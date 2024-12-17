@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h>
+#include <math.h>
+#include <string.h>
+#define SIZE 7
+
+int main() {
+	setlocale(LC_ALL, "RU");
+	char str[8];
+	char* ptr = str;
+	int numW = 0;
+	double numP = 0;
+	int i = -1;
+	int kw = 0, kp = 0, difference;
+	char digit;
+	char WPart[9], PPart;
+	printf(
+		"------------------------------------------------------\n"
+		"введите число в восьмеричной системе счислени€\n");
+	scanf_s("%s", str, sizeof(str));
+	printf("------------------------------------------------------\n");
+	while (*ptr != 0 && *ptr != '.' && *ptr != ',') {
+		digit = *ptr;
+		digit -= 0x30;
+		if (digit >= 0x8 || digit < 0x0) {
+			printf(
+				"------------------------------------------------------\n"
+				"¬ведено не восьмеричное число, или введен недопустимый знак"
+				"------------------------------------------------------\n");
+			return;
+		}
+		numW = (numW * 8) + digit;
+		ptr++;
+		kw++;
+	}
+	ptr++;
+	while (*ptr != 0) {
+		digit = *ptr;
+		digit -= 0x30;
+		if (digit >= 0x8) {
+			printf(
+				"------------------------------------------------------\n"
+				"¬ведено не восьмеричное число, или введен недопустимый знак"
+				"------------------------------------------------------\n");
+			return;
+		}
+		numP += pow(8, i) * digit;
+		ptr++;
+		i--;
+		kp++;
+	}
+	memset(WPart, '0', sizeof(WPart));
+	numP *= pow(10, 3);
+	i = floor(numP);
+	ptr = &WPart[6];
+	while (i > 0) {
+		digit = i % 10;
+		*ptr = digit + 0x30;
+		i /= 10;
+		ptr--;
+	}
+	WPart[3] = '.';
+	ptr--;
+	while (numW > 0) {
+		digit = numW % 10;
+		*ptr = digit + 0x30;
+		numW /= 10;
+		ptr--;
+	}
+	for (i = 0; i < 7; i++) {
+		printf(
+			"------------------------------------------------------\n"
+			"%c" 
+			"------------------------------------------------------\n", WPart[i]);
+	}
+	return 0;
+}

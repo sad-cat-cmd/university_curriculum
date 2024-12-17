@@ -1,0 +1,2 @@
+G:\ВИС\lab1\ConsoleApplication2\Debug\ConsoleApplication2.exe
+G:\ВИС\lab1\ConsoleApplication2\Debug\ConsoleApplication2.pdb

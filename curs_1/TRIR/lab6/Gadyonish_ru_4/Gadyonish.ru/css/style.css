@@ -1,0 +1,229 @@
+@font-face{ /* CSS-правило, которое позволяет отображать шрифты на веб-страницах в интернете */
+    font-family: Rblxdoorsnewfont; /*даём название шрифту*/
+    src: local("Rblxdoorsnewfont"), url(../fonts/Rblxdoorsnewfont.woff) format("woff"), /*указываем формат*/
+      url(../fonts/Rblxdoorsnewfont.woff2) format("woff2"); /*указываем второй формат для отображения на всех браузерах*/
+} /*шрифт для заголовка Gadyupnish*/
+
+@font-face{
+    font-family: fontK;
+    src: local("fontK"), url(../fonts/fontK.woff) format("woff"),
+      url(../fonts/fontK.woff2) format("woff2");
+} /*шрифт для О нас */
+
+@font-face{
+    font-family: snake;
+    src: local("snake"), url(../fonts/snake.woff) format("woff"),
+      url(../fonts/snake.woff2) format("woff2");
+} /*шрифт для описания змей*/
+
+.T1 /*для заголовка и картинки со змеёй на ветке*/
+{
+    font-size: 100px ; /*размер текста */
+    border-left:10px double; border-bottom:10px double; width: 560px; padding: 10px 0 5px 15px; /*двойная черта около названия
+     сайта*/
+    font-family: Rblxdoorsnewfont; /* использование шрифта */
+} /*отвечает за заголовок*/
+
+body /*использовал для закрепления заднего фона*/
+{
+    background-attachment: fixed ; /*закрепляет задний фон*/
+    overflow-x: hidden; /*вообще, эта штука нужна, чтобы элементы, выходящие за рамки, не показывались, но я этим убрал 
+     горизонтальный скролл бар*/
+}
+
+.T2 /*для змеи на палке*/
+{
+    position: absolute; /*независимое расположение от других элементов*/
+    z-index: 1; /*расположил ниже всех по слоям, чтобы картинка не перекрывала собой меню*/
+    margin-top: -135px ; /*отступ сверху*/
+    margin-left: -10px; /*отступ слева*/
+    -webkit-user-select: none; /* это всё запрещает выделение картинки */
+    -khtml-user-select: none; 
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none; /*до сюда*/
+}
+
+.navbar { /*меню*/
+  position: absolute;  /*независимое расположение от других элементов*/ 
+  z-index: 2; /*расположил выше картинки со змеёй на палке*/
+  margin-left: 200px ; /*отступ слева*/
+  margin-top: 10px; /*отступ сверху*/
+}
+
+.navbar a { /*это для ссылок в меню*/
+  float: left; /*расположение внутри контейнера слева*/
+  font-size: 30px; /*размер текста*/
+  color: black; /*цвет текста*/
+  text-align: center; /*текст внутри контейтнера по центру*/
+  padding: 14px 16px; /*размер контейнера*/
+  text-decoration: none; /*чтобы не было подчёркивания текста снизу*/
+  width: auto; /*ширина автоматическа в зависимости от размера текста*/
+  margin-right: 80px; /*отступ справа*/
+}
+
+.dropdown { /*для кнопки О нас*/
+  float: left; /*расположение внутри контейнера слева*/
+}
+
+.dropdown .dropbtn { /*для ссылок внутри О нас*/
+  font-size: 30px;  /*размер текста*/
+  border: none; /*чтобы не было границ*/
+  color: black; /*цвет текста*/
+  padding: 14px 16px; /*размер контейнера кнопки*/
+  background-color: inherit; /*чтобы задний фон был как у родительского элемента*/
+  font-family: inherit; /*чтобы шрифт был как у родительского элемента*/
+  margin: 0; /*отсуствие каких-либо отступов*/
+  width: auto; /*ширина в зависимости от текста*/
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn { /*стилизация при наведении мышки*/
+  background-color: #939c73; /*изменить цвет на такой при наведении*/
+}
+
+.dropdown-content { /*для наших имён*/
+  display: none; /*чтобы имена не выходили раньше положенного*/
+  position: absolute; /*независимое расположение от других элементов*/
+  background-color: #d0f30c; /*цвет заднего фона*/
+  width: 400px;
+  white-space: auto;
+}
+
+.dropdown-content a { /*для ссылки в имени*/
+  float: none; /*чтобы не изменялось расположение*/
+  color: black; /*цвет текста*/
+  padding: 5px 5px; /*размер контейнера*/
+  text-decoration: none; /*чтобы не было подчёркивания*/
+  display: block; /*чтобы шло блоком, а не линией*/
+  text-align: left; /*расположение текста*/
+}
+
+.dropdown-content a:hover { /*при наведении*/
+  background-color: #c53b3b; /*цвет заднего фона*/
+  width: 390px;
+}
+
+.dropdown:hover .dropdown-content { /*при наведении*/
+  display: block; /*чтобы не изменялся вид дисплея при наведении*/
+}
+
+header { /*выделил область для анимации*/
+  opacity: 0; /*непрозрачность*/
+  animation: ani 3s forwards; /*время появления*/
+}
+
+@keyframes ani { /*для анимации*/
+  0% {opacity: 0;} /*изначальная непрозрачность*/
+  100% {opacity: 1;} /*конечная непрозрачность*/
+}
+
+.npan /*блок нижней информации*/
+{
+    margin-top: 110px; /*отступ сверху*/
+    padding: auto ; /*размер поля в зависимости от текста*/
+    background: linear-gradient(to bottom right, #2e3a23, #5ba154); /*градиент*/
+    text-align: center; /*расположение текста*/
+}
+
+.hover-effect-btn { /*для не/ядовитых змей эффекты при наведении*/
+  margin-left: 20px; /*отступ слева*/
+  margin-top: 200px; /*отступ сверху*/
+  position: relative; /*изменяемое расположение позиции*/
+  width: 350px;/*ширина*/
+  height: 500px;  /*высота*/
+}
+
+.overlay { /*слой поверх картинок змей яд неяд*/
+  position: absolute; /*независимое расположение*/
+  top: 0; /*сверху*/
+  left: 0; /*слева*/
+  width: 100%; /*ширина*/
+  height: 100%; /*высота*/
+  background: rgba(0, 0, 0, 0.5); /* Настройка цвета и прозрачности для блока с заголовком */
+  transition: background 0.5s ease; /*время анимации*/
+}
+
+.hover-effect-btn:hover .overlay { /*эффект при наведении*/
+  display: block; /*дисплей блоком, а не линией*/
+  background: rgba(0, 0, 0, 0.9); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+}
+
+.title { /*для заголовка яд неяд*/
+  position: absolute;/*независимое расположение*/
+  width: 100%; /*ширина*/
+  left: 0; /*слева*/
+  top: 25%; /* Отступ сверху */
+  font-size: 1.900em; /* Размер текста заголовка */
+  text-align: center; /*расположение текста*/
+  text-transform: uppercase; /* Заглавные буквы */
+  color: white; /* Цвет заголовка */
+  z-index: 1; /*снизу*/
+  transition: top .5s ease; /*время движения*/
+}
+
+.hover-effect-btn:hover .title {
+   /*при наведении на названия*/
+  top: 20%; /* Отступ сверху при наведении */
+}
+
+
+
+.button { /*для кнопки "посмотреть"*/
+  position: absolute; /*независимое положение*/
+  width: 100%; /*ширина*/
+  left:0; /*оступ слева*/
+  top: 65%; /* Отступ сверху */
+  text-align: center; /*текст по центру*/
+  opacity: 0; /*непрозрачность*/
+  transition: opacity .35s ease; /*движение*/
+}
+
+.button a { /*ссылка*/
+  padding: 15px 40px; /* Отступ */
+  text-align: center; /*расположение текста*/
+  background: #ff921e; /* Цвет кнопки */
+  color: white; /* Цвет текста */
+  border: 1px solid white; /* Ширина, стиль и цвет границы */
+  z-index: 1; /*расположение снизу всего*/
+}
+
+.hover-effect-btn:hover .button { /*эффект при наведении*/
+  opacity: 1; /*непрозрачность*/
+}
+
+.info /*это для фотографии нас*/
+{
+  margin-top: 160px; /*отступ сверху*/
+}
+
+.info-content /*для текста внутри*/
+{
+  font-family: fontK; /*шрифт, взятый сверху*/
+  margin-left: 300px; /*отступ слева*/
+  text-align: center; /*расположение текста*/
+  font-size: 19px; /*размер текста*/
+  width: 500px; /*ширина рамки*/
+  height: 397px; /*высота рамки*/
+  border: 3px solid; /*размер границы*/
+  background-color: #71bc78; /*цвет заднего фона*/
+  margin-top: -404px; /*отступ сверху*/
+}
+
+.snake /*это для фотографии нас*/
+{
+  margin-top: 160px; /*отступ сверху*/
+}
+
+.snake-content /*для текста внутри*/
+{
+  position: absolute;
+  font-family: snake; /*шрифт, взятый сверху*/
+  margin-left: 300px; /*отступ слева*/
+/*  text-align: center; /*расположение текста*/
+  font-size: 12px; /*размер текста*/
+  width: 500px; /*ширина рамки*/
+  height: 397px; /*высота рамки*/
+  border: 3px solid; /*размер границы*/
+/*  background-color: #987654; */
+  margin-top: -404px;
+}

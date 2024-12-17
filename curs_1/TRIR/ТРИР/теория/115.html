@@ -1,0 +1,170 @@
+<!DOCTYPE DOCTYPE PUBLIC "-//W3C//DTD HTML 4.0 // EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="Generator" content="Microsoft Notepad">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Autor" content="Dimas'99">
+<meta name="keywords" content="html, head, meta, body, guidе, справочник, учебник, русский, для начинающих, примеры, интернет, программирование, страница">
+<meta name="description" content="Учебник HTML по-русски,на русском языке с прмерами для начинающих и не только Guide for beginners">
+<meta name="ABSTRACT" content="Учебник HTML по-русски,на русском языке с прмерами для начинающих и не только Guide for beginners">
+<meta name="ROBOTS" content="Index,follow">
+<meta name="revisit-after" content="5 days"><title>Учeбник HTML.Фреймы.&lt;FRAMESET&gt;&lt;FRAME&gt;&lt;IFRAME&gt;.Примеры.</title>
+
+
+
+
+<link rel="stylesheet" href="115_files/style.css" type="text/css"></head>
+
+
+<body leftmargin="30" bgcolor="#ffffff">
+<table bgcolor="#000099" border="0" width="100%">
+<tbody><tr>
+<td align="left"><h1>guide<br>
+<font color="aqua">&lt;dimas&gt;</font><br>
+<strong>help</strong></h1>
+</td><td align="center" width="100%"><h2><strong>On-line</strong> <font color="#ffffff">учебник</font> <strong>HTML</strong> с примерами,   <br> справочник по созданию <strong>Web</strong><font color="#ffffff">-сайтов.</font></h2>
+</td><td align="right"><h1>guide<br>
+<font color="aqua">&lt;dimas&gt;</font><br>
+<strong>help</strong></h1>
+</td></tr></tbody></table>
+<br>
+<br>
+<br>
+<h3><a href="http://172.16.76.30/ivs/HTML_Tutor/1.html" onfocus="this.blur()">Учебник HTML </a> -- Создание документа с помощью кадров</h3> 
+<p>Использование  <b>&lt;FRAME&gt;</b> позволяет помещать в окна одной
+страницы несколько отдельных страниц, произвольно менять их размеры и
+организовывать изменение содержимого одного окна после выполнения
+пользователем действий в другом окне.
+Это позволяет использовать их в качестве инструмента навигации.
+Тэги <b>&lt;FRAMESET&gt;</b> и <b>&lt;/FRAMESET&gt;</b> в данном случае заменяют тэги <b>&lt;BODY&gt;</b> и <b>&lt;/BODY&gt;</b> соответственно.</p>
+<p> Внутри  пары <b>&lt;FRAMESET&gt;</b> и <b>&lt;/FRAMESET&gt;</b> могут быть использованы только тэги <b>&lt;FRAME&gt;</b>, <b>&lt;FRAMESET&gt;</b> и <b>&lt;NOFRAMES&gt;</b>.
+По сути создается несколько отдельных страниц  <i>фреймов</i>,
+которые выводятся на экран одновременно ввиде нескольких окошек одного
+документа. Другими словами, прежде чем организовывать отдельные
+документы ввиде фреймов одного документа, необходимо прежде создать
+сами документы. Для пользователей, чей броузер не поддерживает фреймы,
+необходимо создать альтернативный документ или сообщение о том, каким
+броузером нужно воспользоваться для прoсмотра данного документа и
+заключить его в тэги <b>&lt;NOFRAME&gt;</b> и <b>&lt;/NOFRAME&gt;</b></p>
+
+<ul>
+        <li><a href="#q1">Пара <b>&lt;FRAMESET&gt;</b> и <b>&lt;/FRAMESET&gt;</b></a>
+        </li><li><a href="#q2">Использование  <b>&lt;FRAME&gt;</b></a>
+        </li><li><a href="#q3">Использование  <b>&lt;IFRAME&gt;</b></a>
+        
+        </li><li><a href="#q4">Примеры простейших макетов страниц с <i>фреймами </i>.</a>
+</li></ul>
+ <a name="q1"></a>
+<h3>Пара  &lt;FRAMESET&gt; и &lt;/FRAMESET&gt;</h3>
+<p>Тэги <b>&lt;FRAMESET&gt;</b> и <b>&lt;/FRAMESET&gt;</b> позволяют задать относительный и абсолютный размеры фреймов, <b>&lt;FRAMESET&gt;</b> может иметь атрибуты: 
+</p><ul>
+        <li><b>border</b><br>Атрибут задает толщину обрамления в пикселах для всех производных фреймов.<br><span class="cod">&lt;FRAMESET border="<strong>число</strong>" &gt;</span><br> 
+        </li><li><b>cols</b><br>Атрибут
+задает количество и размер колонок в создаваемом наборе кадров в
+пикселах, процентах или *пропорционально другим кадрам. Значения ширины
+различных кадров перечисляются в кавычках и через запятую. <br><span class="cod">&lt;FRAMESET cols="<strong>число, число* или % </strong>"&gt;</span><br>
+        </li><li><b>rows</b><br>Атрибут
+задает количество и размер строк в создаваемом наборе кадров в
+пикселах, процентах или *пропорционально другим кадрам. Значения высоты
+различных кадров перечисляются в кавычках и через запятую. <br><span class="cod">&lt;FRAMESET rows="<strong>число, число* или % </strong>"&gt;</span><br>
+        </li><li><b>frameborder</b><br>Атрибут задает наличие или отсутствие обрамления у фреймов. Значение <b>1</b> соответствует наличию,  а <b>0</b> - отсутствию обрамления. <br><span class="cod">&lt;FRAMESET frameborder="<strong>1 или 0</strong>" &gt;</span><br>
+</li></ul>
+
+ <a name="q2"></a>
+<h3>Использование &lt;FRAME&gt;</h3>
+<p>Элемент <b>&lt;FRAME&gt;</b> определяет содержимое заданных фреймов. Он может иметь атрибуты: 
+</p><ul>
+        <li><b>src</b><br>Атрибут задает документ, который должен быть отображен в фрейме.<br><span class="cod">&lt;FRAME src="<strong>URL</strong>" &gt;</span><br>
+        </li><li><b>frameborder</b><br>Атрибут задает наличие или отсутствие обрамления у фреймов. Может принимать значения Значение <b>1</b> соответствует наличию,  а <b>0</b> - отсутствию обрамления. <br><span class="cod">&lt;FRAME frameborder="<strong>1 или 0 </strong>"&gt;</span><br>
+        </li><li><b>marginheight</b><br>Атрибут задает толщину верхнего и нижнего обрамления в пикселах.<br><span class="cod">&lt;FRAME marginheight="<strong>число </strong>"&gt;</span><br>
+        </li><li><b>marginwidth</b><br>Атрибут задает толщину правого и левого обрамления в пикселах.<br><span class="cod">&lt;FRAME marginwidth="<strong>число </strong>"&gt;</span><br>
+        </li><li><b>name</b><br>Атрибут задает любое имя фрейма,  по которому можно будет обращаться к нему с помощью атрибута <b>target</b> в ссылках <b>&lt;A href&gt;</b>. Но существует четыре <i>зарезервированных</i> имени: 
+  <ol type="1">
+               <li><b>blank</b><br>Имя открывает в новом окне содержимое указанного <b>URL</b>. 
+               </li><li><b>parent</b><br>Имя открывает содержимое указанного <b>URL</b> в <i>родительском</i>,  относительно текущего,  фрейме. 
+               </li><li><b>self</b><br>Если так назвать фрейм, то содержимое указанного <b>URL</b> заменит первоначально находившуюся в этом фрейме ссылку.
+               </li><li><b>top</b><br>Имя отображает содержимое указанного <b>URL</b> в развёрнутом на всё окно фрейме.
+  </li></ol>      
+        </li><li><b>noresize</b><br>Атрибут лишает пользователя возможности изменить размеры текущего и смежного фреймов с помощью мыши. <br><span class="cod">&lt;FRAME noresize &gt;</span><br>
+        </li><li><b>scrolling</b><br>Атрибут задает наличие у кадра полос прокрутки, принимает значения <b>YES</b>,  <b>NO</b> и <b>AUTO</b>. <br><span class="cod">&lt;FRAME scrolling="<strong>значение </strong>"&gt;</span><br> 
+</li></ul>
+
+  <a name="q3"></a>
+<h3>Использование  &lt;IFRAME&gt;.</h3>
+<p>Этот тэг позволяет вставить в тело <b>BODY </b>  окно,  в котором визуализируется другая страница,  при этом тэг <b>IFRAME</b>,  
+ в отличие от тэга <b>FRAME</b> вставляется не между тэгами <b>FRAMESET</b> и <b>/FRAMESET</b>,  а между тэгами <b>BODY</b> и <b>/BODY</b></p>
+<p>
+</p><ul>
+        <li><b>src</b><br>Атрибут задает документ, который должен быть отображен в фрейме.<br><span class="cod">&lt;IFRAME src="<strong>URL</strong>" &gt;</span><br>.
+        </li><li><b>frameborder</b><br>Атрибут задает наличие или отсутствие обрамления у фреймов. Может принимать значения Значение <b>1</b> соответствует наличию,  а <b>0</b> - отсутствию обрамления. <br><span class="cod">&lt;IFRAME frameborder="<strong>1 или 0 </strong>"&gt;</span><br>
+        </li><li><b>marginheight</b><br>Атрибут задает толщину верхнего и нижнего обрамления в пикселах.<br><span class="cod">&lt;IFRAME marginheight="<strong>число </strong>"&gt;</span><br>
+        </li><li><b>marginwidth</b><br>Атрибут задает толщину правого и левого обрамления в пикселах.<br><span class="cod">&lt;IFRAME marginwidth="<strong>число </strong>"&gt;</span><br>
+        </li><li><b>name</b><br>Атрибут задает любое имя фрейма,  по которому можно будет обращаться к нему в ссылках и направлять в него содержимое.
+        </li><li><b>align</b><br>Атрибут позволяет позиционировать кадр  по отношению к тексту,  принимает значения <b>left</b>,  <b>right</b>,  <b>middle</b>,  <b>top</b> и <b>bottom</b>.<br><span class="cod">&lt;IFRAME align="<strong>left</strong>" &gt;</span><br>
+        </li><li><b>scrolling</b><br>Атрибут задает наличие у кадра полос прокрутки, принимает значения <b>YES</b>,  <b>NO</b> и <b>AUTO</b>. <br><span class="cod">&lt;FRAME scrolling="<strong>значение </strong>"&gt;</span><br> 
+        </li><li><b>width</b><br>Атрибут определяет ширину кадра в пикселях.<br><span class="cod">&lt;IFRAME  width="<strong>число </strong>"&gt;</span><br>
+        </li><li><b>height</b><br>Атрибут определяет высоту кадра в пикселях.<br><span class="cod">&lt;IFRAME  height="<strong>число </strong>"&gt;</span><br>
+        
+</li></ul>
+<br>
+<iframe src="115_files/page1.htm" align="middle" frameborder="1" height="150" scrolling="no" width="150"></iframe><br>
+
+
+  <a name="q4"></a>
+<h3>Примеры простейших макетов страниц с фреймами.</h3>
+
+<p>Горизонтальное деление экрана производится при помощи атрибута <b>rows</b>, а вертикальное при помощи атрибута <b>cols</b>.
+ Значения атрибутов могут быть выражены в пикселах, процентах или * для обозначения оставшейся части экрана. 
+<br>Например:</p>
+<ul>
+<li><span class="cod">cols=50%,50%</span><br> Деление области просмотра на равные, правую и левую, части. 
+<br><a href="http://172.16.76.30/ivs/HTML_Tutor/frexampl1.html" target="blank">Пример</a>
+</li><li><span class="cod">cols=20%,80%</span><br> Деление области просмотра на неравные, правую и левую, части. 
+<br><a href="http://172.16.76.30/ivs/HTML_Tutor/frexampl2.html" target="blank">Пример</a>
+</li><li><span class="cod">rows=100,20%,*</span><br> Деление области просмотра на три части: первой отведено <b>100</b> пикселей, 
+второй - <b>20%</b> доступного пространства, а третьей - все остальное. 
+<br><a href="http://172.16.76.30/ivs/HTML_Tutor/frexampl3.html" target="blank">Пример</a>
+</li><li><span class="cod">cols=*,3*</span><br> Деление области просмотра на неравные, правую и левую, части.  
+Правая часть в три раза шире левой. 
+<br><a href="http://172.16.76.30/ivs/HTML_Tutor/frexampl4.html" target="blank">Пример</a>
+</li><li><span class="cod">cols=25%,75%</span><br> Деление области просмотра аналогично предыдущему примеру. 
+<br><a href="http://172.16.76.30/ivs/HTML_Tutor/frexampl5.html" target="blank">Пример</a>
+</li></ul>
+
+<p><a href="http://172.16.76.30/ivs/HTML_Tutor/frames.html" target="blank">Пример</a> исходного кода фреймов более сложной структуры.</p>
+
+<div class="cod">
+&lt;HTML&gt;<br>
+&lt;HEAD&gt;<br>
+&lt;TITLE&gt;<strong>FRAMES</strong>&lt;/TITLE&gt;<br>
+&lt;/HEAD&gt;<br>
+&lt;FRAMESET FRAMEBORDER=<strong>1</strong> BORDER=<strong>2</strong> ROWS=<strong>150,*</strong>&gt;<br>
+&lt;FRAME SCROLLING="<strong>YES</strong>" NORESIZE SRC="<strong>page1.html</strong>" NAME="<strong>1</strong>"&gt;<br>
+&lt;FRAMESET FRAMEBORDER=<strong>1</strong> BORDER=<strong>2</strong> COLS=<strong>150,*</strong>&gt;<br>
+&lt;FRAME SCROLLING="<strong>YES</strong>" NORESIZE SRC="<strong>page2.html</strong>" NAME="<strong>2</strong>"&gt;<br>
+&lt;FRAME SCROLLING="<strong>YES</strong>" NORESIZE SRC="<strong>page3.html</strong>" NAME="<strong>3</strong>"&gt;<br>
+&lt;/FRAMESET&gt;<br>
+&lt;/FRAMESET&gt;<br>
+&lt;/HTML&gt;<br>
+</div>
+<br>
+<p id="1"><a href="http://172.16.76.30/ivs/HTML_Tutor/framesa.html" target="blank">Пример</a> исходного кода фреймов c навигацией, тут при клике на ссылке в фрейме <b>2</b> меняется содержимое фрейма <b>3</b>, в него загружается файл <b>page1.html</b>, при этом 
+файл <b>page2.html</b> должен иметь следующий вид:</p>
+<div class="cod">
+&lt;HTML&gt;<br>
+&lt;HEAD&gt;<br>
+&lt;TITLE&gt;<strong>page2</strong>&lt;/TITLE&gt;<br>
+&lt;/HEAD&gt;<br>
+&lt;BODY&gt;<br>
+&lt;A HREF="<strong>page1.html</strong>" target="<strong>3</strong>"&gt;link&lt;/A&gt;<br>
+&lt;/BODY&gt;<br>
+&lt;/HTML&gt;<br>
+</div>
+<br>
+
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="-1"><a href="http://172.16.76.30/ivs/HTML_Tutor/114.html">Назад</a> 
+		| <a href="http://172.16.76.30/ivs/HTML_Tutor/1.html">Содержание</a> | <a href="http://172.16.76.30/ivs/HTML_Tutor/116.html">Вперед</a></font></p>
+<br><br>
+
+
+</body></html>

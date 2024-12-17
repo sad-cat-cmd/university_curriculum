@@ -1,0 +1,17 @@
+data segment
+a8 db 45h
+a16 dw 45h
+a32 dd 45h
+
+b8 db 0ACh
+b16 dw 0FFACh
+b32 dd 0FFFFACh
+data ends
+code segment
+assume cs:code, ds:data, ss:nothing; 
+start: mov ax, data
+       mov ds, ax 
+quit: mov ax, 4c00h; cod to finish 0
+	int 21; exit to does
+code ends
+end start

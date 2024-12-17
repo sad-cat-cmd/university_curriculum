@@ -1,0 +1,2 @@
+G:\ВИС\lab1\Project1\Debug\Project1.exe
+G:\ВИС\lab1\Project1\Debug\Project1.pdb

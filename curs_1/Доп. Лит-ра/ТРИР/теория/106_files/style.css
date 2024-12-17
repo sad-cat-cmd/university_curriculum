@@ -1,0 +1,171 @@
+STYLE STRONG {
+	COLOR: #ff0066
+}
+H1 {
+	BACKGROUND-COLOR: #000099; COLOR: #ffffff; FONT: bold 130% "Arial Cyr"; TEXT-ALIGN: center
+}
+H2 {
+	COLOR: aqua; FONT: bold 125% "Arial Cyr"
+}
+H3 {
+	COLOR: #0088bb; FONT: bold 110% "Arial Cyr"
+}
+H2 B {
+	COLOR: #ffffff
+}
+.1 {
+	TEXT-ALIGN: left
+}
+A:link {
+	COLOR: #0044ff; FONT-FAMILY: Arial; FONT-SIZE: 100%; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0088ee; FONT-FAMILY: Arial; FONT-SIZE: 100%; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: aqua; FONT-FAMILY: Arial; FONT-SIZE: 100%; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #000088; FONT-FAMILY: Arial; FONT-SIZE: 100%; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.cod {
+	BACKGROUND-COLOR: #ffffff; COLOR: #0088bb
+}
+P {
+	BACKGROUND-COLOR: #f7ffff; TEXT-INDENT: 0.5in
+}
+.user {
+	COLOR: background
+}
+.navig {
+	BACKGROUND-COLOR: #000099; BORDER-BOTTOM-COLOR: #ffffff; BORDER-BOTTOM-STYLE: outset; BORDER-LEFT-COLOR: #ffffff; BORDER-LEFT-STYLE: outset; BORDER-RIGHT-COLOR: #ffffff; BORDER-RIGHT-STYLE: outset; BORDER-TOP-COLOR: #ffffff; BORDER-TOP-STYLE: outset; TEXT-ALIGN: center; WIDTH: 100%
+}
+.nav {
+	BACKGROUND-COLOR: #ffffff; POSITION: relative; TEXT-ALIGN: center; WIDTH: 100%
+}
+.l {
+	LEFT: 0%; POSITION: relative; TEXT-ALIGN: left; TOP: 0%; WIDTH: 100px
+}
+.c {
+	LEFT: 0%; POSITION: relative; TEXT-ALIGN: center; TOP: 0%; WIDTH: 535px
+}
+.s {
+	BACKGROUND-COLOR: #000099; BORDER-BOTTOM-COLOR: #ffffff; BORDER-BOTTOM-STYLE: outset; BORDER-LEFT-COLOR: #ffffff; BORDER-LEFT-STYLE: outset; BORDER-RIGHT-COLOR: #ffffff; BORDER-RIGHT-STYLE: outset; BORDER-TOP-COLOR: #ffffff; BORDER-TOP-STYLE: outset; LEFT: 0%; POSITION: relative; TEXT-ALIGN: center; TOP: 0%; WIDTH: 25%
+}
+.s1 {
+	BACKGROUND-COLOR: white; BORDER-BOTTOM-COLOR: #ffffff; BORDER-BOTTOM-STYLE: outset; BORDER-LEFT-COLOR: #ffffff; BORDER-LEFT-STYLE: outset; BORDER-RIGHT-COLOR: #ffffff; BORDER-RIGHT-STYLE: outset; BORDER-TOP-COLOR: #ffffff; BORDER-TOP-STYLE: outset; LEFT: 0%; POSITION: relative; TEXT-ALIGN: center; TOP: 0%; WIDTH: 25%
+}
+.r {
+	LEFT: 0%; POSITION: relative; TEXT-ALIGN: right; TOP: 0%; WIDTH: 100px
+}
+STRONG {
+	COLOR: #ff0066
+}
+.faq {
+	COLOR: #0088bb
+}
+.cod STRONG {
+	COLOR: #ff0066; FONT-WEIGHT: normal
+}
+B {
+	COLOR: #0088bb; FONT-SIZE: 100%
+}
+I {
+	COLOR: #0088bb
+}
+.img {
+	BACKGROUND-COLOR: #ffffff; WIDTH: 50%
+}
+UL {
+	BACKGROUND-COLOR: #f7ffff
+}
+OL {
+	BACKGROUND-COLOR: #f7ffff
+}
+DL {
+	BACKGROUND-COLOR: #f7ffff
+}
+MENU {
+	BACKGROUND-COLOR: #f7ffff
+}
+DIR {
+	BACKGROUND-COLOR: #f7ffff
+}
+.msk {
+	FILTER: Mask(Color="#0000ff")
+}
+.sh {
+	FILTER: Shadow(Color="#000000", Direction="150")
+}
+.flp {
+	FILTER: FlipH
+}
+.flpv {
+	FILTER: FlipV
+}
+.gl {
+	FILTER: Glow(Strength=3, Color="#0000ff")
+}
+.wv {
+	FILTER: Wave(Freq=5, Add=0, LightStrength=1, Phase=2, Strength=2)
+}
+.drpsh {
+	FILTER: DropShadow(Color="#6699CC",OffX="3",OffY="3",Positive="1")
+}
+.alph1 {
+	FILTER: Alpha(Opacity="20",FinishOpacity="45",Style="3")
+}
+.alph2 {
+	FILTER: Alpha(Opacity="40",FinishOpacity="95",Style="3")
+}
+.alph3 {
+	FILTER: Alpha(Opacity="90",FinishOpacity="95",Style="3")
+}
+.blr {
+	FILTER: Blur(Add="1",Direction="270",Strength="15")
+}
+.inv {
+	FILTER: Invert
+}
+.gr {
+	FILTER: Gray
+}
+.chr {
+	FILTER: Chroma(Color ="#fdfd03")
+}
+.xr {
+	FILTER: Xray
+}
+.lght {
+	FILTER: Light
+}
+LI {
+	COLOR: #000099; FONT-FAMILY: "Arial Cyr"; FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+TABLE.color {
+	COLOR: #000099; FONT-FAMILY: "Arial Cyr"; FONT-SIZE: 82%; FONT-WEIGHT: normal
+}
+TABLE.symb TR {
+	TEXT-ALIGN: center
+}
+BODY {
+	COLOR: #000099; FONT-FAMILY: "Arial Cyr"; FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+FORM {
+	BACKGROUND-COLOR: #f7ffff
+}
+INPUT {
+	BORDER-BOTTOM: #0088bb 1pt solid; BORDER-LEFT: #0088bb 1pt solid; BORDER-RIGHT: #0088bb 1pt solid; BORDER-TOP: #0088bb 1pt solid; COLOR: #0088bb; LETTER-SPACING: 0pt; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px; TEXT-INDENT: 0pt
+}
+SELECT {
+	BORDER-BOTTOM: #0088bb 0pt solid; BORDER-LEFT: #0088bb 0pt solid; BORDER-RIGHT: #0088bb 0pt solid; BORDER-TOP: #0088bb 0pt solid; FONT-FAMILY: Arial; FONT-SIZE: x-small; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OPTION {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: 0px; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+TEXTAREA {
+	BORDER-BOTTOM: #0088bb 1pt solid; BORDER-LEFT: #0088bb 1pt solid; BORDER-RIGHT: #0088bb 1pt solid; BORDER-TOP: #0088bb 1pt solid; COLOR: #0088bb; LETTER-SPACING: 0pt; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px; TEXT-INDENT: 0pt
+}
+BUTTON {
+	BACKGROUND-COLOR: #000099; BORDER-BOTTOM: #ffffff 1pt solid; BORDER-LEFT: #ffffff 1pt solid; BORDER-RIGHT: #ffffff 1pt solid; BORDER-TOP: #ffffff 1pt solid; COLOR: #ffffff; FONT-FAMILY: "Arial Cyr"; FONT-SIZE: 100%
+}

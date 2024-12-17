@@ -1,0 +1,4 @@
+﻿  ConsoleApplication2.cpp
+C:\Users\B-ZONE\Desktop\curswork\ConsoleApplication2\ConsoleApplication2.cpp(65,9): warning C4101: draw: неиспользованная локальная переменная
+C:\Users\B-ZONE\Desktop\curswork\ConsoleApplication2\ConsoleApplication2.cpp(175,23): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+  ConsoleApplication2.vcxproj -> C:\Users\B-ZONE\Desktop\curswork\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe

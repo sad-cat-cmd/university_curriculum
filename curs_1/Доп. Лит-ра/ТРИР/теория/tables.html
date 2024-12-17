@@ -1,0 +1,1815 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" dir="ltr" lang="ru"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Content-Language" content="ru"><title>Таблицы</title>
+
+<link rel="stylesheet" href="tables_files/default.css" type="text/css">
+<link rel="prev" href="http://172.16.76.30/ivs/NetProg/css2/text.html"><link rel="next" href="http://172.16.76.30/ivs/NetProg/css2/ui.html">
+<link rel="contents" href="http://172.16.76.30/ivs/NetProg/css2/index.html#minitoc">
+<link rel="CSS-properties" href="http://172.16.76.30/ivs/NetProg/css2/propidx.html" title="properties">
+<link rel="index" href="http://172.16.76.30/ivs/NetProg/css2/indexlist.html" title="index"></head>
+
+<body><p>&nbsp;</p>
+<div class="navbar" align="center">
+<p><a href="http://172.16.76.30/ivs/NetProg/css2/text.html">предыдущий</a> &nbsp; <a href="http://172.16.76.30/ivs/NetProg/css2/ui.html">следующий</a>
+&nbsp; <a href="http://172.16.76.30/ivs/NetProg/css2/index.html#minitoc">содержание</a> &nbsp; <a href="http://172.16.76.30/ivs/NetProg/css2/propidx.html">свойства</a>
+&nbsp; <a href="http://172.16.76.30/ivs/NetProg/css2/indexlist.html">индекс</a></p></div><hr class="navbar">
+
+<h1 align="center">17 <a name="visual-tables">Таблицы</a></h1><div class="subtoc">
+<p><strong>Содержание</strong></p><ul class="toc">
+<li class="tocline2"><a href="#q1" class="tocxref">17.1 Введение</a>
+</li><li class="tocline2"><a href="#q2" class="tocxref">17.2 Табличная модель CSS</a>
+<ul class="toc">
+<li class="tocline3"><a href="#anonymous-boxes" class="tocxref">17.2.1 Анонимные
+объекты таблицы</a></li></ul>
+</li><li class="tocline2"><a href="#q4" class="tocxref">17.3 Селекторы столбцов</a>
+</li><li class="tocline2"><a href="#q5" class="tocxref">17.4 Таблицы в модели
+визуального форматирования</a><ul class="toc">
+<li class="tocline3"><a href="#q6" class="tocxref">17.4.1 Позиция и выравнивание заголовка</a></li></ul>
+</li><li class="tocline2"><a href="#q7" class="tocxref">17.5 Вид содержимого таблицы</a>
+<ul class="toc"><li class="tocline3"><a href="#table-layers" class="tocxref">17.5.1 Слои
+и прозрачность таблицы</a>
+</li><li class="tocline3"><a href="#width-layout" class="tocxref">17.5.2
+Алгоритмы ширины таблицы: свойство <span class="propinst-table-layout">'table-layout'</span> </a>
+<ul class="toc">
+<li class="tocline4"><a href="#fixed-table-layout" class="tocxref"> Фиксированный
+вывод таблицы</a>
+</li><li class="tocline4"><a href="#auto-table-layout" class="tocxref"> Автоматический вывод таблицы</a>
+</li></ul></li><li class="tocline3"><a href="#height-layout" class="tocxref">17.5.3 Алгоритмы высоты таблицы</a>
+</li><li class="tocline3"><a href="#column-alignment" class="tocxref">17.5.4 Горизонтальное
+выравнивание в столбце</a>
+</li><li class="tocline3"><a href="#dynamic-effects" class="tocxref">17.5.5 Динамические
+эффекты рядов и столбцов</a></li></ul>
+</li><li class="tocline2"><a href="#borders" class="tocxref">17.6 Рамки</a><ul class="toc">
+<li class="tocline3"><a href="#separated-borders" class="tocxref">17.6.1 Модель раздельных рамок</a>
+<ul class="toc">
+<li class="tocline4"><a href="#empty-cells" class="tocxref"> Обрамление
+пустых ячеек: свойство <span class="propinst-empty-cells">'empty-cells'</span></a></li></ul>
+</li><li class="tocline3"><a href="#collapsing-borders" class="tocxref">17.6.2 Модель сжимающихся рамок</a>
+<ul class="toc">
+<li class="tocline4"><a href="#border-conflict-resolution" class="tocxref"> Разрешение
+конфликтов рамок</a></li></ul>
+</li><li class="tocline3"><a href="#q20" class="tocxref">17.6.3 Стили рамок</a></li></ul>
+</li><li class="tocline2"><a href="#q21" class="tocxref">17.7 Звуковое представление таблиц</a>
+<ul class="toc">
+<li class="tocline3"><a href="#speak-headers" class="tocxref">17.7.1
+Говорящие заголовки: свойство <span class="propinst-speak-header">'speak-header'</span> </a>
+</li></ul></li></ul></div><h2><a name="q1"><br>17.1 Введение</a></h2>
+
+<p>Таблицы представляют взаимоотношения
+между данными. Авторы специфицируют эти
+взаимоотношения на <a href="http://172.16.76.30/ivs/NetProg/css2/conform.html#doclanguage">языке
+документа</a> и их <em>представление</em> в CSS
+двумя способами - визуально и звуком.</p><p>Авторы
+могут специфицировать визуальное
+форматирование таблицы как прямоугольной
+сетки ячеек. Ряды и столбцы ячеек можно
+организовать в группы рядов и столбцов.
+Ряды, столбцы, группы рядов, группы столбцов
+и ячейки могут иметь вокруг себя
+порисованные рамки (в CSS2 есть две модели
+рамок). Авторы могут выровнять данные в
+ячейках по вертикали и по горизонтали и
+выровнять данные во всех ячейках ряда или
+столбца.</p><p>Авторы могут также
+специфицировать звуковое представление
+таблицы: то, как заголовки и данные будут
+звучать. На языке документа авторы могут помечать
+лэйблами ячейки и группы ячеек так, что при
+звуковом отображении заголовки ячеек
+будут произноситься перед данными ячеек.
+Фактически это "сериализует" таблицу:
+пользователи, прослушивающие таблицу,
+услышат последовательность заголовков и
+последующих данных.
+
+</p><div class="example"><p style="display: none;">Пример(ы):</p><p>Вот
+  простая таблица из трёх рядов и трёх
+  столбцов, написанная в HTML 4.0:
+
+</p><pre class="html-example">&lt;TABLE&gt;
+&lt;CAPTION&gt;Это простая таблица 3x3&lt;/CAPTION&gt;
+&lt;TR id="row1"&gt;
+   &lt;TH&gt;Header 1      &lt;TD&gt;Cell 1        &lt;TD&gt;Cell 2
+&lt;TR id="row2"&gt;
+   &lt;TH&gt;Header 2      &lt;TD&gt;Cell 3        &lt;TD&gt;Cell 4
+&lt;TR id="row3"&gt;
+   &lt;TH&gt;Header 3      &lt;TD&gt;Cell 5        &lt;TD&gt;Cell 6
+&lt;/TABLE&gt;</pre>
+
+  <p>Этот код создаёт одну таблицу (элемент TABLE),
+  три ряда (элементы TR), три заголовочных
+  ячейки (элементы TH) и шесть ячеек данных (элементы
+  TD). Обратите внимание, что три столбца в
+  этом примере специфицированы неявно: в
+  таблице столько столбцов, сколько
+  затребовано заголовочными ячейками и
+  ячейками данных.</p><p>Следующее правило CSS
+  центрирует текст по горизонтали в
+  заголовочных ячейках и выводит данные
+  шрифтом, имеющим вес bold:</p>
+
+<pre>TH { text-align: center; font-weight: bold }</pre>
+
+  <p>Следующее правило выравнивает текст
+  заголовочных ячеек по их базовой линии и
+  центрирует текст по вертикали в каждой
+  ячейке данных:</p>
+
+<pre>TH { vertical-align: baseline }
+TD { vertical-align: middle }</pre>
+
+  <p>Следующие правила специфицируют, что верхний
+  ряд будет окружён сплошной голубой рамкой
+  толщиной 3px и каждый из других рядов будет
+  окружён сплошной чёрной рамкой толщиной 1px:</p>
+
+<pre>TABLE   { border-collapse: collapse }
+TR#row1 { border-top: 3px solid blue }
+TR#row2 { border-top: 1px solid black }
+TR#row3 { border-top: 1px solid black }</pre>
+
+  <p>Заметьте, однако, что рамки вокруг рядов
+  перекрываются там, где ряды смыкаются.
+  Какого цвета (чёрного или голубого) и
+  толщины (1px или 3px) будет рамка между рядами row1
+  и row2? Мы обсудим это в разделе о <a href="#border-conflict-resolution">разрешении
+  конфликтов рамок.</a>
+
+</p><p>Следующее правило помещает заголовок
+таблицы над таблицей:</p>
+
+<pre>CAPTION { caption-side: top }</pre>
+
+  <p>Наконец, следующее правило
+  специфицирует, что при звуковом выводе
+  каждый ряд данных произносится как "Заголовок,
+  Данные, Данные":</p>
+
+<pre>TH { speak-header: once }</pre>
+
+<p>Например, первый ряд будет произнесён "Заголовок1
+Ячейка1 Ячейка2".<br>
+С другой стороны, со следующим правилом:</p>
+
+<pre>TH { speak-header: always }</pre>
+
+  <p>будет звучать "Заголовок1 Ячейка1
+  Заголовок1 Ячейка2". 
+</p></div>
+
+<p>Этот пример показал, как CSS работает с
+элементами HTML 4.0; в HTML 4.0 семантика различных
+элементов таблицы (TABLE, CAPTION, THEAD, TBODY, TFOOT, COL,
+COLGROUP, TH и TD) основательно проработана.<br>
+В других языка документов (таких как
+приложения XML) может не быть
+предопределённых элементов таблицы.
+Поэтому CSS2 позволяет авторам <a name="x1"><span class="index-inst" title="mapping elements to table
+parts">"map/отображать"</span></a>  элементы
+языка документа в элементы таблицы через
+свойство <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#propdef-display" class="noxref"><span class="propinst-display">'display'</span></a>.
+Например, следующее правило заставляет
+элемент FOO работать как элемент TABLE в HTML, а
+элемент BAR - как элемент CAPTION:</p>
+
+<pre class="example">FOO { display : table }
+BAR { display : table-caption }</pre>
+
+<p>Мы обсудим различные элементы таблицы в
+следующем разделе. В данной спецификации
+термин <a name="x2"><span class="index-def" title="table
+element"><dfn>элемент таблицы</dfn></span></a> относится
+к любому элементу, участвующему в создании
+таблицы. <a name="x3"><span class="index-def" title="internal table element|table element::internal">"Внутренний"
+элемент таблицы</span></a> это тот, который
+производит ряд, группу рядов, столбец,
+группу столбцов или ячейку.
+
+</p><h2><a name="q2"><br>
+17.2 Табличная модель CSS</a></h2>
+
+<p>Табличная модель CSS базируется на
+табличной модели HTML 4.0, структура таблиц
+которой почти параллельна визуальному
+представлению. В данной модели таблица
+состоит из необязательного заголовка и
+любого числа рядов столбцов. О табличной
+модели говорится, что в ней "ряды первичны",
+поскольку авторы явно специфицируют ряды, а
+не столбцы, в языке документа. Столбцы
+определяются после того, как будут
+специфицированы все ряды - первая ячейка
+каждого ряда принадлежит первому столбцу,
+вторая - второму столбцу и т.д.). Ряды и
+столбцы могут быть сгруппированы
+структурно, и это группирование отражается
+при представлении (например, рамка может
+быть прорисована вокруг группы рядов).</p><p>Таким
+образом, табличная модель состоит из таблиц,
+заголовков, рядов, групп рядов, столбцов,
+групп столбцов и ячеек.</p><p>Модель CSS не
+требует, чтобы <a href="http://172.16.76.30/ivs/NetProg/css2/conform.html#doclanguage">язык документа</a> содержал
+элементы, соответствующие каждому из этих
+компонентов. Для языков документов (таких
+как приложения XML), не имеющих
+предопределённых табличных элементов,
+авторы обязаны отображать элементы языка
+документа в элементы таблицы; это делается
+с помощью свойства <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#propdef-display" class="noxref"><span class="propinst-display">'display'</span></a>. Следующие
+значения <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#propdef-display" class="noxref"><span class="propinst-display">'display'</span></a> 
+назначают семантику таблицы произвольному
+элементу:</p>
+
+<dl>
+<dt><strong><span class="index-def" title="table"><a class="value-def" name="value-def-table">table</a></span></strong>  (в HTML: TABLE)
+
+</dt><dd>Специфицирует, что элемент определяет
+  таблицу <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#block-level">уровня блока</a>: это
+  прямоугольный блок, участвующий в <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#block-formatting">контексте
+  форматирования блока</a>.</dd><dt><strong><span class="index-def" title="inline-table"><a class="value-def" name="value-def-inline-table">inline-table</a></span></strong>  (в
+HTML: TABLE)
+
+</dt><dd>Специфицирует, что элемент определяет
+  таблицу <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#inline-level">инлайн-уровня</a>:
+  это прямоугольный блок, участвующий в <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#inline-formatting">инлайн-контексте
+  форматирования</a>).</dd><dt><strong><span class="index-def" title="table-row"><a class="value-def" name="value-def-table-row">table-row</a></span></strong>  (в HTML: TR)
+
+</dt><dd>Специфицирует, что элемент - это ряд ячеек.</dd><dt><strong><span class="index-def" title="table-row-group"><a class="value-def" name="value-def-table-row-group">table-row-group</a></span></strong>
+  (в HTML: TBODY) </dt><dd>Специфицирует, что элемент
+  группирует один или более рядов.</dd><dt><strong><span class="index-def" title="table-header-group"><a class="value-def" name="value-def-table-header-group">table-header-group</a></span></strong>
+  (в HTML: THEAD) </dt><dd>Похож на 'table-row-group', но для
+  визуального форматирования; группа рядов
+  всегда отображается до всех других рядов и
+  групп рядов и после любого верхнего
+  заголовка. Печатающие пользовательские
+  агенты (ПА) могут повторять ряды футера на
+  каждой странице, занимаемой таблицей.</dd><dt><strong><span class="index-def" title="table-footer-group"><a class="value-def" name="value-def-table-footer-group">table-footer-group</a></span></strong>
+  (в HTML: TFOOT)
+
+</dt><dd>Похож на 'table-row-group', но для визуального
+  форматирования; группа рядов всегда
+  отображается после всех других рядов и
+  групп рядов и перед любым нижним
+  заголовком. Печатающие ПА могут повторять
+  ряды футера на каждой странице, занимаемой
+  таблицей.</dd><dt><strong><span class="index-def" title="table-column"><a class="value-def" name="value-def-table-column">table-column</a></span></strong>  (в
+HTML: COL)
+
+</dt><dd>Специфицирует, что элемент описывает
+  столбец ячеек.</dd><dt><strong><span class="index-def" title="table-column-group"><a class="value-def" name="value-def-table-column-group">table-column-group</a></span></strong>
+  (в HTML: COLGROUP)
+
+</dt><dd>Специфицирует, что элемент группирует
+  один или более столбцов.</dd><dt><strong><span class="index-def" title="table-cell"><a class="value-def" name="value-def-table-cell">table-cell</a></span></strong>  (в HTML:
+TD, TH)
+
+</dt><dd>Специфицирует, что элемент представляет
+  ячейку таблицы.</dd><dt><strong><span class="index-def" title="table-caption"><a class="value-def" name="value-def-table-caption">table-caption</a></span></strong>  (в
+HTML: CAPTION)
+
+</dt><dd>Специфицирует заголовок таблицы.
+</dd></dl>
+
+<p>Элементы с <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#propdef-display" class="noxref"><span class="propinst-display">'display'</span></a><span class="propinst-display">,</span>
+установленным в 'table-column' или 'table-column-group', не
+выводятся (в точности так, как если бы они
+имели 'display: none'), но используются, поскольку
+могут иметь атрибуты, вводящие
+определённый стиль для представляемых ими
+столбцов.</p>
+
+<p> <a href="http://172.16.76.30/ivs/NetProg/css2/sample.html">Таблица стилей по умолчанию
+для HTML 4.0</a>
+ в приложении иллюстрирует использование
+этих значений в HTML 4.0:</p>
+
+<pre class="example">TABLE    { display: table }
+TR       { display: table-row }
+THEAD    { display: table-header-group }
+TBODY    { display: table-row-group }
+TFOOT    { display: table-footer-group }
+COL      { display: table-column }
+COLGROUP { display: table-column-group }
+TD, TH   { display: table-cell }
+CAPTION  { display: table-caption }</pre>
+
+<p>ПА могут <a href="http://172.16.76.30/ivs/NetProg/css2/syndata.html#ignore">игнорировать</a>
+эти значения свойства <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#propdef-display" class="noxref"><span class="propinst-display">'display'</span></a>  для документов HTML,
+поскольку авторы не должны изменять
+ожидаемое поведение элемента.
+
+</p><h3><br>
+17.2.1 <a name="anonymous-boxes">Анонимные объекты таблицы</a></h3> 
+
+<p>Языки документов, кроме HTML, могут не иметь
+всех элементов табличной модели CSS2. В
+таких случаях "отсутствующие"
+элементы обязаны учитываться, для того
+чтобы табличная модель работала.
+Отсутствующие элементы генерируют <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#anonymous">анонимные
+объекты</a> (например, анонимные боксы при
+визуальном выводе таблицы) в соответствии
+со следующими правилами:</p>
+
+<ol>
+
+<li>Любой элемент таблицы автоматически будет
+  генерировать вокруг себя необходимые
+  объекты таблицы, состоящие не менее чем из
+  трёх вложенных объектов, соответствующих
+  элементу 'table'/'inline-table', элементу 'table-row' и
+  элементу 'table-cell'.
+
+</li><li>Если родительский P в 'table-cell' элемента T -
+  не 'table-row', объект, соответствующий 'table-row',
+  будет генерироваться между P и T. Этот
+  объект будет занимать все
+  последовательные родственные (смежные) 'table-cell'
+  (в дереве документа) в T.
+
+</li><li>Если родительский P в 'table-row' элемента T - не
+  элемент 'table', 'inline-table' или 'table-row-group', объект,
+  соответствующий элементу 'table', будет
+  генерироваться между P и T. Этот объект
+  будет занимать всех последовательных
+  родственников (смежных) (в дереве
+  документа) в T,&nbsp; требующем 'table'-родителя:
+'table-row', 'table-row-group', 'table-header-group', 
+'table-footer-group', 'table-column', 'table-column-group' и 'caption'.
+
+</li><li>Если родительский P в 'table-row-group' (или 'table-header-group',
+  или 'table-footer-group') элемента T - не 'table' или 'inline-table',
+  объект, соответствующий элементу 'table',
+  будет генерироваться между P и T. Этот
+  объект будет занимать всех
+  последовательных родственников (смежных) (в
+  дереве документа) в T,&nbsp; требующем 'table'-родителя: 'table-row',
+'table-row-group', 'table-header-group', 'table-footer-group',
+'table-column', 'table-column-group', и 'caption'.
+
+</li><li>Если дочерний T от 'table-row' элемента P - не
+  элемент 'table-cell', объект, соответствующий
+  элементу 'table-cell', будет генерироваться
+  между P и T. Этот объект будет занимать всех
+  последовательных родственников T, не
+  являющихся элементами 'table-cell'.
+</li></ol>
+
+<div class="example"><p style="display: none;">Пример(ы):</p>
+<p>В этом примере XML принимается, что элемент 'table'
+содержит элемент HBOX:</p>
+
+<pre class="xml-example">&lt;HBOX&gt;
+  &lt;VBOX&gt;George&lt;/VBOX&gt;
+  &lt;VBOX&gt;4287&lt;/VBOX&gt;
+  &lt;VBOX&gt;1998&lt;/VBOX&gt;
+&lt;/HBOX&gt;</pre>
+
+<p>поскольку ассоциированная таблица стилей:</p>
+
+<pre class="example">HBOX { display: table-row }
+VBOX { display: table-cell }</pre>
+</div>
+
+<div class="example"><p style="display: none;">Пример(ы):</p>
+  <p>В этом примере три элемента 'table-cell'
+  содержат текст в&nbsp; ROWs/рядах. Заметьте,
+  что текст далее инкапсулируется в
+  анонимные инлайн-боксы, как разъясняется в
+  <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#anonymous">модели визуального форматирования</a>:</p>
+
+<pre class="xml-example">&lt;STACK&gt;
+  &lt;ROW&gt;This is the &lt;D&gt;top&lt;/D&gt; row.&lt;/ROW&gt;
+  &lt;ROW&gt;This is the &lt;D&gt;middle&lt;/D&gt; row.&lt;/ROW&gt;
+  &lt;ROW&gt;This is the &lt;D&gt;bottom&lt;/D&gt; row.&lt;/ROW&gt;
+&lt;/STACK&gt;</pre>
+
+<p>Таблица стилей:</p>
+
+<pre class="example">STACK { display: inline-table }
+ROW   { display: table-row }
+D     { display: inline; font-weight: bolder }</pre>
+
+</div>
+
+<p>От ПА HTML не требуется создавать анонимные
+объекты в соответствии с вышеприведёнными
+правилами.
+
+</p><h2><a name="q4"><br>
+17.3 Селекторы столбцов</a></h2>
+
+<p>Ячейки таблиц могут принадлежать к двум
+контекстам: рядам и столбцам. Однако в
+документе-источнике ячейки являются
+потомками рядов и никогда - столбцов.
+Несмотря на это, некоторые аспекты ячеек
+могут вводиться установкой свойств
+столбцов.</p><p>Следующие свойства применяются
+к элементам столбцов и групп столбцов:
+
+</p><dl>
+<dt><a href="http://172.16.76.30/ivs/NetProg/css2/box.html#propdef-border" class="noxref"><span class="propinst-border">'border'</span></a>
+
+</dt><dd>Различные свойства рамки применяются к
+  столбцам только тогда, когда <a href="#propdef-border-collapse" class="noxref"><span class="propinst-border-collapse">'border-collapse'</span></a><span class="propinst-border-collapse"> </span>в элементе таблицы
+  установлен в 'collapse'. В таком случае, рамки,
+  установленные для столбца и группы
+  столбцов, являются источником <a href="#border-conflict-resolution">алгоритма разрешения конфликтов</a>,
+  который выбирает стили рамки для каждого
+  края ячейки.
+
+</dd><dt><a href="http://172.16.76.30/ivs/NetProg/css2/colors.html#propdef-background" class="noxref"><span class="propinst-background">'background'</span></a>
+
+</dt><dd>Свойства фона устанавливают фон для
+  ячеек в столбце, но только если и ячейка, и
+  ряд имеют прозрачный фон. См. <a href="#table-layers">Слои
+  и прозрачность таблицы.</a>
+
+</dd><dt><a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a>
+
+</dt><dd>Свойство <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a> 
+  задаёт минимальную ширину столбца.
+
+</dd><dt><a href="http://172.16.76.30/ivs/NetProg/css2/visufx.html#propdef-visibility" class="noxref"><span class="propinst-visibility">'visibility'</span></a>
+
+</dt><dd>Если 'visibility' столбца установлено в 'collapse',
+  ни одна из ячеек столбца не отображается, и
+  ячейки, захватывающие другие столбцы,
+  усекаются. В дополнение к этому, ширина
+  таблицы уменьшается до ширины столбца,
+  содержащегося в ней. См. ниже <a href="#dynamic-effects">Динамические эффекты</a>.
+  Другие значения 'visibility' не оказывают
+  никакого действия.
+</dd></dl>
+
+<div class="example"><p style="display: none;">Пример(ы):</p>
+  <p>Вот примеры некоторых правил таблиц
+  стилей, устанавливающих свойства столбцов.<br>
+  Первые два правила вместе выполняют
+  атрибут "rules" HTML 4.0 со значением "cols".
+  Третье правило делает столбец "totals"
+  голубым, а последние два правила
+  показывают, как установить для столбца
+  фиксированный размер, используя <a href="#fixed-table-layout">фиксированный
+  алгоритм вывода</a>.
+
+</p><pre>COL   { border-style: none solid }
+TABLE { border-style: hidden }
+COL.totals { background: blue }
+TABLE { table-layout: fixed }
+COL.totals { width: 5em }
+</pre>
+</div>
+
+
+
+
+<h2><a name="q5">17.4 Таблицы в модели визуального форматирования</a></h2>
+
+<p>В терминах <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html">модели визуального
+форматирования</a> поведение таблицы может
+быть похожим на элемент <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#block-level">уровня блока</a> или
+замещаемый элемент <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#inline-level">инлайн-уровня</a>. У таблиц
+есть содержимое, заполнение, рамки и поля.</p><p>В
+обоих случаях элемент таблицы генерирует <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#anonymous">анонимный</a> бокс,
+содержащий сам бокс таблицы и бокс
+заголовка (если имеется). Боксы таблицы и
+заголовка имеют каждый свои собственные
+области содержимого, заполнения, полей,
+рамки; и размеры прямоугольного анонимного
+бокса являются наименьшими возможными для
+вмещения обоих боксов.<br>
+Вертикальные поля сжимаются в тех местах,
+где боксы таблицы и заголовка
+соприкасаются. При любом перемещении
+таблицы нужно перемещать весь анонимный
+бокс, а не просто бокс таблицы, поскольку
+вместе с ним перемещается и заголовок
+таблицы.
+
+</p><div class="figure">
+<p><img src="tables_files/top-caption.gif" alt="A table with a caption above
+it; both have margins and the margins between them are collapsed, as
+is normal for vertical margins." height="261" width="347"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-top-caption" href="http://172.16.76.30/ivs/NetProg/css2/top-caption-desc.html" title="Long description for example showing caption above a table">[D]</a></span> </p><p class="caption">Диаграмма
+таблицы с заголовком вверху; нижнее поле
+заголовка сжато вместе с верхним полем
+таблицы.
+</p></div>
+
+<h3><a name="q6">17.4.1 Позиция и выравнивание заголовка</a></h3>
+
+<div class="propdef">
+<dl><dt>
+<span class="index-def" title="'caption-side'"><a name="propdef-caption-side" class="propdef-title"><strong>'caption-side'</strong></a></span>
+</dt><dd>
+<table class="propinfo" cellpadding="0" cellspacing="0">
+<tbody><tr valign="baseline"><td><em>Значение:</em></td><td>top | bottom | left | right | <a href="http://172.16.76.30/ivs/NetProg/css2/cascade.html#value-def-inherit" class="noxref"><span class="value-inst-inherit">inherit</span></a>
+</td></tr><tr valign="baseline"><td><em>Начальное:</em></td><td>top
+</td></tr><tr valign="baseline"><td><em>Применяется:</em>&nbsp;&nbsp;</td><td>к
+    элементам 'table-caption'
+</td></tr><tr valign="baseline"><td><em>Наследуется:</em></td><td>да
+</td></tr><tr valign="baseline"><td><em>Процентное:</em></td><td>N/A
+</td></tr><tr valign="baseline"><td><em>Носитель:</em></td><td><a href="http://172.16.76.30/ivs/NetProg/css2/media.html#visual-media-group" class="noxref">визуальный</a>
+</td></tr></tbody></table>
+</dd></dl>
+</div>
+
+
+<p>Это свойство специфицирует позицию бокса
+заголовка относительно бокса таблицы.<br>
+Значения имеют следующий смысл:</p>
+
+<dl>
+<dt><strong>top</strong>
+</dt><dd>Позиционирует бокс заголовка над боксом
+  таблицы.
+</dd><dt><strong>bottom</strong>
+</dt><dd>Позиционирует бокс заголовка под боксом
+  таблицы.
+</dd><dt><strong>left</strong>
+</dt><dd>Позиционирует бокс заголовка слева от
+  бокса таблицы.
+</dd><dt><strong>right</strong>
+</dt><dd>Позиционирует бокс заголовка справа от
+  бокса таблицы.
+</dd></dl>
+
+<p>Заголовки сверху или снизу от элемента 'table'
+форматируются совершенно так же, как если
+бы они были элементами блока до и после
+таблицы, за исключением того, что
+(1) они наследуют наследуемые свойства
+таблицы и (2) они не рассматриваются как бокс
+блока для целей элементов
+'compact' или 'run-in', которые могут
+предшествовать таблице.</p><p>Заголовок сверху
+или снизу от бокса таблицы ведёт себя
+подобно боксу блока и при расчётах ширины;
+ширина вычисляется относительно ширины
+бокса таблицы содержащего блока.</p><p>Для
+заголовков слева или справа от бокса
+таблицы значение, отличное от 'auto' для <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a><span class="propinst-width">,</span> устанавливает ширину явно,
+но 'auto' сообщает ПА, что нужно выбрать "приемлемую
+ширину". Она может варьироваться от "самого
+узкого возможного бокса" до "строки",
+поэтому мы рекомендуем, чтобы пользователи
+не специфицировали 'auto' для ширины левых и
+правых заголовков.</p><p>Чтобы выровнять
+содержимое заголовка по горизонтали внутри
+бокса заголовка, используйте свойство <a href="http://172.16.76.30/ivs/NetProg/css2/text.html#propdef-text-align" class="noxref"><span class="propinst-text-align">'text-align'</span></a>.<br>
+Для вертикального выравнивания левых и
+правых боксов заголовка относительно бокса
+таблицы используйте свойство <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-vertical-align" class="noxref"><span class="propinst-vertical-align">'vertical-align'</span></a>. В этом
+случае возможны только значения 'top', 'middle' и 'bottom'.
+Все другие значения рассматриваются как 'top'.
+
+</p><div class="example"><p style="display: none;">Пример(ы):</p>
+  <p>Здесь свойство <a href="#propdef-caption-side" class="noxref"><span class="propinst-caption-side">'caption-side'</span></a>  размещает
+  заголовок под таблицей. Заголовок будет
+  той же ширины, что и родитель таблицы, и
+  текст заголовка будет выровнен по левому
+  краю.
+
+</p><pre>CAPTION { caption-side: bottom; 
+          width: auto;
+          text-align: left }</pre>
+</div>
+
+<div class="example"><p style="display: none;">Пример(ы):</p>
+  <p>В этом примере показано, как разместить
+  заголовок в левом поле. Сама таблица
+  центрирована установкой левого и правого
+  полей в 'auto', а весь бокс с таблицей и
+  заголовком сдвинут в левое поле на ту же
+  величину, что и ширина заголовка.
+
+</p><pre>BODY {
+    margin-left: 8em
+}
+TABLE {
+    margin-left: auto;
+    margin-right: auto
+}
+CAPTION {
+    caption-side: left;
+    margin-left: -8em;
+    width: 8em;
+    text-align: right;
+    vertical-align: bottom
+}</pre>
+
+  <p>Принимая, что ширина таблицы меньше
+  доступной ширины, форматирование будет
+  примерно таким:
+
+</p><div class="figure">
+<p><img src="tables_files/left-caption.gif" alt="A centered table with a
+caption in the left margin of the page" height="276" width="439"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-left-caption" href="http://172.16.76.30/ivs/NetProg/css2/left-caption-desc.html" title="Long description for example showing caption to the left of a table">[D]</a></span></p><p class="caption"> Диаграмма
+показывает центрированную таблицу с
+заголовком, растянутую в левое поле как
+результат негативного значения свойства 'margin-left'.
+
+</p></div>
+</div>
+
+<h2><a name="q7">17.5 Вид содержимого таблицы</a></h2>
+
+<p>Подобно другим элементам <a href="http://172.16.76.30/ivs/NetProg/css2/conform.html#doclanguage">языка таблицы</a>,
+внутренние элементы таблицы генерируют
+прямоугольные <a href="http://172.16.76.30/ivs/NetProg/css2/box.html#box-dimensions">боксы</a> с содержимым,
+заполнением и рамками. Однако они не имеют
+полей.</p><p>Визуальное представление этих
+боксов управляется прямоугольной
+нерегулярной сеткой из рядов и столбцов.
+Каждый бокс занимает целое число ячеек
+сетки, определяемое в соответствии с
+нижеследующими правилами. Эти правила не
+применяются к HTML 4.0 или более ранним версиям HTML; 
+HTML имеет свои собственные ограничения на
+охват рядов и столбцов.
+</p>
+
+<ol>
+<li>Каждый бокс ряда занимает один ряд ячеек
+  сетки. Все вместе боксы рядов заполняют
+  таблицу сверху вниз в том порядке, в
+  котором они появляются в документе-источнике (т.е.
+  таблица занимает ровно столько рядов
+  сетки, сколько имеется элементов рядов).
+
+</li><li>Группа рядов занимает те же ячейки, что и
+  составляющие её ряды.
+
+</li><li>Бокс столбца занимает один или более
+  столбцов сетки. Боксы столбцов
+  размещаются друг за другом в том порядке, в
+  котором они вводятся. Бокс первого столбца
+  может находиться слева или справа, в
+  зависимости от значения свойства <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#propdef-direction" class="noxref"><span class="propinst-direction">'direction'</span></a>
+  таблицы.
+
+</li><li>Бокс группы столбцов занимает те же
+  ячейки сетки, что и содержащиеся в нём
+  столбцы. 
+
+</li><li>Ячейки могут захватывать несколько рядов
+  и столбцов. (Хотя CSS2 не определяет, как
+  вычисляется количество захваченных рядов
+  или столбцов, ПА может иметь специальные
+  сведения о документе-источнике; будущая
+  версия CSS может предоставить способ выражения
+  этих сведений в синтаксисе CSS.) Каждая
+  ячейка, следовательно, это прямоугольный
+  бокс шириной и высотой в одну или более
+  ячеек сетки. Верхний ряд этого
+  прямоугольника находится в ряду,
+  специфицированном родителем ячейки.
+  Прямоугольник обязан находиться как можно
+  левее, но не может перекрывать любой
+  другой бокс ячейки и обязан находиться
+  справа от всех ячеек в том же ряду,
+  определённых ранее в документе-источнике.
+  (Это ограничение остаётся в силе, если
+  свойство 'direction' таблицы - 'ltr'; если же <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#propdef-direction" class="noxref"><span class="propinst-direction">'direction'</span></a> - 'rtl', "лево"
+  и "право" в предыдущем предложении
+  меняются местами.)
+
+</li><li>Бокс ячейки не может продолжаться за
+  пределы бокса последнего ряда или группы
+  рядов таблицы; ПА обязан уменьшить его (бокс
+  ячейки) до вмещения. 
+</li></ol>
+
+<div class="note"><p>
+<em><strong>Примечание.</strong> Ячейки таблицы
+могут быть позиционированы относительно
+или абсолютно, но это не рекомендуется:
+позиционирование и всплывание удаляет бокс
+из прорисовки, влияя на выравнивание
+таблицы.</em></p></div>
+
+<div class="html-example">
+<p>Вот два примера. Первый - документ HTML:
+
+</p><pre>&lt;TABLE&gt;
+&lt;TR&gt;&lt;TD&gt;1 &lt;TD rowspan="2"&gt;2 &lt;TD&gt;3 &lt;TD&gt;4
+&lt;TR&gt;&lt;TD colspan="2"&gt;5
+&lt;/TABLE&gt;
+</pre>
+
+<pre>&lt;TABLE&gt;
+&lt;ROW&gt;&lt;CELL&gt;1 &lt;CELL rowspan="2"&gt;2 &lt;CELL&gt;3 &lt;CELL&gt;4
+&lt;ROW&gt;&lt;CELL colspan="2"&gt;5
+&lt;/TABLE&gt;</pre>
+
+<p>Вторая таблица сформатирована, как на
+правом рисунке. Однако представление
+таблицы HTML явно не определено HTML, и CSS не
+пытается определить его. ПА свободны в том,
+как отобразить её, например, как на левом
+рисунке.
+
+</p><div class="figure">
+<p><img src="tables_files/table-overlap.gif" alt="One table with overlapping
+cells and one without" height="60" width="376"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-table-overlap" href="http://172.16.76.30/ivs/NetProg/css2/table-overlap-desc.html" title="Long description for example showing how structurally
+overlapping cells are rendered">[D]</a></span> </p><p class="caption">Слева -
+возможное представление ошибочной таблицы HTML 4.0;
+справа - единственно возможное
+форматирование такой же не-HTML таблицы.
+</p></div>
+</div>
+
+<h3>17.5.1 <a name="table-layers">Слои и прозрачность таблицы</a></h3>
+
+<p>Для того, чтобы найти фон для каждой
+ячейки таблицы, различные элементы таблицы
+можно представить себе как состоящие из
+шести накладывающихся слоёв. Фон,
+установленный в элементе, это один из слоёв,
+который будет виден, только если слои над
+ним имеют прозрачный фон.
+
+</p><div class="figure">
+<p><img src="tables_files/tbl-layers.gif" alt="schema of table layers" height="403" width="518"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-tbl-layers" href="http://172.16.76.30/ivs/NetProg/css2/tbl-layers-desc.html" title="Long description of example of cell background calculation">[D]</a></span> </p><p class="caption">Схема слоёв таблицы.
+</p></div>
+
+<ol>
+<li>
+<p>Самый нижний слой - цельный,
+представляющий весь бокс таблицы. Подобно
+другим боксам, он может быть прозрачным.</p>
+</li>
+<li>
+<p>Следующий слой содержит группы столбцов.
+Группы столбцов - такой же высоты, как и
+таблица, но они не должны перекрывать всю
+таблицу по горизонтали.</p>
+</li>
+<li>
+<p>Сверху над группами столбцов находятся
+области, представляющие боксы столбцов. Как
+и группы столбцов, столбцы - такой же высоты,
+как и таблица, но они не должны перекрывать
+всю таблицу по горизонтали.</p>
+</li>
+<li>
+<p>Следом идёт слой групп рядов. Каждая
+группа рядов - такой же ширины, как таблица.
+Все вместе группы рядов полностью
+перекрывают таблицу сверху вниз.</p>
+</li>
+<li>
+<p>Предпоследний слой содержит ряды. Ряды
+также покрывают всю таблицу.</p>
+</li>
+<li>
+<p>Самый верхний слой содержит ячейки. Как
+показано на рисунке, хотя все ряды имеют
+одинаковое количество ячеек, не каждая
+ячейка может иметь специфицированное
+содержимое. Эти "пустые" ячейки
+прозрачны, что позволят нижележащим слоям
+просвечивать.
+</p>
+</li>
+</ol>
+
+<div class="html-example">
+<p>В следующем примере первый ряд содержит 4
+ячейки, но второй ряд не содержит ячеек, и,
+таким образом, виден фон таблицы, исключая
+те места, где ячейка первого ряда
+захватывает и этот ряд. Следующий код HTML и
+правила стилей -</p>
+
+<pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"&gt;
+&lt;HTML&gt;
+  &lt;HEAD&gt;
+    &lt;STYLE type="text/css"&gt;
+      TABLE { background: #ff0; border-collapse: collapse }
+      TD    { background: red; border: double black }
+    &lt;/STYLE&gt;
+  &lt;/HEAD&gt;
+  &lt;BODY&gt;
+    &lt;P&gt;
+    &lt;TABLE&gt;
+      &lt;TR&gt;
+        &lt;TD&gt; 1 
+        &lt;TD rowspan="2"&gt; 2
+        &lt;TD&gt; 3 
+        &lt;TD&gt; 4 
+      &lt;/TR&gt;
+      &lt;TR&gt;&lt;TD&gt;&lt;/TD&gt;&lt;/TR&gt;
+    &lt;/TABLE&gt; 
+  &lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+
+<p>может быть сформатирован так:</p>
+
+<div class="figure">
+<p><img src="tables_files/tbl-empty.gif" alt="Table with three empty cells
+in bottom row" height="77" width="73"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-tbl-empty" href="http://172.16.76.30/ivs/NetProg/css2/tbl-empty-desc.html" title="Long description of example illustrating background calculation">[D]</a></span></p><p class="caption">Таблица с тремя пустыми
+ячейками в нижнем ряду.
+</p></div>
+</div>
+
+<h3>17.5.2&nbsp; <a name="width-layout">Алгоритмы ширины
+таблицы:</a> свойство&nbsp; <a href="#propdef-table-layout" class="noxref"><span class="propinst-table-layout">'table-layout'</span></a>
+</h3>
+
+<p>CSS не определяет "оптимальный" вид
+таблицы, поскольку во многих случаях это
+дело вкуса. CSS не определяет ограничения
+того, как ПА обязан выводить таблицу. ПА
+могут использовать любой возможный
+алгоритм и свободны предпочесть скорость точности
+отображения, если только не выбран "алгоритм
+фиксированного вывода ".
+
+</p><div class="propdef">
+<dl><dt>
+<span class="index-def" title="'table-layout'"><a name="propdef-table-layout" class="propdef-title"><strong>'table-layout'</strong></a></span>
+</dt><dd>
+<table class="propinfo" cellpadding="0" cellspacing="0">
+<tbody><tr valign="baseline"><td><em>Значение:</em></td><td>auto | fixed | <a href="http://172.16.76.30/ivs/NetProg/css2/cascade.html#value-def-inherit" class="noxref"><span class="value-inst-inherit">inherit</span></a>
+</td></tr><tr valign="baseline"><td><em>Начальное:</em></td><td>auto
+</td></tr><tr valign="baseline"><td><em>Применяется:</em>&nbsp;&nbsp;</td><td>к
+    элементам 'table' и 'inline-table'
+</td></tr><tr valign="baseline"><td><em>Наследуется:</em></td><td>нет
+</td></tr><tr valign="baseline"><td><em>Процентное:</em></td><td>N/A
+</td></tr><tr valign="baseline"><td><em>Носитель:</em></td><td><a href="http://172.16.76.30/ivs/NetProg/css2/media.html#visual-media-group" class="noxref">визуальный</a>
+</td></tr></tbody></table>
+</dd></dl>
+</div>
+
+
+<p>Свойство <a href="#propdef-table-layout" class="noxref"><span class="propinst-table-layout">'table-layout'</span></a>
+ контролирует алгоритм, используемый для
+вывода ячеек, рядов и столбцов таблицы.<br>
+Значения имеют следующий смысл:</p>
+
+<dl>
+<dt><strong>fixed</strong>
+</dt><dd>Алгоритм фиксированного вывода таблицы;
+</dd><dt><strong>auto</strong>
+</dt><dd>Используется любой автоматический алгоритм
+  вывода таблицы.
+</dd></dl>
+
+<p>Эти два алгоритма описаны ниже.
+
+</p><h4> <a name="fixed-table-layout">Алгоритм фиксированного
+вывода</a></h4>
+
+<p>В этом (быстром) алгоритме горизонтальный
+вывод таблицы не зависит от содержимого
+ячеек; он зависит только от ширины таблицы,
+ширины столбцов и от рамок и заполнения
+ячеек.</p><p>Ширина таблицы может быть
+специфицирована явно свойством <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a>. Значение 'auto' (и для 'display: table',
+и для 'display: inline-table') означает использование
+алгоритма <a href="#auto-table-layout">автоматического вывода таблицы</a>.</p><p>В
+алгоритме фиксированного вывода ширина
+каждого столбца определяется так:</p>
+
+<ol>
+<li>Элемент столбца со значением свойства <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a><span class="propinst-width">,
+  отличным от </span> 'auto', устанавливает ширину
+  этого столбца.
+
+</li><li>Иначе, ячейка в первом ряду со значением
+  свойства <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a><span class="propinst-width">,
+  отличным от </span> 'auto', устанавливает ширину
+  этого столбца. Если ячейка занимает более
+  одного столбца, ширина разделяется на эти
+  столбцы.
+
+</li><li>Любые оставшиеся столбцы равномерно
+  разделяют оставшееся горизонтальное
+  пространство таблицы (минус рамки и
+  заполнение ячеек).
+</li></ol>
+
+<p>Ширина таблицы будет тогда больше
+значения свойства <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a> 
+для элемента таблицы и суммарной ширины
+столбцов (плюс заполнение ячеек или рамки).
+Если таблица шире, чем столбцы, оставшееся
+пространство должно быть равномерно
+распределено между столбцами.</p><p>При таком
+методе ПА может начать вывод таблицы сразу,
+как только будет получен весь первый ряд.
+Ячейки в последующих рядах не влияют на
+ширину таблицы. Любая ячейка, имеющая
+переполняющее содержимое, использует
+свойство <a href="http://172.16.76.30/ivs/NetProg/css2/visufx.html#propdef-overflow" class="noxref"><span class="propinst-overflow">'overflow'</span></a> 
+для определения того, сжимать ли
+переполняющее содержимое.
+
+</p><h4> <a name="auto-table-layout">Автоматический вывод таблицы</a></h4>
+
+<p>В этом алгоритме (требующем обычно не
+более двух шагов), ширина таблицы
+определяется шириной её столбцов (и
+промежуточных <a href="#borders">рамок</a>). Этот
+алгоритм отражает поведение некоторых
+популярных ПА HTML на момент написания данной
+спецификации. От ПА не требуется выполнять
+этот алгоритм для определения структуры
+таблицы в случае, если <a href="#propdef-table-layout" class="noxref"><span class="propinst-table-layout">'table-layout'</span></a> - 'auto'. Они
+могут использовать любой другой алгоритм.</p><p>Этого
+алгоритма может оказаться недостаточно,
+поскольку он требует, чтобы ПА имел доступ
+ко всему содержимому таблицы до
+определения окончательной структуры, и
+может потребовать более одного шага.
+
+</p><p>Ширина столбцов определяется так:</p>
+
+<ol>
+<li>Вычисляется минимальная ширина
+  содержимого (MCW) каждой ячейки:
+  форматированное содержимое может
+  занимать любое количество строк, но не
+  может переполнять бокс ячейки. Если
+  специфицированная <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a> (W)
+  ячейки больше, чем MCW, W является
+  минимальной шириной ячейки. Значение 'auto'
+  указывает, что MCW это минимальная ширина
+  ячейки.<p>Так же вычисляется "максимальная"
+  ширина каждой ячейки: затем содержимое
+  форматируется без разрывов строк, за
+  исключением тех разрывов строк, которые указаны
+  явно.
+
+</p></li><li>Для каждого столбца определяется
+  максимальная и минимальная ширина столбца
+  из тех ячеек, которые занимают только этот
+  столбец. Минимум - это та ширина, которая требуется
+  для ячейки с самой большой минимальной
+  шириной (или <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a><span class="propinst-width"> столбца</span>, в зависимости от
+  того, что больше). Максимум - это
+  максимальная ширина, которая требуется
+  для ячейки с самой большой максимальной
+  шириной&nbsp; (или <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a><span class="propinst-width"> столбца</span>, в зависимости от
+  того, что больше).
+
+</li><li>Для каждой ячейки, занимающей более
+  одного столбца, увеличивается минимальная
+  ширина тех столбцов, которые она
+  захватывает, так что вместе они не уже, чем
+  ячейка. То же самое делается и для
+  максимальной ширины. Если возможно,
+  расширяются все захваченные ряды на
+  приблизительно то же значение.
+</li></ol>
+
+<p>Это задаёт максимальную и минимальную
+ширину каждого столбца. Ширина столбцов
+влияет на окончательную ширину таблицы так:</p>  
+
+<ol>
+
+<li>Если свойство <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-width" class="noxref"><span class="propinst-width">'width'</span></a><span class="propinst-width"> </span>элементов 'table' или 'inline-table'
+  имеет специфицированное значение (W),
+  отличное от 'auto', вычисленное значение
+  свойства будет больше W и минимальной
+  ширины, требующейся для всех столбцов плюс
+  заполнение и рамки ячеек (MIN). Если W больше,
+  чем MIN, излишняя ширина должна быть
+  распределена между столбцами.
+
+</li><li>Если элементы 'table' или 'inline-table' имеют 'width: auto',
+  вычисленная ширина таблицы будет больше
+  ширины самого большого из содержащих
+  блоков таблицы и MIN. Однако, если
+  максимальная ширина, требуемая для
+  столбцов плюс заполнение ячеек или рамки (MAX) меньше, чем ширина содержащего
+  блока, используется MAX.
+</li></ol>
+
+<p>Процентные значения ширины столбца
+являются относительными к ширине таблицы.
+Если таблица имеет 'width: auto', проценты дают
+ограничение ширины столбца, которое ПА
+должен попытаться выдержать. (Очевидно, это
+не всегда возможно: если ширина столбца '110%',
+ограничение не может быть выполнено.)</p>
+
+<div class="note">
+<p> <em><strong>Примечание.</strong>  В этом алгоритме
+ряды (и группы рядов) и столбцы (и группы
+столбцов) ограничивают и сами ограничены
+размерами содержащихся в них ячеек.
+Установка ширины столбца может неявно влиять
+на высоту ряда, и наоборот.</em>
+</p></div>
+
+<h3><br>
+17.5.3 <a name="height-layout">Алгоритмы высоты таблицы</a></h3>
+
+<p>Высота таблицы задаётся свойством <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-height" class="noxref"><span class="propinst-height">'height'</span></a>  элемента 'table' или 'inline-table'.
+Значение 'auto' устанавливает, что высота
+является суммой высоты рядов плюс
+заполнение ячеек или рамки. Любые другие
+значения специфицируют высоту явно;
+таблица, таким образом, может быть выше или
+короче, чем высота её рядов. CSS2 не
+специфицирует вывод в тех случаях, когда специфицированная
+высота таблицы отличается от высоты
+содержимого, особенно когда высота
+содержимого может перекрыть
+специфицированную высоту; или как излишнее
+пространство должно распределиться между
+рядами для заполнения высоты таблицы; или,
+если высота содержимого превосходит
+специфицированную высоту таблицы, должен
+ли ПА предоставить механизм прокрутки.&nbsp;
+
+</p><div class="note">
+<p><em><strong>Примечание.</strong> Будущие версии CSS
+могут специфицировать это.
+</em></p></div>
+
+<p>Высота бокса элемента 'table-row' вычисляется
+однократно сразу после получения ПАгентом
+всех ячеек ряда: это максимальная
+специфицированная рядом&nbsp; <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-height" class="noxref"><span class="propinst-height">'height'</span></a>
+ и минимальная высота (MIN), затребованная
+ячейками. Значение <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-height" class="noxref"><span class="propinst-height">'height'</span></a>&nbsp; -&nbsp; 'auto' для
+'table-row' означает, что вычисленная высота
+ряда - MIN. MIN зависит от высоты боксов ячеек и
+выравнивания бокса ячейки (очень походит на
+вычисление высоты <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#line-height">строчного бокса</a>).  CSS2 не
+определяет, к чему относятся процентные
+значения <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-height" class="noxref"><span class="propinst-height">'height'</span></a><span class="propinst-height">,</span> специфицированные для
+рядов и групп рядов таблицы.</p><p>В CSS2 высота
+бокса ячейки - это максимальное из свойств <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-height" class="noxref"><span class="propinst-height">'height'</span></a> 
+ячеек таблицы и минимальная высота,
+требуемая содержимым (MIN). Значение 'auto' для <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-height" class="noxref"><span class="propinst-height">'height'</span></a> 
+подразумевает вычисленное значение MIN. CSS2
+не определяет, к чему относятся процентные
+значения <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-height" class="noxref"><span class="propinst-height">'height'</span></a><span class="propinst-height">, когда они определены для
+ячеек таблицы</span>.</p><p>CSS2 не специфицирует, как
+ячейки, захватывающие более одного ряда,
+влияют на вычисление высоты рядов, за
+исключением того, что суммарная высота
+рядов обязана быть достаточно большой,
+чтобы окружить ячейку, захватывающую ряды.</p><p>Свойство
+<a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-vertical-align" class="noxref"><span class="propinst-vertical-align">'vertical-align'</span></a>
+ каждой ячейки таблицы определяет её
+выравнивание в ряду. Содержимое каждой
+ячейки имеет baseline/базовую линию, top/верх,
+middle/середину и bottom/низ, как и сам ряд.<br>
+В контексте таблиц значения <a href="http://172.16.76.30/ivs/NetProg/css2/visudet.html#propdef-vertical-align" class="noxref"><span class="propinst-vertical-align">'vertical-align'</span></a>  имеют
+следующий смысл:</p>
+
+<dl>
+<dt><strong>baseline</strong></dt>
+<dd>Базовая линия ячейки помещена на той же
+  высоте, что и базовая линия первого из
+  рядов, которые она захватывает (см. ниже
+  определение базовой линии ячейки и ряда).
+</dd><dt><strong>top</strong></dt>
+<dd>Верх бокса ячейки выровнен с верхом первого
+  из рядов, которые она захватывает.
+</dd><dt><strong>bottom</strong></dt>
+<dd>Низ бокса ячейки выровнен с низом
+  последнего из рядов, которые она
+  захватывает.
+</dd><dt><strong>middle</strong></dt>
+<dd>Центр ячейки выровнен с центром рядов,
+  которые она захватывает.
+</dd><dt><strong>sub, super, text-top, text-bottom</strong></dt>
+<dd>Эти значения не применяются к ячейкам;
+  вместо этого ячейка выравнивается по
+  базовой линии.
+</dd></dl>
+
+<p>Базовая линия ячейки это базовая линия
+первого <a href="http://172.16.76.30/ivs/NetProg/css2/visuren.html#line-box">строчного бокса</a>
+в ячейке. Если никакого текста нет, базовая
+линия - это базовая линия какого-либо объекта,
+отображаемого в ячейке или, если такого
+объекта нет, - низ бокса ячейки.
+Максимальное расстояние между верхом бокса
+ячейки и базовой линией всех ячеек,
+имеющих
+'vertical-align: baseline', используется для установки
+базовой линии ряда. Вот пример:</p>
+
+<div class="figure">
+<p><img src="tables_files/cell-align.gif" alt="Example of vertically
+aligning the cells" height="241" width="375"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-cell-align" href="http://172.16.76.30/ivs/NetProg/css2/cell-align-desc.html" title="Long description of example illustrating table row height
+calculations and vertical cell alignment">[D]</a></span></p><p class="caption"> Диаграмма
+показывает действие различных значений 'vertical-align'
+в ячейках таблицы.
+</p></div>
+
+<p>Боксы ячеек 1 и 2 выровнены по их базовым
+линиям. Бокс ячейки 2 имеет б&#243;льшую высоту
+относительно базовой линии и поэтому
+определяет базовую линию ряда. Заметьте,
+что если нет ни одного бокса ячейки,
+выровненного по базовой линии, у ряда не
+будет (не нужна) базовой линии.</p>
+
+<p>Чтобы исключить неоднозначные ситуации,
+выравнивание ячеек происходит в следующем
+порядке:</p>
+
+<ol>
+
+<li>Сначала позиционируются ячейки,
+  выровненные по их базовым линиям. Это
+  устанавливает базовую линию ряда. Затем
+  позиционируются ячейки с 'vertical-align: top'.
+
+</li><li>Ряд имеет теперь верх, возможно - базовую
+  линию и предварительную высоту, которая
+  является расстоянием от верха (таблицы) до
+  низа самой нижней ячейки. (См. ниже условия
+  для заполнения ячеек.)
+
+</li><li>Если какая-либо из оставшихся ячеек,
+  выровненных по низу или по середине, имеет
+  высоту большую, чем текущая высота ряда, то
+  высота ряда будет увеличена до максимума
+  этой ячейки путём опускания низа (таблицы).
+
+</li><li>Наконец, позиционируются оставшиеся
+  ячейки.
+
+</li></ol>
+
+<p>Боксы ячеек, которые меньше, чем высота
+ряда, получают дополнительное заполнение
+вверху или внизу.</p>
+
+<h3><br>
+17.5.4 <a name="column-alignment">Горизонтальное выравнивание
+в столбце</a></h3>
+
+<p>Горизонтальное выравнивание содержимого
+ячейки в боксе ячейки специфицируется
+свойством <a href="http://172.16.76.30/ivs/NetProg/css2/text.html#propdef-text-align" class="noxref"><span class="propinst-text-align">'text-align'</span></a>.</p><p>Если значение
+свойства <a href="http://172.16.76.30/ivs/NetProg/css2/text.html#propdef-text-align" class="noxref"><span class="propinst-text-align">'text-align'</span></a>
+ для более чем одной ячейки в столбце
+установлено в<span class="index-inst" title="&lt;string&gt;"><a name="x17" href="http://172.16.76.30/ivs/NetProg/css2/syndata.html#value-def-string" class="noxref"><span class="value-inst-string">&lt;string&gt;</span></a></span>, содержимое
+этих ячеек выравнивается вдоль
+вертикальной оси. Начало строки касается
+этой оси. Направление письма определяет,
+расположена строка слева или справа от оси.</p><p>Выравнивание
+текста таким способом возможно только
+тогда, когда текст входит на одну строку.
+Результат не определён, если содержимое
+ячейки занимает более одной строки.</p><p>Если
+значение <a href="http://172.16.76.30/ivs/NetProg/css2/text.html#propdef-text-align" class="noxref"><span class="propinst-text-align">'text-align'</span></a>
+ ячейки таблицы это строка, но строка не
+появляется в содержимом ячейки, то конец
+содержимого ячейки соприкасается с
+вертикальной осью выравнивания.</p><p>Заметьте,
+что строки не должны быть теми же самыми для
+каждой ячейки, хотя, как правило, это и так.</p><p>CSS
+не предоставляет способа специфицировать
+смещение оси вертикального выравнивания
+относительно края бокса столбца.
+
+</p><div class="example"><p style="display: none;">Пример(ы):</p><p>
+Следующая таблица стилей:</p>
+
+<pre>   TD { text-align: "." }
+   TD:before { content: "$" }</pre>
+
+<p>создаст столбец знаков доллара в
+следующей таблице HTML:</p>
+
+<pre class="html-example">  &lt;TABLE&gt;
+  &lt;COL width="40"&gt;
+  &lt;TR&gt; &lt;TH&gt;Long distance calls
+  &lt;TR&gt; &lt;TD&gt; 1.30
+  &lt;TR&gt; &lt;TD&gt; 2.50
+  &lt;TR&gt; &lt;TD&gt; 10.80
+  &lt;TR&gt; &lt;TD&gt; 111.01
+  &lt;TR&gt; &lt;TD&gt; 85.
+  &lt;TR&gt; &lt;TD&gt; 90
+  &lt;TR&gt; &lt;TD&gt; .05
+  &lt;TR&gt; &lt;TD&gt; .06
+  &lt;/TABLE&gt;</pre>
+
+  <p>для выравнивания десятичной точки. Шутки
+  ради, мы использовали псевдоэлемент <a name="x18"><span class="index-inst" title=":before">:before</span></a>
+  для того, чтобы вставить знак доллара
+  перед каждым значением. Таблица может
+  выглядеть так:</p>
+
+<pre>Long distance calls
+              $1.30      
+              $2.50
+             $10.80
+            $111.01
+             $85.
+             $90
+               $.05
+               $.06
+</pre>
+</div>
+
+<h3>17.5.5 <a name="dynamic-effects">Динамические эффекты рядов
+и столбцов</a></h3>
+
+<p>Свойство <a href="http://172.16.76.30/ivs/NetProg/css2/visufx.html#propdef-visibility" class="noxref"><span class="propinst-visibility">'visibility'</span></a> 
+принимает значение 'collapse' для элементов
+ряда, группы рядов, столбца и группы
+столбцов. Это значение вызывает удаление
+целого ряда или столбца с экрана, и
+пространство, нормально занимаемое этим
+рядом или столбцом, становится доступным
+для другого содержимого. Подавление ряда
+или столбца не влияет, однако, на структуру
+таблицы. Это позволяет динамически удалять
+столбцы или ряды таблицы без форсирования
+реструктурирования таблицы для того, чтобы
+учесть возможные изменения в столбцах.
+
+
+
+</p><h2><br>
+17.6&nbsp; <a name="borders">Рамки</a></h2>
+
+<p>Имеются две различные модели установки
+рамок ячейки таблицы в CSS. Одна больше
+подходит для так называемых <a name="x19"><span class="index-inst" title="separated borders">раздельных рамок</span></a>
+вокруг отдельных ячеек, другая подходит для
+рамок, которые протянулись от одного конца
+таблицы до другого. Многие стили рамок
+могут получены с помощью такой модели,
+поэтому чаще всего - дело вкуса, какую
+модель использовать.
+
+</p><div class="propdef">
+<dl><dt>
+<span class="index-def" title="'border-collapse'"><a name="propdef-border-collapse" class="propdef-title"><strong>'border-collapse'</strong></a></span>
+</dt><dd>
+<table class="propinfo" cellpadding="0" cellspacing="0">
+<tbody><tr valign="baseline"><td><em>Значение:</em></td><td>collapse | separate | <a href="http://172.16.76.30/ivs/NetProg/css2/cascade.html#value-def-inherit" class="noxref"><span class="value-inst-inherit">inherit</span></a>
+</td></tr><tr valign="baseline"><td><em>Начальное:</em></td><td>collapse
+</td></tr><tr valign="baseline"><td><em>Применяется:</em>&nbsp;&nbsp;</td><td>к
+    элементам 'table' и 'inline-table'
+</td></tr><tr valign="baseline"><td><em>Наследуется:</em></td><td>да
+</td></tr><tr valign="baseline"><td><em>Процентное:</em></td><td>N/A
+</td></tr><tr valign="baseline"><td><em>Носитель:</em></td><td><a href="http://172.16.76.30/ivs/NetProg/css2/media.html#visual-media-group" class="noxref">визуальный</a>
+</td></tr></tbody></table>
+</dd></dl>
+</div>
+
+
+<p>Это свойство выбирает модель рамки
+таблицы. Значение 'separate' выбирает модель
+раздельных рамок. Значение 'collapse' выбирает
+модель сжимающихся рамок. Эти модели
+описаны ниже.
+
+</p><h3><br>
+17.6.1 <a name="separated-borders">Модель раздельных рамок</a></h3>
+
+<div class="propdef">
+<dl><dt>
+<span class="index-def" title="'border-spacing'"><a name="propdef-border-spacing" class="propdef-title"><strong>'border-spacing'</strong></a></span>
+</dt><dd>
+<table class="propinfo" cellpadding="0" cellspacing="0">
+<tbody><tr valign="baseline"><td><em>Значение:</em></td><td><a href="http://172.16.76.30/ivs/NetProg/css2/syndata.html#value-def-length" class="noxref"><span class="value-inst-length">&lt;length&gt;</span></a> <a href="http://172.16.76.30/ivs/NetProg/css2/syndata.html#value-def-length" class="noxref"><span class="value-inst-length">&lt;length&gt;</span></a>? | <a href="http://172.16.76.30/ivs/NetProg/css2/cascade.html#value-def-inherit" class="noxref"><span class="value-inst-inherit">inherit</span></a>
+</td></tr><tr valign="baseline"><td><em>Начальное:</em></td><td>0
+</td></tr><tr valign="baseline"><td><em>Применяется:</em>&nbsp;&nbsp;</td><td>к
+    элементам 'table' и 'inline-table'
+</td></tr><tr valign="baseline"><td><em>Наследуется:</em></td><td>да
+</td></tr><tr valign="baseline"><td><em>Процентное:</em></td><td>N/A
+</td></tr><tr valign="baseline"><td><em>Носитель:</em></td><td><a href="http://172.16.76.30/ivs/NetProg/css2/media.html#visual-media-group" class="noxref">визуальный</a>
+</td></tr></tbody></table>
+</dd></dl>
+</div>
+
+
+<p>Размеры специфицируют расстояние,
+разделяющее рамки смежных таблиц. Если
+специфицирован один размер, он задаёт и
+горизонтальное, и вертикальное расстояние.
+Если специфицированы два, то первый задаёт
+расстояние по горизонтали, второй - по
+вертикали. Значения размеров не могут быть
+отрицательными.</p><p>В этой модели каждая
+ячейка имеет собственную рамку. Свойство <a href="#propdef-border-spacing" class="noxref"><span class="propinst-border-spacing">'border-spacing'</span></a> 
+специфицирует расстояние между рамками
+смежных ячеек. Это пространство
+заполняется фоном элемента таблицы. Ряды,
+группы рядов, столбцы и группы столбцов не
+могут иметь рамок (т.е. ПА обязаны <span class="index-inst" title="ignore"><a name="x22" href="http://172.16.76.30/ivs/NetProg/css2/syndata.html#ignore">игнорировать</a></span>  свойства
+рамки в таких элементах).
+
+</p><div class="example"><p style="display: none;">Пример(ы):</p>
+  <p>Таблица на рисунке может быть
+  результатом такой таблицы стилей:
+
+</p><pre>  TABLE      { border: outset 10pt; 
+               border-collapse: separate;
+               border-spacing: 15pt }
+  TD         { border: inset 5pt }
+  TD.special { border: inset 10pt }  /* Верхняя левая ячейка */</pre>
+
+<div class="figure">
+<p><img src="tables_files/tbl-spacing.gif" alt="A table with
+border-spacing" height="298" width="427"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-tbl-spacing" href="http://172.16.76.30/ivs/NetProg/css2/tbl-spacing-desc.html" title="Long description of example illustrating the separated
+borders model">[D]</a></span></p><p class="caption">Таблица с <a href="#propdef-border-spacing" class="noxref"><span class="propinst-border-spacing">'border-spacing'</span></a>,
+установленным в значение размера. Заметьте,
+что у каждой ячейки имеется своя
+собственная рамка, а таблица также имеет
+отдельную рамку.
+</p></div>
+</div>
+
+<h4> <a name="empty-cells">Обрамление пустых ячеек:</a>
+свойство <a href="#propdef-empty-cells" class="noxref"><span class="propinst-empty-cells">'empty-cells'</span></a> </h4>
+
+<div class="propdef">
+<dl><dt>
+<span class="index-def" title="'empty-cells'"><a name="propdef-empty-cells" class="propdef-title"><strong>'empty-cells'</strong></a></span>
+</dt><dd>
+<table class="propinfo" cellpadding="0" cellspacing="0">
+<tbody><tr valign="baseline"><td><em>Значение:</em></td><td>show | hide | <a href="http://172.16.76.30/ivs/NetProg/css2/cascade.html#value-def-inherit" class="noxref"><span class="value-inst-inherit">inherit</span></a>
+</td></tr><tr valign="baseline"><td><em>Начальное:</em></td><td>show
+</td></tr><tr valign="baseline"><td><em>Применяется:</em>&nbsp;&nbsp;</td><td>к
+    элементам 'table-cell'
+</td></tr><tr valign="baseline"><td><em>Наследуется:</em></td><td>да
+</td></tr><tr valign="baseline"><td><em>Процентное:</em></td><td>N/A
+</td></tr><tr valign="baseline"><td><em>Носитель:</em></td><td><a href="http://172.16.76.30/ivs/NetProg/css2/media.html#visual-media-group" class="noxref">визуальный</a>
+</td></tr></tbody></table>
+</dd></dl>
+</div>
+
+
+<p>В модели раздельных рамок данное свойство
+управляет представлением рамок вокруг
+ячеек, не имеющих видимого содержимого.
+Пустые ячейки и ячейки со свойством <a href="http://172.16.76.30/ivs/NetProg/css2/visufx.html#propdef-visibility" class="noxref"><span class="propinst-visibility">'visibility'</span></a><span class="propinst-visibility">,</span> установленным в
+'hidden', рассматриваются как не имеющие
+видимого содержимого. Видимое содержимое
+включает "&amp;nbsp;" и другие пробелы, за
+исключением ASCII-символов CR ("\0D"), LF
+("\0A"), tab ("\09"), и space ("\20").</p><p>Если это свойство
+имеет значение 'show', рамки прорисовываются вокруг
+пустых ячеек (как вокруг нормальных ячеек).</p><p>Значение
+'hide' указывает, что рамки вокруг пустых
+ячеек не будут прорисованы. Следовательно,
+если все ячейки в ряду имеют значение 'hide' и
+не имеют видимого содержимого, весь ряд
+ведёт себя так, как если бы он имел 'display: none'.
+
+</p><div class="example"><p style="display: none;">Пример(ы):</p><p>
+Следующее правило вызывает прорисовку
+рамок вокруг всех ячеек:</p>
+
+<pre>TABLE { empty-cells: show }
+</pre>
+</div>
+
+
+<h3>17.6.2 <a name="collapsing-borders">Модель сжимающихся рамок</a></h3>
+
+<p>В модели сжимающихся рамок имеется
+возможность специфицировать рамки,
+окружающие все или часть ячеек, рядов, групп
+рядов, столбцов и групп столбцов. Рамки для
+атрибута HTML "rule" могут быть
+специфицированы таким способом.</p><p>Рамки
+центрируются по линиям сетки между
+ячейками. ПА обязаны находить подходящее
+правило для округления при наличии
+нестандартного числа абстрактных единиц
+измерения (пикселов экрана, точек принтера).</p>
+
+<p>Диаграмма внизу показывает, как
+взаимодействуют ширина таблицы, рамок,
+заполнение и ширина ячеек. Их отношения
+задаются следующим уравнением, которое
+действует для каждого ряда таблицы:</p>
+
+<blockquote>
+<p><var>row-width</var> = (0.5 * <var>border-width</var><sub>0</sub>) +
+<var>padding-left</var><sub>1</sub> + <var>width</var><sub>1</sub> +
+<var>padding-right</var><sub>1</sub> +
+<var>border-width</var><sub>1</sub> +
+<var>padding-left</var><sub>2</sub> +...+
+<var>padding-right</var><sub><var>n</var></sub> +
+(0.5 * <var>border-width</var><sub><var>n</var></sub>)</p>
+</blockquote>
+
+<p>Здесь <var>n</var>  это число ячеек в ряду, а
+<var>border-width</var><sub><var>i</var></sub>  относится к рамке
+между ячейками <var>i</var> и <var>i</var> + 1. Учтите
+только, что лишь половина из двух внешних
+рамок учитывается в ширине таблицы; другая
+половина этих двух рамок находится в
+области полей.</p>
+
+<div class="figure">
+<p><img src="tables_files/tbl-width.gif" alt="Schema showing the widths of
+cells and borders and the padding of cells" height="348" width="501"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-tbl-width" href="http://172.16.76.30/ivs/NetProg/css2/tbl-width-desc.html" title="Long description of example illustrating the collapsing
+borders model">[D]</a></span></p><p class="caption"> Схема показывает
+размеры ширины ячеек и рамок и заполнение
+ячеек.
+</p></div>
+
+<p>Обратите внимание, что в этой модели
+ширина таблицы включает половину ширины
+рамки таблицы. Также в этой модели таблица
+не имеет заполнения (но имеет поля).
+
+</p><h4> <a name="border-conflict-resolution"><br>
+Разрешение конфликтов рамок</a></h4>
+
+<p>В модели сжимающихся рамок, рамки каждого
+края каждой ячейки могут быть
+специфицированы свойствами рамки
+различных элементов, находящихся у этого
+края (ячеек, рядов, групп рядов, столбцов,
+групп столбцов и самой таблицы), и эти рамки
+могут различаться по ширине, стилю и цвету.
+Основным правилом является то, что у
+каждого края выбирается самая "примечательная"
+рамка, за исключением тех случаев, когда
+появление стиля 'hidden' безусловно отключает
+вывод рамки.</p>
+
+<p>Следующие правила определяют, какой стиль
+рамки "побеждает" в случае конфликта:</p>
+
+<ol>
+<li>Рамки с&nbsp; <a href="http://172.16.76.30/ivs/NetProg/css2/box.html#propdef-border-style" class="noxref"><span class="propinst-border-style">'border-style'</span></a> - 'hidden' имеют
+  преимущество перед всеми другими
+  конфликтующими рамками. Любая рамка с этим
+  значением подавляет все рамки в этом месте.
+</li>
+
+<li>Рамки со стилем 'none' имеют самый низкий
+  приоритет. Только если свойства рамки всех
+  элементов, встречающихся у данного края,&nbsp;
+  - 'none', тогда рамка будет отсутствовать (но
+  заметьте, что 'none' - это значение по
+  умолчанию для стиля рамки).
+
+</li><li>Если ни один из стилей не 'hidden' и минимум
+  один из них - не 'none', тогда узкие рамки
+  отбрасываются в пользу более широких. Если
+  несколько рамок имеют одну <a href="http://172.16.76.30/ivs/NetProg/css2/box.html#propdef-border-width" class="noxref"><span class="propinst-border-width">'border-width'</span></a><span class="propinst-border-width">,</span> тогда стили имеют
+  приоритет в следующем порядке: 'double', 'solid', 'dashed', 'dotted',
+'ridge', 'outset', 'groove' и, самый низший, 'inset'.
+
+</li><li>Если стили рамок отличаются только
+  цветом, тогда стиль, установленный в
+  ячейке имеет преимущество перед стилем
+  ряда, который имеет преимущество перед
+  стилем группы рядов, столбца, группы
+  столбцов и, наконец, таблицы.
+</li></ol>
+
+<div class="example"><p style="display: none;">Пример(ы):</p>
+  <p>Следующий пример иллюстрирует
+  приложение с такими правилами&nbsp;
+  приоритета. Данная таблица стилей:</p>
+
+<pre>  TABLE          { border-collapse: collapse;
+                   border: 5px solid yellow; }
+  *#col1         { border: 3px solid black; }
+  TD             { border: 1px solid red; padding: 1em; }
+  TD.solid-blue  { border: 5px dashed blue; }
+  TD.solid-green { border: 5px solid green; }</pre>
+
+<p>с этим HTML:</p>
+
+<pre class="html-example">&lt;P&gt;
+&lt;TABLE&gt;
+&lt;COL id="col1"&gt;&lt;COL id="col2"&gt;&lt;COL id="col3"&gt;
+&lt;TR id="row1"&gt;
+    &lt;TD&gt; 1
+    &lt;TD&gt; 2
+    &lt;TD&gt; 3
+&lt;/TR&gt;
+&lt;TR id="row2"&gt;
+    &lt;TD&gt; 4 
+    &lt;TD class="solid-blue"&gt; 5
+    &lt;TD class="solid-green"&gt; 6
+&lt;/TR&gt;
+&lt;TR id="row3"&gt;
+    &lt;TD&gt; 7
+    &lt;TD&gt; 8
+    &lt;TD&gt; 9
+&lt;/TR&gt;
+&lt;TR id="row4"&gt;
+    &lt;TD&gt; 10
+    &lt;TD&gt; 11
+    &lt;TD&gt; 12
+&lt;/TR&gt;
+&lt;TR id="row5"&gt;
+    &lt;TD&gt; 13
+    &lt;TD&gt; 14
+    &lt;TD&gt; 15
+&lt;/TR&gt;
+&lt;/TABLE&gt;</pre>
+
+<p>даст в резуль<a name="img-tbl-border-conflict">тате что-либо
+под</a>обное:</p>
+
+<div class="figure">
+<p><img src="tables_files/tbl-border-conflict.gif" alt="An example of a table with collapsed borders" height="189" width="125"><span class="dlink">&nbsp;&nbsp;&nbsp;[D]</span></p>
+<p class="caption">Пример таблицы со сжимающимися
+рамками.</p>
+</div>
+</div>
+
+<div class="example"><p style="display: none;">Пример(ы):</p>
+  <p>В следующем примере показана таблица с
+  горизонтальными линиями между рядами.
+  Верх рамки таблицы установлен в 'hidden',
+  чтобы подавить верхний край рамки первого
+  ряда. Это - выполнение атрибута "rules" HTML 4.0 (rules="rows").
+
+</p><pre>TABLE[rules=rows] TR { border-top: solid }
+TABLE[rules=rows]    { border-collapse: collapse; 
+                       border-top: hidden }</pre>
+
+<div class="figure">
+<p><img src="tables_files/tbl-rules.gif" alt="Table with horizontal
+rules" height="77" width="132"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-tbl-rules" href="http://172.16.76.30/ivs/NetProg/css2/tbl-rules-desc.html" title="Long description of example illustrating rows separated
+by a border">[D]</a></span></p><p class="caption"> Таблица с
+горизонтальными линиями между рядами.
+</p></div>
+
+  <p>В этом случае того же эффекта можно
+  достичь без установки рамки
+'hidden' в TABLE: путём адресации первого ряда
+  отдельно. Какой метод предпочесть - дело
+  вкуса.
+
+</p><pre>TR:first-child { border-top: none }
+TR { border-top: solid }</pre>
+</div>
+
+<div class="example"><p style="display: none;">Пример(ы):</p>
+  <p>Вот другой пример скрытых сжимающихся
+  рамок:</p>
+
+<div class="figure">
+<p><img src="tables_files/csstbl3.gif" alt="Table
+with two omitted borders" height="48" width="57"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-CSStbl3" href="http://172.16.76.30/ivs/NetProg/css2/CSStbl3-desc.html" title="Long description of example illustrating hidden internal
+borders">[D]</a></span></p><p class="caption"> Таблица с двумя
+пропущенными внутренними рамками.
+</p></div>
+
+<p>HTML-источник:</p>
+
+<pre class="html-example">&lt;TABLE style="border-collapse: collapse; border: solid;"&gt;
+&lt;TR&gt;&lt;TD style="border-right: hidden; border-bottom: hidden"&gt;foo&lt;/TD&gt;
+    &lt;TD style="border: solid"&gt;bar&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD style="border: none"&gt;foo&lt;/TD&gt;
+    &lt;TD style="border: solid"&gt;bar&lt;/TD&gt;&lt;/TR&gt;
+&lt;/TABLE&gt;
+</pre>
+</div>
+
+<h3><a name="q20">17.6.3&nbsp; Стили рамок</a></h3>
+
+<p>Некоторые значения <span class="index-inst" title="&lt;border-style&gt;"><a name="x24" href="http://172.16.76.30/ivs/NetProg/css2/box.html#propdef-border-style" class="noxref"><span class="propinst-border-style">'border-style'</span></a></span>  имеют в
+таблице иной смысл в сравнении с другими
+элементами. В следующем списке они помечены
+звёздочкой.</p>
+
+<dl>
+<dt><a href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-bo-none" class="noxref"><span class="value-inst-bo-none"><strong>none</strong></span></a>
+</dt><dd><a name="x25"><span class="index-inst" title="'none'::as border
+style">Нет рамки.</span></a>
+
+</dd><dt><strong>*<span class="index-inst" title="'hidden"><a name="x26" href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-hidden" class="noxref"><span class="value-inst-hidden">hidden</span></a></span></strong>
+</dt><dd>То же, что 'none', но в <a href="#collapsing-borders">модели
+  сжимающихся рамок</a> также сдерживает
+  любые другие рамки (см. раздел <a href="#border-conflict-resolution">Конфликты
+  рамок</a>).
+
+</dd><dt><strong><span class="index-inst" title="'dotted'"><a name="x27" href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-dotted" class="noxref"><span class="value-inst-dotted">dotted</span></a></span></strong>
+</dt><dd>Рамка из точек .
+
+</dd><dt><strong><span class="index-inst" title="'dashed'"><a name="x28" href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-dashed" class="noxref"><span class="value-inst-dashed">dashed</span></a></span></strong>
+</dt><dd>Пунктир.
+
+</dd><dt><strong><span class="index-inst" title="'solid'"><a name="x29" href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-solid" class="noxref"><span class="value-inst-solid">solid</span></a></span></strong>
+</dt><dd>Сплошная линия.
+
+</dd><dt><strong><span class="index-inst" title="'double'"><a name="x30" href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-double" class="noxref"><span class="value-inst-double">double</span></a></span></strong>
+</dt><dd>Двойная сплошная линия. Сумма двух линий
+  и пространства между ними равна значению <a href="http://172.16.76.30/ivs/NetProg/css2/box.html#propdef-border-width" class="noxref"><span class="propinst-border-width">'border-width'</span></a>.
+
+</dd><dt><strong><span class="index-inst" title="'groove'"><a name="x31" href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-groove" class="noxref"><span class="value-inst-groove">groove</span></a></span></strong>
+</dt><dd>Вырезана в канве.
+
+</dd><dt><strong><span class="index-inst" title="'ridge'"><a name="x32" href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-ridge" class="noxref"><span class="value-inst-ridge">ridge</span></a></span></strong>
+</dt><dd>Противоположно 'groove': выступает над
+  канвой.
+
+</dd><dt><strong>*<span class="index-inst" title="'inset'"><a name="x33" href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-inset" class="noxref"><span class="value-inst-inset">inset</span></a></span></strong>
+</dt><dd>В <a href="#separated-borders">модели раздельных рамок</a>
+  рамка выглядит как целый бокс, как будто он
+  внедрён в канву. В <a href="#collapsing-borders">модели сжимающихся
+  рамок</a> - то же, что 'groove'.
+
+</dd><dt><strong>*<span class="index-inst" title="'outset'"><a name="x34" href="http://172.16.76.30/ivs/NetProg/css2/box.html#value-def-outset" class="noxref"><span class="value-inst-outset">outset</span></a></span></strong>
+</dt><dd>В <a href="#separated-borders">модели раздельных рамок</a>
+  рамка выглядит как целый бокс, как будто он
+  выступает из канвы. В <a href="#collapsing-borders">модели
+  сжимающихся рамок</a> - то же, что 'ridge'.
+</dd></dl>
+
+<h2><a name="q21"><br>
+17.7&nbsp; Звуковое представление таблиц</a></h2>
+<p>Когда таблица читается синтезатором речи,
+отношения между ячейками данных и
+заголовочными ячейками обязаны быть
+выражены иначе, чем отношения
+вертикального и горизонтального
+выравнивания. Некоторые синтезаторы речи
+могут позволять пользователям "перемещаться"
+в 2-мерном пространстве, давая таким образом
+возможность отображения пространственных
+соотношений. Если это невозможно, таблица
+стилей обязана специфицировать, с какого
+места произносятся заголовки.</p>
+
+<h3><br>
+17.7.1&nbsp; <a name="speak-headers">Говорящие заголовки:</a>
+свойство <a href="#propdef-speak-header" class="noxref"><span class="propinst-speak-header">'speak-header'</span></a> </h3>
+
+
+<div class="propdef">
+<dl><dt>
+<span class="index-def" title="'speak-header'"><a name="propdef-speak-header" class="propdef-title"><strong>'speak-header'</strong></a></span>
+</dt><dd>
+<table class="propinfo" cellpadding="0" cellspacing="0">
+<tbody><tr valign="baseline"><td><em>Значение:</em></td><td>once | always | <a href="http://172.16.76.30/ivs/NetProg/css2/cascade.html#value-def-inherit" class="noxref"><span class="value-inst-inherit">inherit</span></a>
+</td></tr><tr valign="baseline"><td><em>Начальное:</em></td><td>once
+</td></tr><tr valign="baseline"><td><em>Применяется:</em>&nbsp;&nbsp;</td><td>к
+    элементам. имеющим информацию "шапки"
+    таблицы
+</td></tr><tr valign="baseline"><td><em>Наследуется:</em></td><td>да
+</td></tr><tr valign="baseline"><td><em>Процентное:</em></td><td>N/A
+</td></tr><tr valign="baseline"><td><em>Носитель:</em></td><td><a href="http://172.16.76.30/ivs/NetProg/css2/media.html#aural-media-group" class="noxref">звуковой</a>
+</td></tr></tbody></table>
+</dd></dl>
+</div>
+
+
+<p>Это свойство специфицирует, произносятся
+ли заголовки перед каждой ячейкой (данных),
+или только перед той ячейкой, которая
+ассоциирована с другим заголовком.<br>
+Значения имеют следующий смысл:</p>
+
+<dl>
+<dt><strong>once</strong>
+</dt><dd>Заголовок произносится однократно перед
+  серией ячеек.
+</dd><dt><strong>always</strong>
+</dt><dd>Заголовок произносится перед каждой
+  подходящей ячейкой.
+</dd></dl>
+
+<p>Каждый язык документов может иметь
+различные механизмы спецификации
+заголовков. Например, в HTML 4.0 (<a href="http://172.16.76.30/ivs/NetProg/css2/refs.html#ref-HTML40" rel="biblioentry" class="noxref"><span class="normref">[HTML40]</span></a>)
+можно специфицировать заголовочную
+информацию тремя различными атрибутами ("headers",
+"scope" и "axis"), и спецификация
+предоставляет алгоритм для определения
+заголовочной информации, когда эти
+атрибуты не специфицированы.</p>
+
+<div class="html-example">
+<div class="figure">
+<p><img src="tables_files/table1.gif" alt="Image of a table created in MS
+Word" height="207" width="399"><span class="dlink">&nbsp;&nbsp;&nbsp;<a name="img-table1" href="http://172.16.76.30/ivs/NetProg/css2/table1-desc.html" title="Long description of example illustrating a table of
+travel expenses">[D]</a></span></p><p class="caption">Изображение
+таблицы с заголовочными ячейками ("San
+Jose" и "Seattle"), которые не находятся в
+одном столбце или ряде с данными, к которым
+они относятся.
+</p></div>
+
+<p>Этот пример HTML представляет денежный
+расчёт расходов на питание, гостиницу и
+транспорт в двух местах (San Jose и Seattle) на
+несколько дней. Концептуально Вы можете
+представлять таблицу в терминах n-размерного
+пространства. Заголовками этого
+пространства являются: место, день,
+категория и итог. Некоторые ячейки
+определяют метки вдоль оси, а другие дают
+подсчёт денег в точке данного пространства.
+Вот разметка для этой таблицы:</p>
+
+<pre>&lt;TABLE&gt;
+&lt;CAPTION&gt;Travel Expense Report&lt;/CAPTION&gt;
+&lt;TR&gt;
+  &lt;TH&gt;&lt;/TH&gt;
+  &lt;TH&gt;Meals&lt;/TH&gt;
+  &lt;TH&gt;Hotels&lt;/TH&gt;
+  &lt;TH&gt;Transport&lt;/TH&gt;
+  &lt;TH&gt;subtotal&lt;/TH&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH id="san-jose" axis="san-jose"&gt;San Jose&lt;/TH&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH headers="san-jose"&gt;25-Aug-97&lt;/TH&gt;
+  &lt;TD&gt;37.74&lt;/TD&gt;
+  &lt;TD&gt;112.00&lt;/TD&gt;
+  &lt;TD&gt;45.00&lt;/TD&gt;
+  &lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH headers="san-jose"&gt;26-Aug-97&lt;/TH&gt;
+  &lt;TD&gt;27.28&lt;/TD&gt;
+  &lt;TD&gt;112.00&lt;/TD&gt;
+  &lt;TD&gt;45.00&lt;/TD&gt;
+  &lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH headers="san-jose"&gt;subtotal&lt;/TH&gt;
+  &lt;TD&gt;65.02&lt;/TD&gt;
+  &lt;TD&gt;224.00&lt;/TD&gt;
+  &lt;TD&gt;90.00&lt;/TD&gt;
+  &lt;TD&gt;379.02&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH id="seattle" axis="seattle"&gt;Seattle&lt;/TH&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH headers="seattle"&gt;27-Aug-97&lt;/TH&gt;
+  &lt;TD&gt;96.25&lt;/TD&gt;
+  &lt;TD&gt;109.00&lt;/TD&gt;
+  &lt;TD&gt;36.00&lt;/TD&gt;
+  &lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH headers="seattle"&gt;28-Aug-97&lt;/TH&gt;
+  &lt;TD&gt;35.00&lt;/TD&gt;
+  &lt;TD&gt;109.00&lt;/TD&gt;
+  &lt;TD&gt;36.00&lt;/TD&gt;
+  &lt;TD&gt;&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH headers="seattle"&gt;subtotal&lt;/TH&gt;
+  &lt;TD&gt;131.25&lt;/TD&gt;
+  &lt;TD&gt;218.00&lt;/TD&gt;
+  &lt;TD&gt;72.00&lt;/TD&gt;
+  &lt;TD&gt;421.25&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+  &lt;TH&gt;Totals&lt;/TH&gt;
+  &lt;TD&gt;196.27&lt;/TD&gt;
+  &lt;TD&gt;442.00&lt;/TD&gt;
+  &lt;TD&gt;162.00&lt;/TD&gt;
+  &lt;TD&gt;800.27&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;/TABLE&gt;</pre>
+
+<p>Представляя модель данных таким образом,
+авторы дают возможность браузерам с
+синтезом речи работать с
+таблицей различными способами, например,
+каждая ячейка может проговариваться как
+список с повторением соответствующих
+заголовков перед каждой ячейкой данных:</p>
+
+<pre>  San Jose, 25-Aug-97, Meals:  37.74
+  San Jose, 25-Aug-97, Hotels:  112.00
+  San Jose, 25-Aug-97, Transport:  45.00
+ ...</pre>
+
+<p>Браузер может также проговаривать ячейки,
+только если они изменяются:</p>
+
+<pre>San Jose, 25-Aug-97, Meals: 37.74
+    Hotels: 112.00
+    Transport: 45.00
+  26-Aug-97, Meals: 27.28
+    Hotels: 112.00
+...</pre>
+</div>
+
+<hr class="navbar">
+
+<div class="navbar" align="center">
+<p><a href="http://172.16.76.30/ivs/NetProg/css2/text.html">предыдущий</a> &nbsp; <a href="http://172.16.76.30/ivs/NetProg/css2/ui.html">следующий</a> &nbsp;
+<a href="http://172.16.76.30/ivs/NetProg/css2/index.html#minitoc">содержание</a> &nbsp; <a href="http://172.16.76.30/ivs/NetProg/css2/propidx.html">свойства</a> &nbsp;
+<a href="http://172.16.76.30/ivs/NetProg/css2/indexlist.html">индекс</a>
+</p></div>
+</body></html>

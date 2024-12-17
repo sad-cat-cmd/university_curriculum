@@ -1,0 +1,18 @@
+data segment
+a8 db 45h 
+b8 db 0ACh
+y8 db?
+data ends
+code segment
+assume cs:code, ds:data, ss:nothing; 
+start: mov ax, data; load adress
+       mov ds, ax; data segment; 
+mov AX, a8 ; 
+mov BX, b8 ; 
+add AX, BX; 
+mov y8, AX ;
+ 
+quit mov ax, 4c00h; cod to finish 0
+	int 21; exit to does
+code ends
+end start

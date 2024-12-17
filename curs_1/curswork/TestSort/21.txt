@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------------
+| # |              ФИО                |Название группы | Номер в группе | Дата Поступления|
+-------------------------------------------------------------------------------------------
+|0  |Polinevskiy Vadim Vadimovich                     |23VVV3   |1  |12.08.23   |05/10/24 |
+|1  |Aleckseev Victor Vadimovich                      |23VVV4    |4   |13.08.23   |05/10/24 |
+|2  |Andreev Valentin Georgievich                     |23VVP3   |22     |12.05.07   |05/05/20   |
+|3  |Dubova Daria Anatolyevna                         |23VVV3   |15     |12.05.07   |03/05/21   |
+|4  |Alexandrov Alexandr Wiktovorovich                |23VVN3   |30     |12.05.07   |05/05/23   |
+|5  |Debatov Maksim Afanasyevich                      |23VVV3   |19     |12.05.07   |03/05/22   |
+|6  |Absolyamov Damir Casimovich                      |23VVP3   |8      |12.05.07   |05/05/20   |
+|7  |Polinevskiy Dmitriy Dmitrievich                  |23VVV3   |1      |12.05.07   |03/05/21   |

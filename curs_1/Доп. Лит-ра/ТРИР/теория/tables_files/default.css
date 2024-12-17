@@ -1,0 +1,163 @@
+/*
+ * Style sheet for the CSS2 specification
+ * $Id: default.css,v 2.14 1998/03/24 16:16:22 bbos Exp $
+ */
+
+body {
+    color: black;
+    /* text-align: justify; */
+    font-family: helvetica, sans-serif;
+    background: white;
+    margin: 2em;
+    /* For the REC: background: #def url(recbg.jpg); */
+}
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+h1 {
+    clear: left;
+    margin-top: 2em;
+    text-align: center;
+}
+
+pre {
+    font-family: monospace;
+    margin-left: 1em;
+    font-size: 90%
+}
+
+address {
+    text-align: right;
+    font-style: italic;
+}
+
+var {
+    font-style: normal;
+}
+img {
+    border: 0;
+}
+.toc {
+    text-indent: 0;
+}
+p.toc-line {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-indent: 0;
+}
+
+/* I don't like all that blue text, how about this: */
+/* It should be 'inherit', but Netscape inserts a random color :-( */
+a.noxref:link, a.noxref:visited {color: black; /*color: inherit*/}
+div.example a:link, div.example a:visited {color: maroon; /*color: inherit*/}
+div.deprecated-html-example a:link,
+div.deprecated-html-example a:visited {color: red; /*color: inherit*/}
+.note a:link, .note a:visited {color: green; /*color: inherit*/}
+
+a.propdef-title {
+  background: yellow;
+}
+
+a.descdef-title {
+  color: yellow;
+  background: green
+}
+
+/* TABLE {margin-left: 1em} */
+div.propdef {margin: 1.2em 0}
+
+div.example { color: maroon }
+pre.example { color: maroon }
+pre.illegal-example { color: red }
+div.illegal-example { color: red }
+div.illegal-example p { color: black }
+
+
+div.html-example { color: maroon }
+pre.html-example { color: maroon }
+pre.illegal-html-example { color: red }
+div.illegal-html-example { color: red }
+div.illegal-html-example p { color: black }
+pre.deprecated-html-example { color: red }
+div.deprecated-html-example { color: red }
+div.deprecated-html-example p { color: black }
+
+div.xml-example { color: maroon }
+pre.xml-example { color: maroon }
+pre.illegal-xml-example { color: red }
+div.illegal-xml-example { color: red }
+div.illegal-xml-example p { color: black }
+
+div.dtd-example { color: maroon }
+pre.dtd-example { color: maroon }
+pre.illegal-dtd-example { color: red }
+div.illegal-dtd-example { color: red }
+div.illegal-dtd-example p { color: black }
+
+.note {
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: green
+}
+
+.normref { 
+    color: red;
+}	
+
+.informref {
+    color: green;
+}	
+
+div.propdef TH { 
+    text-align: right; 
+}
+
+div.descdef TH { 
+    text-align: right; 
+}
+
+ul.toc, ol.toc {list-style: none}
+div.toc ul ul, div.toc ol ol {margin-left: 0}
+div.toc ul ul ul, div.toc ol ol ol {margin-left: 1em}
+div.toc ul ul ul ul, div.toc ol ol ol ol {margin-left: 0}
+li.tocline1 {font-weight: bold}
+li.tocline2 {font-weight: normal}
+li.tocline4 {font-style: italic}
+/* DIV.subtoc UL, DIV.subtoc OL {list-style: none} */
+/* The border in the following rule crashes NN4 on fonts.html :-(
+*/
+div.subtoc {padding: 1em; border: solid black thin; margin: 1em 0;
+    background: #ddd}
+
+ul.index {list-style: none}
+
+s, del {text-decoration: line-through; color: red}
+u, ins {text-decoration: underline; background: #bfa}
+
+div.figure {
+    text-align: center;
+    /*border: solid thin;
+    width: 100%;*/
+    margin: 2.5em 0
+}
+p.caption, caption {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 90%;
+    color: #088;
+    margin: 1.5em 25% 0 25%;
+}
+div.toc, ul.index, dt {
+    text-align: left
+}
+sup {
+    vertical-align: super;
+    font-size: 80%
+}
+div.subtocyel {padding: 1em; border: solid thin; margin: 1em 0;
+    background: #ffff99}

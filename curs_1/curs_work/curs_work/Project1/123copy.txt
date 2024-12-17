@@ -1,0 +1,7 @@
+|6|AbsolyamovDamirCasimovich|23VVP3|8|12.05.07|05/05/20|
+|1|AleckseevVictorVadimovich|23VVV4|4|13.08.23|05/10/24|
+|4|AlexandrovAlexandrWiktovorovich|23VVN3|30|12.05.07|05/05/23|
+|2|AndreevValentinGeorgievich|23VVP3|22|12.05.07|05/05/20|
+|5|DebatovMaksimAfanasyevich|23VVV3|19|12.05.07|03/05/22|
+|3|DubovaDariaAnatolyevna|23VVV3|15|12.05.07|03/05/21|
+|7|PolinevskiyDmitriyDmitrievich|23VVV3|1|12.05.07|03/05/21||0|PolinevskiyVadimVadimovich|23VVV3|1|12.08.23|05/10/24|

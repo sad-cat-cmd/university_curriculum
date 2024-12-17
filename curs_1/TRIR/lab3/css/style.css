@@ -1,0 +1,57 @@
+body{
+    margin:0px;
+    margin-top:5px;
+    margin-left:5px;    
+    text-align: center;
+    background-color: rgb(127, 128, 113);
+ }
+table td {
+	width: 10%;
+    width: 100px;
+    height: 10px;
+    text-align: left; 
+	/* margin: 0 auto;  */
+}
+/* .T1 {
+    text-align: center;
+} */
+thead {
+	color:rgb(247, 144, 144);
+}
+.T7 {
+	align:center;
+	/* width:50%; */
+	border-style: ridge;	
+	background-image:url(abc.png);
+	border-radius: 20px;
+        white-space: nowrap;
+	/* border:none; */
+}
+caption {
+	font-size: 25px;
+	color: blue;
+	font-style: italic;
+    text-align: right;
+}
+/* .T3 {
+    background: grey;
+} */
+.T12 {
+	background: green;
+}
+.T22 {
+	background: red;
+}
+.T33 {
+	background:#111;
+}
+.T1 {
+	border: 2px solid red;
+	width:500px;
+}
+.T100 td{
+border-top:none;
+border-bottom:none;	
+	width:20px;
+	text-align:center;
+}

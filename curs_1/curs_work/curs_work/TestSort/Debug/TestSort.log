@@ -1,0 +1,25 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (TestSort.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Source.cpp
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Header.h(17,2): warning C4091: typedef : пропускается слева от "Node", когда ни одна переменная не объявлена
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(49,4): warning C4477: "printf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "FILE *"
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(94,41): warning C4474: "scanf_s" : для строки формата передано слишком много аргументов
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(94,41): message : заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(149,39): warning C4474: "scanf_s" : для строки формата передано слишком много аргументов
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(149,39): message : заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(165,39): warning C4474: "scanf_s" : для строки формата передано слишком много аргументов
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(165,39): message : заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(236,157): warning C4101: array_str: неиспользованная локальная переменная
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(236,121): warning C4101: temp_str_elemets_DB: неиспользованная локальная переменная
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(236,7): warning C4101: name_student: неиспользованная локальная переменная
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(236,148): warning C4101: token: неиспользованная локальная переменная
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(236,40): warning C4101: date_of_receipt: неиспользованная локальная переменная
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(236,76): warning C4101: date_of_entry: неиспользованная локальная переменная
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(236,25): warning C4101: name_group: неиспользованная локальная переменная
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(559,14): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(559,14): message : заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(559,14): message : отсутствующий вариативный аргумент "2" требуется для строки форматирования "%s"
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Source.cpp(559,14): message : этот аргумент используется в качестве размера буфера
+  TestSort.cpp
+C:\Users\B-ZONE\Desktop\curswork\TestSort\Header.h(17,2): warning C4091: typedef : пропускается слева от "Node", когда ни одна переменная не объявлена
+  Создание кода...
+  TestSort.vcxproj -> C:\Users\B-ZONE\Desktop\curswork\TestSort\Debug\main.exe

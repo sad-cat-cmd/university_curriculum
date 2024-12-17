@@ -1,0 +1,623 @@
+<!DOCTYPE DOCTYPE PUBLIC "-//W3C//DTD HTML 4.0 // EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="Generator" content="Microsoft Notepad">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Autor" content="Dimas'99">
+<meta name="keywords" content="html, head, meta, body, guidе, справочник, учебник, русский, для начинающих, примеры, интернет, программирование, страница">
+<meta name="description" content="Учебник HTML по-русски,на русском языке с прмерами для начинающих и не только Guide for beginners">
+<meta name="ABSTRACT" content="Учебник HTML по-русски,на русском языке с прмерами для начинающих и не только Guide for beginners">
+<meta name="ROBOTS" content="Index,follow">
+<meta name="revisit-after" content="5 days"><title>Учeбник HTML. Цвета RGB. Цвета безопасной палитры.</title>
+
+
+
+<script language="JavaScript">
+<!--
+function dimas(src,clrClk) {
+ var r1 = document.forms[1].elements[0].value;
+ var r2 = document.forms[1].elements[1].value;
+ var g1 = document.forms[1].elements[2].value;
+ var g2 = document.forms[1].elements[3].value;
+ var b1 = document.forms[1].elements[4].value;
+ var b2 = document.forms[1].elements[5].value; 
+ var d = '#' + r1 + r2 + g1 + g2 + b1 + b2;
+	if (!src.contains(event.fromElement)) { 
+		src.style.cursor = 'hand'; 
+		src.bgColor = d; 
+	}
+}
+
+//-->
+</script>
+
+<script language="JavaScript">
+
+        <!--
+        function decCompute(form) {
+                form.hex.value = hexfromdec(form.decimal.value);
+        }
+
+        function hexCompute(form) {
+                form.decimal.value = decfromhex(form.hex.value);
+        }
+
+        
+        function hexfromdec(num) {
+                if (num > 255) { return ("error") }
+                first = Math.round(num/256 -.5);
+                temp1 = num - first * 256;
+                second = Math.round(temp1/16 - .5);
+                third = temp1 - second * 16;
+                return (""+getletter(second)+getletter(third));
+        }
+
+        function getletter(num) {
+                if (num < 10) {
+                        return num;
+                } else {
+                        if (num == 10) { return "A" }
+                        if (num == 11) { return "B" }
+                        if (num == 12) { return "C" }
+                        if (num == 13) { return "D" }
+                        if (num == 14) { return "E" }
+                        if (num == 15) { return "F" }
+                }
+        }
+
+        function decfromhex(num) {
+                return (eval(getnum(num.substring(1,2))) + eval(getnum(num.substring(0,1))) * 16);
+        }
+        function getnum(letter) {
+                if (letter <= "9") {
+                        return letter;
+                } else {
+                        if ((letter == "a") || (letter == "A")) { return 10 }
+                        if ((letter == "b") || (letter == "B")) { return 11 }
+                        if ((letter == "c") || (letter == "C")) { return 12 }
+                        if ((letter == "d") || (letter == "D")) { return 13 }
+                        if ((letter == "e") || (letter == "E")) { return 14 }
+                        if ((letter == "f") || (letter == "F")) { return 15 }
+                        return 0;
+                }
+        }
+
+// -->
+
+</script>
+<link rel="stylesheet" href="107_files/style.css" type="text/css"></head>
+
+
+<body leftmargin="30" bgcolor="#ffffff">
+<table bgcolor="#000099" border="0" width="100%">
+<tbody><tr>
+<td align="left"><h1>guide<br>
+<font color="aqua">&lt;dimas&gt;</font><br>
+<strong>help</strong></h1>
+</td><td align="center" width="100%"><h2><strong>On-line</strong> <font color="#ffffff">учебник</font> <strong>HTML</strong> с примерами  , <br> справочник по созданию <strong>Web</strong><font color="#ffffff">-сайтов.</font></h2>
+</td><td align="right"><h1>guide<br>
+<font color="aqua">&lt;dimas&gt;</font><br>
+<strong>help</strong></h1>
+</td></tr></tbody></table>
+<br>
+<br>
+<br>
+<h3><a href="http://172.16.76.30/ivs/HTML_Tutor/1.html" onfocus="this.blur()">Учебник HTML </a> -- Управление цветом </h3>
+
+<ul>
+<li><a href="#1">Шестнадцатеричные значения цвета RGB</a>
+</li><li><a href="#2">Задание цвета при помощи строчных литералов </a>
+</li><li><a href="#3">Использование безопасной палитры цветов </a>
+</li></ul>
+<h3 id="1">Шестнадцатеричные значения цвета RGB</h3>
+<p>Способы описания и обработки цвета отличаются друг от друга тем, для
+какого конечного представления предназначаются. Сравним, например,
+представления цветов для полиграфии и для мониторов компьютеров. В
+первом случае за основу берется <b>белый</b> цвет бумаги, на которую в последствии наносятся три основные цвета: <b>голубой</b>, 
+<b>пурпурный</b> и <b>желтый</b>. Смешиваясь между собой и с белым
+цветом бумаги в разных пропорциях, эти три основные цвета дают
+различные цветовые оттенки, кроме чистого черного, либо при полном
+отсутствии красок дают белый цвет бумаги. Если к ним добавить еще и
+черный цвет, то получим <b>CMYK</b>-способ передачи цвета, когда необходимый цвет получается путем вычитания из белого
+ недостающих цветов.</p>
+<p> Во втором же случае за основу принимается <b>черный</b> цвет экрана монитора, каждая ячейка которого, светится одним из трех цветов: <b>red</b>-красный, <b>green</b>-зеленый и <b>blue</b>-синий.
+Тогда при полном отсутствии какого-либо свечения мы получаем чистый
+черный цвет экрана, а любой из требуемых цветов задается соотношением
+каждого из трех цветов. В этом случае мы получим <b>RGB</b>-способ передачи цвета. Основные цвета могут иметь значения от <b>0</b> до <b>255</b>, или от <b>0%</b> до <b>100%</b>,
+либо могут быть представлены в виде шестнадцатеричного значения. На
+рисунке ниже можно увидеть результаты смешения основных цветов.<br><img src="107_files/color.gif">  
+</p>
+
+
+<p>Шестнадцатеричная система счисления, в отличии от десятичной в своём
+ряду цифр имеет не десять знаков, а шестнадцать - отсюда и название.
+Соответственно не повторяющихся вариантов сочетаний из двух цифр может
+быть только - <b>256</b>, для продолжения ряда цифр после  <b>9</b> используются буквы от <b>A</b> до <b>F</b>, следовательно, ряд будет выглядеть так -
+</p><table bgcolor="#ffffff"><tbody><tr><td>0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F.</td></tr></tbody></table>
+Для перевода чисел из одной системы счисления в другую и наоборот
+воспользуйтесь калькулятором, приведенным ниже. Максимальное значение
+здесь может быть <b>FF</b> - <b>255</b>. 
+
+<form>
+<table border="0">
+<tbody><tr><td>Десятичные:</td><td><input name="decimal" value="0" size="4" maxlength="3" onchange="decCompute(this.form)" type="text">
+</td></tr><tr><td>Шестнадцатеричные:</td><td><input name="hex" value="00" size="4" maxlength="2" onchange="hexCompute(this.form)" type="text">
+</td></tr><tr><td><input value="Перевести" style="background-color: rgb(0, 0, 153);" type="button"></td><td><input name="clear" value="Обнулить" style="background-color: rgb(0, 0, 153);" type="reset">
+</td></tr></tbody></table>
+
+</form>
+<p>В этом случае цвет задается тремя шестнадцатеричными числами, каждое
+из которых состоит из двух цифр. Первое число определяет интенсивность <b>красного</b> цвета, среднее- <b>зеленого</b>, последнее- <b>синего</b> цвета.
+Все числа могут принимать значения в диапазоне от <b>00</b> до <b>FF</b> (от 0 до 255 ). Например: зеленый цвет задается как <b>#00FF00</b>, красный - как <b>#FF0000</b>, синий - как <b>#0000FF</b>, белый - как <b>#FFFFFF</b>, полное отсутствие цвета или черный задается как <b>#000000</b>.
+ </p>
+<p>В расположенной ниже форме Вы сможете задать любые шестнадцатеричные
+значения каждого из трех цветов и посмотреть результат их смешения,
+кликнув в поле вывода.</p>
+
+<form>
+<table border="2">
+<tbody><tr><td colspan="2" align="center" bgcolor="#ffffff"><font color="#ff0000">RED</font>
+</td><td colspan="2" align="center" bgcolor="#ffffff"><font color="#00ff00">GREEN</font>
+</td><td colspan="2" align="center" bgcolor="#ffffff"><font color="#0000ff">BLUE</font>
+
+</td></tr><tr><td><select name="r1" size="1"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option selected="selected" value="f">f</option></select>
+</td><td><select name="r2" size="1"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option selected="selected" value="f">f</option></select>
+</td><td><select name="g1" size="1"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option selected="selected" value="f">f</option></select>
+</td><td><select name="g2" size="1"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option selected="selected" value="f">f</option></select>
+</td><td><select name="b1" size="1"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option selected="selected" value="f">f</option></select>
+</td><td><select name="b2" size="1"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option selected="selected" value="f">f</option></select>
+</td></tr><tr><td colspan="6" align="center"><input value="Вернуть в исходное" style="background-color: rgb(0, 0, 153);" type="reset">
+</td></tr><tr><td colspan="6" onclick="dimas(this,'d');" align="center" height="100">...кликни здесь
+</td></tr></tbody></table>
+</form>
+
+<p>Примеры некоторых шестнадцатеричных значений цветов RGB:
+градации красного, синего и зеленого цветов.
+</p><table class="color" bgcolor="#ffffff" border="3" width="100%">
+<tbody><tr>
+<td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td></tr><tr>
+<td bgcolor="#010000">&nbsp;</td><td>#010000
+</td><td bgcolor="#800000">&nbsp;</td><td>#800000
+</td><td bgcolor="#000100">&nbsp;</td><td>#000100
+</td><td bgcolor="#008000">&nbsp;</td><td>#008000
+</td><td bgcolor="#000001">&nbsp;</td><td>#000001
+</td><td bgcolor="#000080">&nbsp;</td><td>#000080
+</td></tr><tr>
+<td bgcolor="#100000">&nbsp;</td><td>#100000
+</td><td bgcolor="#900000">&nbsp;</td><td>#900000
+</td><td bgcolor="#001000">&nbsp;</td><td>#001000
+</td><td bgcolor="#009000">&nbsp;</td><td>#009000
+</td><td bgcolor="#000010">&nbsp;</td><td>#000010
+</td><td bgcolor="#000090">&nbsp;</td><td>#000090
+</td></tr><tr>
+<td bgcolor="#200000">&nbsp;</td><td>#200000
+</td><td bgcolor="#a00000">&nbsp;</td><td>#A00000
+</td><td bgcolor="#002000">&nbsp;</td><td>#002000
+</td><td bgcolor="#00a000">&nbsp;</td><td>#00A000
+</td><td bgcolor="#000020">&nbsp;</td><td>#000020
+</td><td bgcolor="#0000a0">&nbsp;</td><td>#0000A0
+</td></tr><tr>
+<td bgcolor="#300000">&nbsp;</td><td>#300000
+</td><td bgcolor="#b00000">&nbsp;</td><td>#B00000
+</td><td bgcolor="#003000">&nbsp;</td><td>#003000
+</td><td bgcolor="#00b000">&nbsp;</td><td>#00B000
+</td><td bgcolor="#000030">&nbsp;</td><td>#000030
+</td><td bgcolor="#0000b0">&nbsp;</td><td>#0000B0
+</td></tr><tr>
+<td bgcolor="#400000">&nbsp;</td><td>#400000
+</td><td bgcolor="#c00000">&nbsp;</td><td>#C00000
+</td><td bgcolor="#004000">&nbsp;</td><td>#004000
+</td><td bgcolor="#00c000">&nbsp;</td><td>#00C000
+</td><td bgcolor="#000040">&nbsp;</td><td>#000040
+</td><td bgcolor="#0000c0">&nbsp;</td><td>#0000C0
+</td></tr><tr>
+<td bgcolor="#500000">&nbsp;</td><td>#500000
+</td><td bgcolor="#d00000">&nbsp;</td><td>#D00000
+</td><td bgcolor="#005000">&nbsp;</td><td>#005000
+</td><td bgcolor="#00d000">&nbsp;</td><td>#00D000
+</td><td bgcolor="#000050">&nbsp;</td><td>#000050
+</td><td bgcolor="#0000d0">&nbsp;</td><td>#0000D0
+</td></tr><tr>
+<td bgcolor="#600000">&nbsp;</td><td>#600000
+</td><td bgcolor="#e00000">&nbsp;</td><td>#E00000
+</td><td bgcolor="#006000">&nbsp;</td><td>#006000
+</td><td bgcolor="#00e000">&nbsp;</td><td>#00E000
+</td><td bgcolor="#000060">&nbsp;</td><td>#000060
+</td><td bgcolor="#0000e0">&nbsp;</td><td>#0000E0
+</td></tr><tr>
+<td bgcolor="#700000">&nbsp;</td><td>#700000
+</td><td bgcolor="#ff0000">&nbsp;</td><td>#FF0000
+</td><td bgcolor="#007000">&nbsp;</td><td>#007000
+</td><td bgcolor="#00ff00">&nbsp;</td><td>#00FF00
+</td><td bgcolor="#000070">&nbsp;</td><td>#000070
+</td><td bgcolor="#0000ff">&nbsp;</td><td>#0000FF
+</td></tr></tbody></table>
+<h3 id="2"> Задание цвета при помощи строчных литералов </h3>
+<p>
+Для удобства пользования некоторым цветам и их сочетаниям были
+присвоены имена, которые распознаются всеми браузерами и появилась
+возможность задавать многие из них по имени. В таблице ниже приведены
+некоторые из названий цветов:
+</p><table class="color" bgcolor="#ffffff" border="3" width="100%">
+<tbody><tr> 
+<td align="center"><b>вид</b>
+</td><td align="center"><b>имя</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>имя</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>имя</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>имя</b>
+</td></tr><tr><td bgcolor="White">&nbsp;</td><td>White</td><td bgcolor="Red">&nbsp;</td><td>Red
+</td><td bgcolor="Orange">&nbsp;</td><td>Orange</td><td bgcolor="Yellow">&nbsp;</td><td>Yellow
+</td></tr><tr><td bgcolor="Green">&nbsp;</td><td>Green</td><td bgcolor="Blue">&nbsp;</td><td>Blue
+</td><td bgcolor="Purple">&nbsp;</td><td>Purple</td><td bgcolor="Black">&nbsp;</td><td>Black
+</td></tr><tr><td bgcolor="Aliceblue">&nbsp;</td><td>Aliceblue</td><td bgcolor="Antiquewhite">&nbsp;</td><td>Antiquewhite
+</td><td bgcolor="Aqua">&nbsp;</td><td>Aqua</td><td bgcolor="Aquamarine">&nbsp;</td><td>Aquamarine
+</td></tr><tr><td bgcolor="Azure">&nbsp;</td><td>Azure</td><td bgcolor="Beige">&nbsp;</td><td>Beige
+</td><td bgcolor="Bisque">&nbsp;</td><td>Bisque</td><td bgcolor="Blanchedalmond">&nbsp;</td><td>Blanchedalmond
+</td></tr><tr><td bgcolor="Blueviolet">&nbsp;</td><td>Blueviolet</td><td bgcolor="Brown">&nbsp;</td><td>Brown
+</td><td bgcolor="Burlywood">&nbsp;</td><td>Burlywood</td><td bgcolor="Cadetblue">&nbsp;</td><td>Cadetblue
+</td></tr><tr><td bgcolor="Chartreuse">&nbsp;</td><td>Chartreuse</td><td bgcolor="Chocolate">&nbsp;</td><td>Chocolate
+</td><td bgcolor="Coral">&nbsp;</td><td>Coral</td><td bgcolor="Cornflowerblue">&nbsp;</td><td>Cornflowerblue
+</td></tr><tr><td bgcolor="Cornsilk">&nbsp;</td><td>Cornsilk</td><td bgcolor="Crimson">&nbsp;</td><td>Crimson
+</td><td bgcolor="Cyan">&nbsp;</td><td>Cyan</td><td bgcolor="Darkblue">&nbsp;</td><td>Darkblue
+</td></tr><tr><td bgcolor="Darkcyan">&nbsp;</td><td>Darkcyan</td><td bgcolor="Darkgoldenrod">&nbsp;</td><td>Darkgoldenrod
+</td><td bgcolor="Darkgray">&nbsp;</td><td>Darkgray</td><td bgcolor="Darkgreen">&nbsp;</td><td>Darkgreen
+</td></tr><tr><td bgcolor="Darkkhaki">&nbsp;</td><td>Darkkhaki</td><td bgcolor="Darkmagenta">&nbsp;</td><td>Darkmagenta
+</td><td bgcolor="Darkolivegreen">&nbsp;</td><td>Darkolivegreen</td><td bgcolor="Darkorange">&nbsp;</td><td>Darkorange
+</td></tr><tr><td bgcolor="Darkorchid">&nbsp;</td><td>Darkorchid</td><td bgcolor="Darkred">&nbsp;</td><td>Darkred
+</td><td bgcolor="Darksalmon">&nbsp;</td><td>Darksalmon</td><td bgcolor="Darkseagreen">&nbsp;</td><td>Darkseagreen
+</td></tr><tr><td bgcolor="Darkslateblue">&nbsp;</td><td>Darkslateblue</td><td bgcolor="Darkslategray">&nbsp;</td><td>Darkslategray
+</td><td bgcolor="Darkturquoise">&nbsp;</td><td>Darkturquoise</td><td bgcolor="Darkviolet">&nbsp;</td><td>Darkviolet
+</td></tr><tr><td bgcolor="Deeppink">&nbsp;</td><td>Deeppink</td><td bgcolor="Deepskyblue">&nbsp;</td><td>Deepskyblue
+</td><td bgcolor="Dimgray">&nbsp;</td><td>Dimgray</td><td bgcolor="Dodgerblue">&nbsp;</td><td>Dodgerblue
+</td></tr><tr><td bgcolor="Firebrick">&nbsp;</td><td>Firebrick</td><td bgcolor="Floralwhite">&nbsp;</td><td>Floralwhite
+</td><td bgcolor="Forestgreen">&nbsp;</td><td>Forestgreen</td><td bgcolor="Fuschia">&nbsp;</td><td>Fuschia
+</td></tr><tr><td bgcolor="Gainsboro">&nbsp;</td><td>Gainsboro</td><td bgcolor="Ghostwhite">&nbsp;</td><td>Ghostwhite
+</td><td bgcolor="Gold">&nbsp;</td><td>Gold</td><td bgcolor="Goldenrod">&nbsp;</td><td>Goldenrod
+</td></tr><tr><td bgcolor="Gray">&nbsp;</td><td>Gray</td><td bgcolor="Greenyellow">&nbsp;</td><td>Greenyellow
+</td><td bgcolor="Honeydew">&nbsp;</td><td>Honeydew</td><td bgcolor="Hotpink">&nbsp;</td><td>Hotpink
+</td></tr><tr><td bgcolor="Indianred">&nbsp;</td><td>Indianred</td><td bgcolor="Indigo">&nbsp;</td><td>Indigo
+</td><td bgcolor="Ivory">&nbsp;</td><td>Ivory</td><td bgcolor="Khaki">&nbsp;</td><td>Khaki
+</td></tr><tr><td bgcolor="Lavender">&nbsp;</td><td>Lavender</td><td bgcolor="Lavenderblush">&nbsp;</td><td>Lavenderblush
+</td><td bgcolor="Lemonchiffon">&nbsp;</td><td>Lemonchiffon</td><td bgcolor="Lightblue">&nbsp;</td><td>Lightblue
+</td></tr><tr><td bgcolor="Lightcoral">&nbsp;</td><td>Lightcoral</td><td bgcolor="Lightcyan">&nbsp;</td><td>Lightcyan
+</td><td bgcolor="Lightcoldenrodyellow">&nbsp;</td><td>Lightcoldenrodyellow</td><td bgcolor="Lightgreen">&nbsp;</td><td>Lightgreen
+</td></tr><tr><td bgcolor="Lightgray">&nbsp;</td><td>Lightgray</td><td bgcolor="Lightpink">&nbsp;</td><td>Lightpink
+</td><td bgcolor="Lightsalmon">&nbsp;</td><td>Lightsalmon</td><td bgcolor="Lightseagreen">&nbsp;</td><td>Lightseagreen
+</td></tr><tr><td bgcolor="Lightskyblue">&nbsp;</td><td>Lightskyblue</td><td bgcolor="Lightslategray">&nbsp;</td><td>Lightslategray
+</td><td bgcolor="Lightsteelblue">&nbsp;</td><td>Lightsteelblue</td><td bgcolor="Lightyellow">&nbsp;</td><td>Lightyellow
+</td></tr><tr><td bgcolor="Lime">&nbsp;</td><td>Lime</td><td bgcolor="Limegreen">&nbsp;</td><td>Limegreen
+</td><td bgcolor="Linen">&nbsp;</td><td>Linen</td><td bgcolor="Magenta">&nbsp;</td><td>Magenta
+</td></tr><tr><td bgcolor="Maroon">&nbsp;</td><td>Maroon</td><td bgcolor="Mediumaquamarine">&nbsp;</td><td>Mediumaquamarine
+</td><td bgcolor="Mediumblue">&nbsp;</td><td>Mediumblue</td><td bgcolor="Mediumorchid">&nbsp;</td><td>Mediumorchid
+</td></tr><tr><td bgcolor="Mediumpurple">&nbsp;</td><td>Mediumpurple</td><td bgcolor="Mediumseagreen">&nbsp;</td><td>Mediumseagreen
+</td><td bgcolor="Mediumslateblue">&nbsp;</td><td>Mediumslateblue</td><td bgcolor="Mediumspringgreen">&nbsp;</td><td>Mediumspringgreen
+</td></tr><tr><td bgcolor="Mediumturquoise">&nbsp;</td><td>Mediumturquoise</td><td bgcolor="Mediumvioletred">&nbsp;</td><td>Mediumvioletred
+</td><td bgcolor="Midnightblue">&nbsp;</td><td>Midnightblue</td><td bgcolor="Mintcream">&nbsp;</td><td>Mintcream
+</td></tr><tr><td bgcolor="Mistyrose">&nbsp;</td><td>Mistyrose</td><td bgcolor="Navajowhite">&nbsp;</td><td>Navajowhite
+</td><td bgcolor="Navy">&nbsp;</td><td>Navy</td><td bgcolor="Oldlace">&nbsp;</td><td>Oldlace
+</td></tr><tr><td bgcolor="Olive">&nbsp;</td><td>Olive</td><td bgcolor="Olivedrab">&nbsp;</td><td>Olivedrab
+</td><td bgcolor="Orangered">&nbsp;</td><td>Orangered</td><td bgcolor="Orchid">&nbsp;</td><td>Orchid
+</td></tr><tr><td bgcolor="Palegoldenrod">&nbsp;</td><td>Palegoldenrod</td><td bgcolor="Palegreen">&nbsp;</td><td>Palegreen
+</td><td bgcolor="Paleturquoise">&nbsp;</td><td>Paleturquoise</td><td bgcolor="Palevioletred">&nbsp;</td><td>Palevioletred
+</td></tr><tr><td bgcolor="Papayawhip">&nbsp;</td><td>Papayawhip</td><td bgcolor="Peachpuff">&nbsp;</td><td>Peachpuff
+</td><td bgcolor="Peru">&nbsp;</td><td>Peru</td><td bgcolor="Pink">&nbsp;</td><td>Pink
+</td></tr><tr><td bgcolor="Plum">&nbsp;</td><td>Plum</td><td bgcolor="Powderblue">&nbsp;</td><td>Powderblue
+</td><td bgcolor="Rosybrown">&nbsp;</td><td>Rosybrown</td><td bgcolor="Royalblue">&nbsp;</td><td>Royalblue
+</td></tr><tr><td bgcolor="Saddlebrown">&nbsp;</td><td>Saddlebrown</td><td bgcolor="Seagreen">&nbsp;</td><td>Seagreen
+</td><td bgcolor="Seashell">&nbsp;</td><td>Seashell</td><td bgcolor="Sienna">&nbsp;</td><td>Sienna
+</td></tr><tr><td bgcolor="Silver">&nbsp;</td><td>Silver</td><td bgcolor="Skyblue">&nbsp;</td><td>Skyblue
+</td><td bgcolor="Slateblue">&nbsp;</td><td>Slateblue</td><td bgcolor="Slategray">&nbsp;</td><td>Slategray
+</td></tr><tr><td bgcolor="Snow">&nbsp;</td><td>Snow</td><td bgcolor="Springgreen">&nbsp;</td><td>Springgreen
+</td><td bgcolor="Steelblue">&nbsp;</td><td>Steelblue</td><td bgcolor="Tan">&nbsp;</td><td>Tan
+</td></tr><tr><td bgcolor="Teal">&nbsp;</td><td>Teal</td><td bgcolor="Thistle">&nbsp;</td><td>Thistle
+</td><td bgcolor="Tomato">&nbsp;</td><td>Tomato</td><td bgcolor="Turquoise">&nbsp;</td><td>Turquoise
+</td></tr><tr><td bgcolor="Violet">&nbsp;</td><td>Violet</td><td bgcolor="Wheat">&nbsp;</td><td>Wheat
+</td><td bgcolor="Whitesmoke">&nbsp;</td><td>Whitesmoke</td><td bgcolor="Yellowgreen">&nbsp;</td><td>Yellowgreen
+</td></tr></tbody></table> Перечень строчных литералов с названиями
+цветов довольно обширен и более чем достаточен. Если необходимо задать
+в качестве фонового цвет настолько необычный, что ему даже нет
+названия, то можно воспользоваться шестнадцатеричным значением.
+<h3 id="3"> Использование безопасной палитры цветов </h3>
+<p>К сожалению, на разных платформах, с разными системными настройками,
+правильная передача цвета является проблемой. Все дело в том, что
+браузер всегда старается подстроить цветовую палитру документа под
+системные настройки и возможности монитора, путем
+самостоятельного смешивания цветов и их замещения. Как результат -
+иногда пользователь видит не совсем то, что хотел ему показать
+web-мастер. Выход из этой ситуации был найден в применении палитры,
+каждый цвет которой гарантированно передается одинаково
+всеми браузерами на разных платформах. Это так называемая <b>гарантированная</b> палитра, еще ее называют <b>безопасной</b> палитрой. В эту палитру входят цвета, цветовые составляющие которых, принимают следующие значения:<b>00</b>,<b>33</b>,<b>66</b>,<b>99</b>,
+<b>CC</b>,<b>FF</b>, во всех возможных <b>216</b> их сочетаниях.
+</p><table class="color" bgcolor="#ffffff" border="3" width="100%">
+<tbody><tr> 
+<td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+</td><td align="center"><b>вид</b>
+</td><td align="center"><b>код</b>
+
+</td></tr><tr>
+<td bgcolor="#ffffff">&nbsp;</td><td>FFFFFF
+</td><td bgcolor="#cccccc">&nbsp;</td><td>CCCCCC
+</td><td bgcolor="#999999">&nbsp;</td><td>999999
+</td><td bgcolor="#666666">&nbsp;</td><td>666666
+</td><td bgcolor="#333333">&nbsp;</td><td>333333
+</td><td bgcolor="#000000">&nbsp;</td><td>000000
+</td></tr><tr>
+<td bgcolor="#cccc66">&nbsp;</td><td>CCCC66
+</td><td bgcolor="#cccc33">&nbsp;</td><td>CCCC33
+</td><td bgcolor="#999966">&nbsp;</td><td>999966
+</td><td bgcolor="#999933">&nbsp;</td><td>999933
+</td><td bgcolor="#999900">&nbsp;</td><td>999900
+</td><td bgcolor="#666600">&nbsp;</td><td>666600
+</td></tr><tr>
+<td bgcolor="#ccff66">&nbsp;</td><td>CCFF66
+</td><td bgcolor="#ccff00">&nbsp;</td><td>CCFF00
+</td><td bgcolor="#ccff33">&nbsp;</td><td>CCFF33
+</td><td bgcolor="#cccc99">&nbsp;</td><td>CCCC99
+</td><td bgcolor="#666633">&nbsp;</td><td>666633
+</td><td bgcolor="#333300">&nbsp;</td><td>333300
+</td></tr><tr>
+<td bgcolor="#99ff00">&nbsp;</td><td>99FF00
+</td><td bgcolor="#99ff33">&nbsp;</td><td>99FF33
+</td><td bgcolor="#99cc66">&nbsp;</td><td>99CC66
+</td><td bgcolor="#99cc00">&nbsp;</td><td>99CC00
+</td><td bgcolor="#99cc33">&nbsp;</td><td>99CC33
+</td><td bgcolor="#669900">&nbsp;</td><td>669900
+</td></tr><tr>
+<td bgcolor="#ccff99">&nbsp;</td><td>CCFF99
+</td><td bgcolor="#99ff99">&nbsp;</td><td>99FF99
+</td><td bgcolor="#66cc00">&nbsp;</td><td>66CC00
+</td><td bgcolor="#66cc33">&nbsp;</td><td>66CC33
+</td><td bgcolor="#669933">&nbsp;</td><td>669933
+</td><td bgcolor="#336600">&nbsp;</td><td>336600
+</td></tr><tr>
+<td bgcolor="#66ff00">&nbsp;</td><td>66FF00
+</td><td bgcolor="#66ff33">&nbsp;</td><td>66FF33
+</td><td bgcolor="#33ff00">&nbsp;</td><td>33FF00
+</td><td bgcolor="#33cc00">&nbsp;</td><td>33CC00
+</td><td bgcolor="#339900">&nbsp;</td><td>339900
+</td><td bgcolor="#009900">&nbsp;</td><td>009900
+</td></tr><tr>
+<td bgcolor="#33ff33">&nbsp;</td><td>33FF33
+</td><td bgcolor="#00ff33">&nbsp;</td><td>00FF33
+</td><td bgcolor="#00ff00">&nbsp;</td><td>00FF00
+</td><td bgcolor="#00cc00">&nbsp;</td><td>00CC00
+</td><td bgcolor="#33cc33">&nbsp;</td><td>33CC33
+</td><td bgcolor="#00cc33">&nbsp;</td><td>00CC33
+</td></tr><tr>
+<td bgcolor="#ccffcc">&nbsp;</td><td>CCFFCC
+</td><td bgcolor="#99cc99">&nbsp;</td><td>99CC99
+</td><td bgcolor="#66cc66">&nbsp;</td><td>66CC66
+</td><td bgcolor="#669966">&nbsp;</td><td>669966
+</td><td bgcolor="#336633">&nbsp;</td><td>336633
+</td><td bgcolor="#003300">&nbsp;</td><td>003300
+</td></tr><tr>
+<td bgcolor="#99ff99">&nbsp;</td><td>99FF99
+</td><td bgcolor="#66ff66">&nbsp;</td><td>66FF66
+</td><td bgcolor="#33ff66">&nbsp;</td><td>33FF66
+</td><td bgcolor="#00ff66">&nbsp;</td><td>00FF66
+</td><td bgcolor="#339933">&nbsp;</td><td>339933
+</td><td bgcolor="#006600">&nbsp;</td><td>006600
+</td></tr><tr>
+<td bgcolor="#66ff99">&nbsp;</td><td>66FF99
+</td><td bgcolor="#33ff99">&nbsp;</td><td>33FF99
+</td><td bgcolor="#00ff99">&nbsp;</td><td>00FF99
+</td><td bgcolor="#33cc66">&nbsp;</td><td>33CC66
+</td><td bgcolor="#00cc66">&nbsp;</td><td>00CC66
+</td><td bgcolor="#009933">&nbsp;</td><td>009933
+</td></tr><tr>
+<td bgcolor="#66cc99">&nbsp;</td><td>66CC99
+</td><td bgcolor="#33cc99">&nbsp;</td><td>33CC99
+</td><td bgcolor="#00cc99">&nbsp;</td><td>00CC99
+</td><td bgcolor="#339966">&nbsp;</td><td>339966
+</td><td bgcolor="#009966">&nbsp;</td><td>009966
+</td><td bgcolor="#006633">&nbsp;</td><td>006633
+</td></tr><tr>
+<td bgcolor="#99ffcc">&nbsp;</td><td>99FFCC
+</td><td bgcolor="#66ffcc">&nbsp;</td><td>66FFCC
+</td><td bgcolor="#33ffcc">&nbsp;</td><td>33FFCC
+</td><td bgcolor="#00ffcc">&nbsp;</td><td>00FFCC
+</td><td bgcolor="#33cccc">&nbsp;</td><td>33CCCC
+</td><td bgcolor="#009999">&nbsp;</td><td>009999
+</td></tr><tr>
+<td bgcolor="#ccffff">&nbsp;</td><td>CCFFFF
+</td><td bgcolor="#99ffff">&nbsp;</td><td>99FFFF
+</td><td bgcolor="#66ffff">&nbsp;</td><td>66FFFF
+</td><td bgcolor="#33ffff">&nbsp;</td><td>33FFFF
+</td><td bgcolor="#00ffff">&nbsp;</td><td>00FFFF
+</td><td bgcolor="#00cccc">&nbsp;</td><td>00CCCC
+</td></tr><tr>
+<td bgcolor="#99cccc">&nbsp;</td><td>99CCCC
+</td><td bgcolor="#66cccc">&nbsp;</td><td>66CCCC
+</td><td bgcolor="#339999">&nbsp;</td><td>339999
+</td><td bgcolor="#669999">&nbsp;</td><td>669999
+</td><td bgcolor="#006666">&nbsp;</td><td>006666
+</td><td bgcolor="#336666">&nbsp;</td><td>336666
+</td></tr><tr>
+<td bgcolor="#66ccff">&nbsp;</td><td>66CCFF
+</td><td bgcolor="#33ccff">&nbsp;</td><td>33CCFF
+</td><td bgcolor="#00ccff">&nbsp;</td><td>00CCFF
+</td><td bgcolor="#3399cc">&nbsp;</td><td>3399CC
+</td><td bgcolor="#0099cc">&nbsp;</td><td>0099CC
+</td><td bgcolor="#003333">&nbsp;</td><td>003333
+</td></tr><tr>
+<td bgcolor="#99ccff">&nbsp;</td><td>99CCFF
+</td><td bgcolor="#3399ff">&nbsp;</td><td>3399FF
+</td><td bgcolor="#0099ff">&nbsp;</td><td>0099FF
+</td><td bgcolor="#6699cc">&nbsp;</td><td>6699CC
+</td><td bgcolor="#336699">&nbsp;</td><td>336699
+</td><td bgcolor="#006699">&nbsp;</td><td>006699
+</td></tr><tr>
+<td bgcolor="#0066ff">&nbsp;</td><td>0066FF
+</td><td bgcolor="#3366cc">&nbsp;</td><td>3366CC
+</td><td bgcolor="#0066cc">&nbsp;</td><td>0066CC
+</td><td bgcolor="#0033ff">&nbsp;</td><td>0033FF
+</td><td bgcolor="#003399">&nbsp;</td><td>003399
+</td><td bgcolor="#003366">&nbsp;</td><td>003366
+</td></tr><tr>
+<td bgcolor="#6699ff">&nbsp;</td><td>6699FF
+</td><td bgcolor="#3366ff">&nbsp;</td><td>3366FF
+</td><td bgcolor="#0000ff">&nbsp;</td><td>0000FF
+</td><td bgcolor="#0000cc">&nbsp;</td><td>0000CC
+</td><td bgcolor="#0033cc">&nbsp;</td><td>0033CC
+</td><td bgcolor="#000033">&nbsp;</td><td>000033
+</td></tr><tr>
+<td bgcolor="#3333ff">&nbsp;</td><td>3333FF
+</td><td bgcolor="#3300ff">&nbsp;</td><td>3300FF
+</td><td bgcolor="#3300cc">&nbsp;</td><td>3300CC
+</td><td bgcolor="#3333cc">&nbsp;</td><td>3333CC
+</td><td bgcolor="#000099">&nbsp;</td><td>000099
+</td><td bgcolor="#000066">&nbsp;</td><td>000066
+</td></tr><tr>
+<td bgcolor="#9999cc">&nbsp;</td><td>9999CC
+</td><td bgcolor="#6666ff">&nbsp;</td><td>6666FF
+</td><td bgcolor="#6666cc">&nbsp;</td><td>6666CC
+</td><td bgcolor="#666699">&nbsp;</td><td>666699
+</td><td bgcolor="#333399">&nbsp;</td><td>333399
+</td><td bgcolor="#333366">&nbsp;</td><td>333366
+</td></tr><tr>
+<td bgcolor="#ccccff">&nbsp;</td><td>CCCCFF
+</td><td bgcolor="#9999ff">&nbsp;</td><td>9999FF
+</td><td bgcolor="#6666ff">&nbsp;</td><td>6666FF
+</td><td bgcolor="#6600ff">&nbsp;</td><td>6600FF
+</td><td bgcolor="#330099">&nbsp;</td><td>330099
+</td><td bgcolor="#330066">&nbsp;</td><td>330066
+</td></tr><tr>
+<td bgcolor="#9966cc">&nbsp;</td><td>9966CC
+</td><td bgcolor="#9966ff">&nbsp;</td><td>9966FF
+</td><td bgcolor="#6600cc">&nbsp;</td><td>6600CC
+</td><td bgcolor="#6633cc">&nbsp;</td><td>6633CC
+</td><td bgcolor="#663399">&nbsp;</td><td>663399
+</td><td bgcolor="#330033">&nbsp;</td><td>330033
+</td></tr><tr>
+<td bgcolor="#cc99ff">&nbsp;</td><td>CC99FF
+</td><td bgcolor="#cc66ff">&nbsp;</td><td>CC66FF
+</td><td bgcolor="#9933ff">&nbsp;</td><td>9933FF
+</td><td bgcolor="#9900ff">&nbsp;</td><td>9900FF
+</td><td bgcolor="#660099">&nbsp;</td><td>660099
+</td><td bgcolor="#663366">&nbsp;</td><td>663366
+</td></tr><tr>
+<td bgcolor="#cc66ff">&nbsp;</td><td>CC66FF
+</td><td bgcolor="#cc33ff">&nbsp;</td><td>CC33FF
+</td><td bgcolor="#cc00ff">&nbsp;</td><td>CC00FF
+</td><td bgcolor="#9900cc">&nbsp;</td><td>9900CC
+</td><td bgcolor="#996699">&nbsp;</td><td>996699
+</td><td bgcolor="#660066">&nbsp;</td><td>660066
+</td></tr><tr>
+<td bgcolor="#cc99cc">&nbsp;</td><td>CC99CC
+</td><td bgcolor="#cc66cc">&nbsp;</td><td>CC66CC
+</td><td bgcolor="#cc33cc">&nbsp;</td><td>CC33CC
+</td><td bgcolor="#cc00cc">&nbsp;</td><td>CC00CC
+</td><td bgcolor="#990099">&nbsp;</td><td>990099
+</td><td bgcolor="#993399">&nbsp;</td><td>993399
+</td></tr><tr>
+<td bgcolor="#ffccff">&nbsp;</td><td>FFCCFF
+</td><td bgcolor="#ff99ff">&nbsp;</td><td>FF99FF
+</td><td bgcolor="#ff66ff">&nbsp;</td><td>FF66FF
+</td><td bgcolor="#ff33ff">&nbsp;</td><td>FF33FF
+</td><td bgcolor="#ff00ff">&nbsp;</td><td>FF00FF
+</td><td bgcolor="#cc3399">&nbsp;</td><td>CC3399
+</td></tr><tr>
+<td bgcolor="#ff66cc">&nbsp;</td><td>FF66CC
+</td><td bgcolor="#ff00cc">&nbsp;</td><td>FF00CC
+</td><td bgcolor="#ff33cc">&nbsp;</td><td>FF33CC
+</td><td bgcolor="#cc6699">&nbsp;</td><td>CC6699
+</td><td bgcolor="#cc0099">&nbsp;</td><td>CC0099
+</td><td bgcolor="#990066">&nbsp;</td><td>990066
+</td></tr><tr>
+<td bgcolor="#ff99cc">&nbsp;</td><td>FF99CC
+</td><td bgcolor="#ff3399">&nbsp;</td><td>FF3399
+</td><td bgcolor="#ff0099">&nbsp;</td><td>FF0099
+</td><td bgcolor="#cc0066">&nbsp;</td><td>CC0066
+</td><td bgcolor="#993366">&nbsp;</td><td>993366
+</td><td bgcolor="#660033">&nbsp;</td><td>660033
+</td></tr><tr>
+<td bgcolor="#ff6699">&nbsp;</td><td>FF6699
+</td><td bgcolor="#ff3399">&nbsp;</td><td>FF3399
+</td><td bgcolor="#ff0066">&nbsp;</td><td>FF0066
+</td><td bgcolor="#cc3366">&nbsp;</td><td>CC3366
+</td><td bgcolor="#996666">&nbsp;</td><td>996666
+</td><td bgcolor="#663333">&nbsp;</td><td>663333
+</td></tr><tr>
+<td bgcolor="#cc9999">&nbsp;</td><td>CC9999
+</td><td bgcolor="#cc6666">&nbsp;</td><td>CC6666
+</td><td bgcolor="#cc3333">&nbsp;</td><td>CC3333
+</td><td bgcolor="#cc0000">&nbsp;</td><td>CC0000
+</td><td bgcolor="#990033">&nbsp;</td><td>990033
+</td><td bgcolor="#330000">&nbsp;</td><td>330000
+</td></tr><tr>
+<td bgcolor="#ffcccc">&nbsp;</td><td>FFCCCC
+</td><td bgcolor="#ff9999">&nbsp;</td><td>FF9999
+</td><td bgcolor="#ff6666">&nbsp;</td><td>FF6666
+</td><td bgcolor="#ff3333">&nbsp;</td><td>FF3333
+</td><td bgcolor="#ff0000">&nbsp;</td><td>FF0000
+</td><td bgcolor="#cc0033">&nbsp;</td><td>CC0033
+</td></tr><tr>
+<td bgcolor="#ff6633">&nbsp;</td><td>FF6633
+</td><td bgcolor="#cc3300">&nbsp;</td><td>CC3300
+</td><td bgcolor="#ff3300">&nbsp;</td><td>FF3300
+</td><td bgcolor="#ff0000">&nbsp;</td><td>FF0000
+</td><td bgcolor="#cc0000">&nbsp;</td><td>CC0000
+</td><td bgcolor="#990000">&nbsp;</td><td>990000
+</td></tr><tr>
+<td bgcolor="#ffcc99">&nbsp;</td><td>FFCC99
+</td><td bgcolor="#ffcc66">&nbsp;</td><td>FFCC66
+</td><td bgcolor="#ff6600">&nbsp;</td><td>FF6600
+</td><td bgcolor="#cc6633">&nbsp;</td><td>CC6633
+</td><td bgcolor="#993300">&nbsp;</td><td>993300
+</td><td bgcolor="#660000">&nbsp;</td><td>660000
+</td></tr><tr>
+<td bgcolor="#ff9900">&nbsp;</td><td>FF9900
+</td><td bgcolor="#ff9933">&nbsp;</td><td>FF9933
+</td><td bgcolor="#cc9966">&nbsp;</td><td>CC9966
+</td><td bgcolor="#cc6600">&nbsp;</td><td>CC6600
+</td><td bgcolor="#996633">&nbsp;</td><td>996633
+</td><td bgcolor="#663300">&nbsp;</td><td>663300
+</td></tr><tr>
+<td bgcolor="#ffcc66">&nbsp;</td><td>FFCC66
+</td><td bgcolor="#ffcc00">&nbsp;</td><td>FFCC00
+</td><td bgcolor="#ffcc33">&nbsp;</td><td>FFCC33
+</td><td bgcolor="#cc9900">&nbsp;</td><td>CC9900
+</td><td bgcolor="#cc9933">&nbsp;</td><td>CC9933
+</td><td bgcolor="#996600">&nbsp;</td><td>996600
+</td></tr><tr>
+<td bgcolor="#ffffcc">&nbsp;</td><td>FFFFCC
+</td><td bgcolor="#ffff99">&nbsp;</td><td>FFFF99
+</td><td bgcolor="#ffff66">&nbsp;</td><td>FFFF66
+</td><td bgcolor="#ffff33">&nbsp;</td><td>FFFF33
+</td><td bgcolor="#ffff00">&nbsp;</td><td>FFFF00
+</td><td bgcolor="#cccc00">&nbsp;</td><td>CCCC00
+</td></tr></tbody></table>
+
+
+<br>
+
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="-1"><a href="http://172.16.76.30/ivs/HTML_Tutor/106.html">Назад</a> 
+		| <a href="http://172.16.76.30/ivs/HTML_Tutor/1.html">Содержание</a> | <a href="http://172.16.76.30/ivs/HTML_Tutor/108.html">Вперед</a></font></p>
+<br><br>
+
+ 
+</body></html>

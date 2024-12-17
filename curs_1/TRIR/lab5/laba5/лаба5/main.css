@@ -1,0 +1,42 @@
+body {
+    background-color: #DCDCDC;
+}
+.content {
+    height: 90%;
+    width: 40%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1% 1% 2% 2%;
+    text-align: center;
+}
+.content h4 {
+    margin-top: 20%;
+}
+span, p {
+    font-size: 80%;
+}
+.menu {
+    margin-top: -8px;
+    margin-left: -8px;
+    background-color: whitesmoke;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 1%;
+}
+.botton {
+    display: inline-block;
+    padding: 5px;
+    background-color: white;
+    border-radius: 2px;
+    border-right: 1px solid #2F4F4F;
+}
+.botton:hover {
+    background-color: #C0C0C0;
+    color: #060F0F;
+}
+a {
+    text-decoration: none;
+    color: #2F4F4F;
+    font-family: Arial;
+}

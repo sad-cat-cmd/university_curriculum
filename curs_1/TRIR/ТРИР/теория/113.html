@@ -1,0 +1,417 @@
+<!DOCTYPE DOCTYPE PUBLIC "-//W3C//DTD HTML 4.0 // EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="Generator" content="Microsoft Notepad">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Autor" content="Dimas'99">
+<meta name="keywords" content="html, head, meta, body, guidе, справочник, учебник, русский, для начинающих, примеры, интернет, программирование, страница">
+<meta name="description" content="Учебник HTML по-русски,на русском языке с прмерами для начинающих и не только Guide for beginners">
+<meta name="ABSTRACT" content="Учебник HTML по-русски,на русском языке с прмерами для начинающих и не только Guide for beginners">
+<meta name="ROBOTS" content="Index,follow">
+<meta name="revisit-after" content="5 days"><title>Учeбник HTML.&lt;TABLE&gt;&lt;TD&gt;&lt;TH&gt;&lt;CAPTION&gt;&lt;TR&gt;&lt;COL&gt;&lt;COLGROUP&gt;&lt;THEAD&gt;&lt;TBODY&gt;</title>
+
+
+
+
+<link rel="stylesheet" href="113_files/style.css" type="text/css"></head>
+
+
+<body leftmargin="30" bgcolor="#ffffff">
+<table bgcolor="#000099" border="0" width="100%">
+<tbody><tr>
+<td align="left"><h1>guide<br>
+<font color="aqua">&lt;dimas&gt;</font><br>
+<strong>help</strong></h1>
+</td><td align="center" width="100%"><h2><strong>On-line</strong> <font color="#ffffff">учебник</font> <strong>HTML</strong> с примерами,   <br> справочник по созданию <strong>Web</strong><font color="#ffffff">-сайтов.</font></h2>
+</td><td align="right"><h1>guide<br>
+<font color="aqua">&lt;dimas&gt;</font><br>
+<strong>help</strong></h1>
+</td></tr></tbody></table>
+<br>
+<br>
+<br>
+<h3><a href="http://172.16.76.30/ivs/HTML_Tutor/1.html" onfocus="this.blur()">Учебник HTML </a> -- Создание таблиц.</h3> 
+<ul>
+       <li><a href="#q1">Элемент &lt;TABLE&gt;</a>
+       </li><li><a href="#q2">Элемент &lt;COL&gt;</a>
+       </li><li><a href="#q3">Элемент &lt;COLGROUP&gt;</a>
+       </li><li><a href="#q4">Элемент &lt;THEAD&gt;</a>
+       </li><li><a href="#q5">Элемент &lt;TBODY&gt;</a>
+       </li><li><a href="#q6">Элемент &lt;TFOOT&gt;</a>
+       </li><li><a href="#q7">Элемент &lt;TR&gt;</a>
+       </li><li><a href="#q8">Элемент &lt;CAPTION&gt;</a>
+       </li><li><a href="#q9">Элемент &lt;TH&gt;</a>
+       </li><li><a href="#q10">Элемент &lt;TD&gt;</a>
+       </li><li><a href="#q11">Примеры написания таблиц.</a>
+</li></ul>
+<br>
+<br>
+ <a name="q1"></a>
+<h3>Элемент &lt;TABLE&gt;</h3>
+<p> Элемент  <b>&lt;TABLE&gt;</b> используется с целью внедрения таблиц
+в Web страницу. Они удобны тем, что браузер сам прорисовывает рамку
+таблицы. Размер рамки может задаваться, как фиксировано, так и
+автоматически согласовываться с размерами окна просмотра браузера и с
+размерами, находящегося в ячейках текста и рисунков. Кроме того таблицы
+позволяют решать чисто дизайнерские задачи: выравнивать части таблицы
+друг относительно друга, размещать рядом рисунки и текст, управлять
+цветовым оформлением, разбивать текст на колонки и т.д. </p>
+<p>В этом случае хочется предостеречь от совершения очень
+распространенной ошибки, когда для выравнивания текста и задания
+отступов дизайнеры вставляют всю страницу в одну единственную таблицу,
+но забывают о такой особенности, что содержимое таблицы не
+прорисовывается частями и посетителю придется ждать пока загрузится все
+содержимое таблицы, особенно досадно, если общий объем текста
+достаточно велик.</p>
+<p>По правде говоря само по себе использование таблиц для визуального
+форматирования есть нарушение того принципа, которого рекомендует
+придерживаться <b>W3C</b> - таблицы должны использоваться только для внедрения таблиц, а позиционировать элементы
+ необходимо при помощи слоев.  
+ При создании таблиц  используется принцип вложения:  между тэгами <b>&lt;TABLE&gt;</b> и <b>&lt;/TABLE&gt;</b> 
+задается заголовок вне рамки таблицы <b>&lt;CAPTION&gt;</b>, создается ряд элементов <b>&lt;TR&gt;</b>, определяющих начало строки,  а внутри этих элементов размещаются элементы <b>&lt;TD&gt;</b>, описывающие ячейки и <b>&lt;TH&gt;</b>, описывающие заглавные ячейки. 
+</p>
+<p> Элемент  <b>&lt;TABLE&gt;</b> может иметь атрибуты: <br>
+</p><ul>
+       <li><b>bgcolor</b><br>Этот атрибут задает фоновый цвет ячейкам, которые не обладают собственным атрибутом <b>bgcolor</b> или <b>background</b>.
+ <br><span class="cod">&lt;TABLE bgcolor=<strong>цвет</strong>&gt;</span>
+       </li><li><b>background</b><br>Этот атрибут задает фоновый рисунок ячейкам, которые не обладают собственным атрибутом <b>bgcolor</b> или <b>background</b>. 
+<br><span class="cod">&lt;TABLE background=<strong>URL файла изображения</strong>&gt;</span>
+       </li><li><b>bordercolor</b><br>Этот атрибут задает цвет рамки, используется только с атрибутом <b>border</b>.  
+<br><span class="cod">&lt;TABLЕ border=<strong>число </strong>bordercolor=<strong>цвет</strong> &gt;</span>
+       </li><li><b>bordercolorlight</b><br>Этот атрибут задает цвет рамки, используется только с атрибутом <b>border</b>.  
+<br><span class="cod">&lt;TABLE border=<strong>число</strong> bordercolorlight=<strong>цвет</strong>&gt;</span>
+       </li><li><b>bordercolordark</b><br>Этот атрибут задает цвет рамки, используется только с атрибутом <b>border</b>.  
+<br><span class="cod">&lt;TABLE border=<strong>число</strong> bordercolordark=<strong>цвет</strong>&gt;</span>
+       </li><li><b>align</b><br>Этот атрибут задает режим горизонтального выравнивания таблицы на странице,  он может принимать значения <b>left</b>,  <b> center </b> и <b> right </b>. 
+<br><span class="cod">&lt;TABLE align=<strong> способ </strong>&gt;</span>
+       </li><li><b>width</b><br>Этот атрибут задает ширину таблицы в пикселях или процентах от всего окна. 
+<br><span class="cod">&lt;TABLE width=<strong>число или %</strong>&gt;</span>
+       </li><li><b>border</b><br>Этот атрибут задает ширину внешнего обрамления таблицы в пикселях. 
+<br><span class="cod">&lt;TABLE border=<strong>число</strong> &gt;</span>
+       </li><li><b>cellspacing</b><br>Этот атрибут задает ширину внутреннего обрамления в пикселях. 
+<br><span class="cod">&lt;TABLE сellspacing=<strong>число</strong> &gt;</span>
+       </li><li><b>сellpadding</b><br>Этот атрибут задает отступ между содержимым ячейки и обрамлением таблицы в пикселях. 
+<br><span class="cod">&lt;TABLE сellpadding=<strong>число </strong>&gt;</span>
+       </li><li><b>summary</b><br>Этот необязательный атрибут задает краткое описание таблицы для некоторых браузеров. 
+<br><span class="cod">&lt;TABLE summary=<strong>описание </strong>&gt;</span>
+       </li><li><b>rules</b><br>Этот атрибут задает линии между ячейками. 
+<br><span class="cod">&lt;TABLE rules=<strong>all </strong>&gt;</span>
+        <ul>
+              <li><b>none</b><br> Нет линий,  значение используется по умолчанию.  
+              </li><li><b>groups</b><br> Линии отображаются только между группами строк <b>THEAD</b>,<b> TFOOT</b>, и <b>TBODY</b> или группами столбцов <b> COLGROUP</b> и <b>COL</b>.  
+              </li><li><b>rows</b> <br>Линии отображаются только между строками.  
+              </li><li><b>cols</b><br> Линии отображаются только между столбцами.  
+              </li><li><b>all</b> <br>Линии отображаются между строками и столбцами.  
+        </li></ul>
+       </li><li><b>frame</b><br> Этот атрибут указывает, какие стороны кадра, окружающего таблицу, будут видимы. 
+<br><span class="cod">&lt;TABLE frame=<strong>void</strong>&gt;</span> Возможные значения:
+        <ul> 
+              <li><b>void</b><br>  Сторон нет.  Это значение используется по умолчанию.  
+              </li><li><b>above</b><br> Только верхняя часть.  
+              </li><li><b>below</b><br>  Только нижняя часть.  
+              </li><li><b>hsides</b><br>  Только верхняя и нижняя часть.  
+              </li><li><b>vsides</b><br> Только левая и правая части.  
+              </li><li><b>lhs</b><br>  Только левая часть.  
+              </li><li><b>rhs</b><br>  Только права часть.  
+              </li><li><b>box</b><br> Все четыре части.  
+              </li><li><b>border</b><br>  Все четыре части.  
+
+        </li></ul> 
+       </li><li><b>id</b><br>Этот атрибут задает имя для ссылки.  <br><span class="cod">&lt;TABLE id=<strong>имя</strong>&gt;</span>     
+</li></ul>
+
+ <a name="q2"></a>
+<h3>Элемент &lt;COL&gt;</h3>
+<p> Элемент  <b>&lt;COL&gt;</b> используется с целью задания колонок таблицы,  может иметь атрибуты:   
+
+</p><ul>
+       <li><b>width</b><br>Этот атрибут  задает ширину ячеек в колонке. <br><span class="cod">&lt;COL width=<strong>число</strong>&gt;</span>
+       </li><li><b>bgcolor</b><br>Этот атрибут задает  цвет фона ячеек. <br><span class="cod">&lt;СOL bgcolor= <strong>цвет</strong> &gt;</span>
+       </li><li><b>align</b><br>Этот атрибут задает  режим горизонтального выравнивания содержимого внутри ячейки,  он может принимать значения <b>left</b>,  <b> center </b> и <b> right </b>. <br><span class="cod">&lt;СOL align=<strong> способ</strong> &gt;</span>
+       </li><li><b>valign</b><br>Этот атрибут  задает режим вертикального выравнивания содержимого внутри ячейки,  он может принимать значения:  <b> middle </b> - <i> по середине </i> и <b> top </b> - <i>вверху</i>. <br><span class="cod">&lt;СOL valign=<strong>значение</strong>&gt;</span>
+       </li><li><b>id</b><br>Этот атрибут задает имя для ссылки. <br><span class="cod">&lt;COL id=<strong>имя</strong>&gt;</span>
+</li></ul>
+ <a name="q3"></a>
+<h3>Элемент &lt;COLGROUP&gt;</h3>
+<p> Элемент  <b>&lt;COLGROUP&gt;</b> используется с целью задания групп колонок таблицы,  может иметь атрибуты:  
+</p><ul>
+       <li><b>width</b><br>Этот атрибут  задает ширину ячеек.  <br><span class="cod">&lt;COLGROUP width=<strong>число</strong>&gt;</span>
+       </li><li><b>bgcolor</b><br>Этот атрибут задает  цвет фона ячеек. <br><span class="cod">&lt;COLGROUP bgcolor= <strong>цвет</strong> &gt;</span>
+       </li><li><b>align</b><br>Этот атрибут задает  режим горизонтального выравнивания содержимого внутри ячейки,  он может принимать значения <b>left</b>,  <b> center </b> и <b> right </b>. <br><span class="cod">&lt;COLGROUP align=<strong> способ</strong> &gt;</span>
+       </li><li><b>valign</b><br>Этот атрибут  задает режим вертикального выравнивания содержимого внутри ячейки,  он может принимать значения:  <b> middle </b> - <i> по середине </i> и <b> top </b> - <i>вверху</i>. <br><span class="cod">&lt;COLGROUP valign=<strong>значение</strong>&gt;</span>
+       </li><li><b>span</b><br>Этот атрибут  задает количество колонок в группе.  <br><span class="cod">&lt;COLGROUP span=<strong>число</strong>&gt;</span>
+       </li><li><b>width</b><br>Этот атрибут  задает ширину ячеек в колонках.  <br><span class="cod">&lt;COLGROUP width=<strong>число</strong>&gt;</span>
+       </li><li><b>id</b><br>Этот атрибут задает имя для ссылки.  <br><span class="cod">&lt;COLGROUP id=<strong>имя</strong>&gt;</span>
+</li></ul>
+ <a name="q4"></a>
+<h3>Элемент &lt;THEAD&gt;</h3>
+<p> Элемент  <b>&lt;THEAD&gt;</b> используется с целью логического задания групп строк для верхней "шапки". 
+<br><span class="cod">&lt;THEAD &gt;<strong>&lt;TR &gt;&lt;TD &gt;...&lt;TD &gt;...</strong>&lt;/THEAD&gt;</span></p>
+<ul>
+       <li><b>bgcolor</b><br>Этот атрибут задает  цвет фона ячеек. <br><span class="cod">&lt;THEAD bgcolor= <strong>цвет</strong> &gt;</span>
+       </li><li><b>align</b><br>Этот атрибут задает  режим горизонтального выравнивания содержимого внутри ячейки,  он может принимать значения <b>left</b>,  <b> center </b> и <b> right </b>. <br><span class="cod">&lt;THEAD align=<strong> способ</strong> &gt;</span>
+       </li><li><b>valign</b><br>Этот атрибут  задает режим вертикального выравнивания содержимого внутри ячейки,  он может принимать значения:  <b> middle </b> - <i> по середине </i> и <b> top </b> - <i>вверху</i>. <br><span class="cod">&lt;THEAD valign=<strong>значение</strong>&gt;</span>
+       </li><li><b>id</b><br>Этот атрибут задает имя для ссылки. <br><span class="cod">&lt;THEAD id=<strong>имя</strong>&gt;</span>
+</li></ul>
+ <a name="q5"></a>
+<h3>Элемент &lt;TBODY&gt;</h3>
+<p> Элемент  <b>&lt;TBODY&gt;</b> используется с целью логического задания групп строк  "тела" таблицы. 
+<br><span class="cod">&lt;TBODY &gt;<strong>&lt;TR &gt;&lt;TD &gt;...&lt;TD &gt;...</strong>&lt;/TBODY&gt;</span></p>
+<ul>
+       <li><b>bgcolor</b><br>Этот атрибут задает  цвет фона ячеек. <br><span class="cod">&lt;TBODY bgcolor= <strong>цвет</strong> &gt;</span>
+       </li><li><b>align</b><br>Этот атрибут задает  режим горизонтального выравнивания содержимого внутри ячейки,  он может принимать значения <b>left</b>,  <b> center </b> и <b> right </b>. <br><span class="cod">&lt;TBODY align=<strong> способ</strong> &gt;</span>
+       </li><li><b>valign</b><br>Этот атрибут  задает режим вертикального выравнивания содержимого внутри ячейки,  он может принимать значения:  <b> middle </b> - <i> по середине </i> и <b> top </b> - <i>вверху</i>. <br><span class="cod">&lt;TBODY valign=<strong>значение</strong>&gt;</span>
+       </li><li><b>id</b><br>Этот атрибут задает имя для ссылки. <br><span class="cod">&lt;TBODY id=<strong>имя</strong>&gt;</span>
+</li></ul>
+ <a name="q6"></a>
+<h3>Элемент &lt;TFOOT&gt;</h3>
+<p> Элемент  <b>&lt;TFOOT&gt;</b> используется с целью логического задания групп строк для нижней "шапки".
+<br><span class="cod">&lt;TFOOT &gt;<strong>&lt;TR &gt;&lt;TD &gt;...&lt;TD &gt;...</strong>&lt;/THEAD&gt;</span></p>
+<ul>
+       <li><b>bgcolor</b><br>Этот атрибут задает  цвет фона ячеек.<br><span class="cod">&lt;TFOOT bgcolor= <strong>цвет</strong> &gt;</span>
+       </li><li><b>align</b><br>Этот атрибут задает  режим горизонтального выравнивания содержимого внутри ячейки,  он может принимать значения <b>left</b>,  <b> center </b> и <b> right </b>.<br><span class="cod">&lt;TFOOT align=<strong> способ</strong> &gt;</span>
+       </li><li><b>valign</b><br>Этот атрибут  задает режим вертикального выравнивания содержимого внутри ячейки,  он может принимать значения:  <b> middle </b> - <i> по середине </i> и <b> top </b> - <i>вверху</i>.<br><span class="cod">&lt;TFOOT valign=<strong>значение</strong>&gt;</span>
+       </li><li><b>id</b><br>Этот атрибут задает имя для ссылки. <br><span class="cod">&lt;TFOOT id=<strong>имя</strong>&gt;</span>
+</li></ul>
+ <a name="q7"></a>
+<h3>Начало строки:  элемент &lt;TR&gt;</h3>
+<p> Элемент <b>&lt;TR&gt;</b> открывает строку определений ячеек и не
+требует конечного тэга, хотя такой элемент можно использовать для
+наглядности обозначения каждой строки, поддерживает атрибуты, которые
+задают стиль оформления всех ячеек в строке. Отдельные ячейки могут
+быть отформатированы иначе. </p><ul>
+       <li><b>bgcolor</b><br>Этот атрибут задает  цвет фона ячеек.<br><span class="cod">&lt;TR bgcolor=<strong> цвет</strong> &gt;</span>
+       </li><li><b>align</b><br>Этот атрибут задает  режим горизонтального выравнивания содержимого внутри ячейки,  он может принимать значения <b>left</b>,  <b> center </b> и <b> right </b>.<br><span class="cod">&lt;TR align=<strong> способ</strong> &gt;</span>
+
+       </li><li><b>valign</b><br>Этот атрибут  задает режим вертикального выравнивания содержимого внутри ячейки,  он может принимать значения:  <b> middle </b> - <i> по середине </i> и <b> top </b> - <i>вверху</i>.<br><span class="cod">&lt;TR valign=<strong>значение</strong>&gt;</span>
+       </li><li><b>id</b><br>Этот атрибут задает имя для ссылки. <br><span class="cod">&lt;TR id=<strong>имя</strong>&gt;</span>
+</li></ul>
+
+ <a name="q8"></a>
+<h3>Заголовок таблицы:  элемент &lt;CAPTION&gt;</h3>
+<p> Элемент <b>&lt;CAPTION&gt;</b> задает заголовок вне рамки таблицы, имеет атрибут <b>align</b>, который может принимать значения <b>top</b> и <b>bottom</b>,  <b>left</b> и <b>right</b>,  а также <b>id</b><br> - имя для ссылки. <br><span class="cod">&lt;CAPTION&gt;<strong> текст </strong>&lt;/CAPTION&gt;</span>
+
+</p>
+ <a name="q9"></a>
+<h3>Ячейки заголовка:  элемент &lt;TH&gt;</h3>
+<p> Элемент <b>&lt;TH&gt;</b> задает ячейку, которая содержит заголовок,  поддерживает атрибут <b>id</b><br> - имя для ссылки. <br><span class="cod">&lt;TH <strong>атрибуты </strong>&gt; <strong>текст заголовка</strong> </span>
+</p>
+ <a name="q10"></a>
+<h3>Ячейки с данными &lt;TD&gt;</h3>
+<p>Элемент <b>&lt;TD&gt;</b> определяет ячейку с данными
+</p><ul>
+       <li><b>bgcolor</b><br>Этот атрибут задает  цвет фона ячейки.<br><span class="cod">&lt;TD bgcolor= <strong>цвет</strong> &gt;</span>
+       </li><li><b>width</b><br>Этот атрибут задает  ширину ячейки в пикселях или %.<br><span class="cod">&lt;TD width= <strong>число или %</strong> &gt;</span>
+       </li><li><b>heigt</b><br>Этот атрибут задает высоту ячейки в пикселях.<br><span class="cod">&lt;TD height=<strong>значение</strong>&gt;</span>
+       </li><li><b>rowspan</b><br>Этот атрибут задает объединение соседних ячеек <i>столбца</i>
+в одну большего размера. При этом соседние ячейки не уничтожаются, а
+лишь скрываются, пока соседняя ячейка использует их пространство.<br><span class="cod">&lt;TD rowspan=<strong>количество строк</strong>  &gt;</span>
+       </li><li><b>colspan</b><br>Этот атрибут задает объединение соседних ячеек <i>строки </i>в
+одну большего размера. При этом соседние ячейки не уничтожаются, а лишь
+скрываются, пока соседняя ячейка использует их пространство.<br><span class="cod">&lt;TD colspan=<strong>количество колонок </strong> &gt;</span>
+       </li><li><b>align</b><br>Этот атрибут задает режим горизонтального выравнивания содержимого внутри ячейки,  он может принимать значения <b>left</b>,  <b> center </b> и <b> right </b>.<br><span class="cod">&lt;TD align= <strong>способ </strong>&gt;</span>
+       </li><li><b>valign</b><br>Этот атрибут задает режим вертикального выравнивания содержимого внутри ячейки,  он может принимать значения:  <b> middle </b> - <i> по середине </i> и <b> top </b> - <i>вверху</i>.<br><span class="cod">&lt;TD valign=<strong>значение</strong>&gt;</span>
+       </li><li><b>nowrap</b><br>Этот
+атрибут блокирует автоматический перенос по словам в пределах ячейки в
+зависимости от других параметров таблицы. Аналогичного результата можно
+достичь при помощи замены обычных пробелов на неразрывный мнемонический
+объект <b>&amp;ampnbsp;</b>
+       </li><li><b>id</b><br>Этот атрибут задает имя для ссылки. <br><span class="cod">&lt;TD id=<strong>имя</strong>&gt;</span>
+</li></ul>
+
+ <a name="q11"></a>
+<h3>Исходные коды некоторых таблиц. </h3>
+<p>Таблица с общим заголовком и заголовками в колонках.</p>
+<div class="cod">
+&lt;TABLE border=<strong>4</strong> cellspacing=<strong>3</strong>&gt;<br>
+&lt;CAPTION&gt;<strong> Заголовок таблицы</strong> &lt;/CAPTION&gt;<br>
+&lt;TR&gt;&lt;TH bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 1</strong><br>
+    &lt;TH bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 2</strong><br>
+&lt;TR&gt;&lt;TD&gt;<strong>Ячейка 1</strong>
+    &lt;TD&gt;<strong>Ячейка 2</strong><br>
+&lt;TR&gt;&lt;TD&gt;<strong>Ячейка 3</strong>
+    &lt;TD&gt;<strong>Ячейка 4</strong><br>
+&lt;/TABLE&gt;
+</div>
+<p>
+</p><table border="4" cellspacing="3">
+<caption> Заголовок таблицы </caption>
+<tbody><tr><th bgcolor="white">Заголовок 1
+    </th><th bgcolor="white">Заголовок 2
+</th></tr><tr><td>Ячейка 1
+    </td><td>Ячейка 2
+</td></tr><tr><td>Ячейка 3
+    </td><td>Ячейка 4
+</td></tr></tbody></table>
+
+<p>Таблица с общим заголовком и заголовками в колонках, и в строках.</p>
+<div class="cod">
+&lt;TABLE border=<strong>4 </strong>cellspacing=<strong>3</strong>&gt;<br>
+&lt;CAPTION&gt; <strong>Заголовок таблицы </strong>&lt;/caption&gt;<br>
+&lt;TR&gt;&lt;TH bgcolor="<strong>white</strong>"&gt;<br>
+    &lt;TH bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 1</strong><br>
+    &lt;TH bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 2</strong><br>
+&lt;TR&lt;TH bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 3</strong><br>
+    &lt;TD&gt;<strong>Ячейка 1</strong><br>
+    &lt;TD&gt;<strong>Ячейка 2</strong><br>
+&lt;TR&gt;&lt;TH bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 4</strong><br>
+    &lt;TD&gt;<strong>Ячейка 3</strong><br>
+    &lt;TD&gt;<strong>Ячейка 4</strong><br>
+&lt;/table&gt;
+</div>
+<p>
+</p><table border="4" cellspacing="3">
+<caption> Заголовок таблицы </caption>
+<tbody><tr><th bgcolor="white">
+    </th><th bgcolor="white">Заголовок 1
+    </th><th bgcolor="white">Заголовок 2
+</th></tr><tr><th bgcolor="white">Заголовок 3
+    </th><td>Ячейка 1
+    </td><td>Ячейка 2
+</td></tr><tr><th bgcolor="white">Заголовок 4
+    </th><td>Ячейка 3
+    </td><td>Ячейка 4
+</td></tr></tbody></table>
+
+<p>Таблица с объединенными ячейками в колонках, и в строках.</p>
+<div class="cod">
+&lt;TABLE border=<strong>4 </strong>cellspacing=<strong>0</strong> &gt;<br>
+&lt;CAPTION&gt;<strong>Заголовок таблицы</strong> &lt;/caption&gt;<br>
+&lt;TR&gt;&lt;TD bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 1</strong><br>
+    &lt;TD bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 2</strong><br>
+&lt;TR&gt;&lt;TD rowspan=<strong>3 </strong>bgcolor="<strong>white</strong>"&gt;<strong>Ячейка 1</strong><br>
+    &lt;TD&gt;<strong>Ячейка 2</strong><br>
+&lt;TR&gt;&lt;TD&gt;<strong>Ячейка 3</strong><br>
+&lt;TR&gt;&lt;TD&gt;<strong>Ячейка 4</strong><br>
+&lt;TR&gt;&lt;TD colspan=<strong>2</strong> bgcolor="<strong>white</strong>" align="<strong>center</strong>"&gt;<strong>Ячейка 5 </strong><br>  
+&lt;/table&gt;
+</div>
+<p>
+</p><table border="4" cellspacing="0">
+<caption>Заголовок таблицы </caption>
+<tbody><tr><td bgcolor="white">Заголовок 1
+    </td><td bgcolor="white">Заголовок 2
+</td></tr><tr><td rowspan="3" bgcolor="white">Ячейка 1
+    </td><td>Ячейка 2
+</td></tr><tr><td>Ячейка 3
+</td></tr><tr><td>Ячейка 4
+</td></tr><tr><td colspan="2" align="center" bgcolor="white">Ячейка 5   
+</td></tr></tbody></table>
+
+<p>Более сложное объединение ячеек в колонках, и в строках.</p>
+<div class="cod">
+&lt;TABLE border=<strong>4 </strong>cellspacing=<strong>0</strong> &gt;<br>
+&lt;TR&gt;&lt;TD bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 1</strong><br>
+    &lt;TD bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 2</strong><br>
+    &lt;TD bgcolor="<strong>white</strong>"&gt;<strong>Заголовок 3</strong><br>
+&lt;TR&gt;&lt;TD rowspan=<strong>4</strong> colspan=<strong>2 </strong>bgcolor="<strong>white</strong>"&gt;<strong>Ячейка 1</strong><br>
+&lt;TR&gt;&lt;TD&gt;<strong>Ячейка 2</strong><br>
+&lt;TR&gt;&lt;TD&gt;<strong>Ячейка 3</strong><br>
+&lt;TR&gt;&lt;TD&gt;<strong>Ячейка 4</strong><br>
+&lt;TR&gt;&lt;TD colspan=<strong>3</strong> bgcolor="<strong>white</strong>" align="<strong>center</strong>"&gt;<strong>Ячейка 5 </strong><br>  
+&lt;/table&gt;
+</div>
+<p>
+</p><table border="4" cellspacing="0">
+<tbody><tr><td bgcolor="white">Заголовок 1
+    </td><td bgcolor="white">Заголовок 2
+    </td><td bgcolor="white">Заголовок 3
+</td></tr><tr><td rowspan="4" colspan="2" bgcolor="white">Ячейка 1
+</td></tr><tr><td>Ячейка 2
+</td></tr><tr><td>Ячейка 3
+</td></tr><tr><td>Ячейка 4
+</td></tr><tr><td colspan="3" align="center" bgcolor="white">Ячейка 5   
+</td></tr></tbody></table>
+
+<p>Таблица в ячейке таблицы.</p>
+<div class="cod">
+&lt;TABLE border=<strong>4</strong> cellspacing=<strong>0</strong>&gt;<br>
+&lt;TR&gt;&lt;TD bgcolor="<strong>white</strong>"&gt;<strong>Ячейка 1</strong><br>
+    &lt;TD&gt;<br>
+&lt;TABLE border=<strong>2</strong>&gt;  <br>  
+&lt;TR&gt;&lt;TD&gt;<strong>Ячейка 2-1</strong><br>
+    &lt;TD&gt;<strong>Ячейка 2-2</strong><br>
+&lt;TR&gt;&lt;TD&gt;<strong>Ячейка 3-2</strong><br>
+    &lt;TD&gt;<strong>Ячейка 4-2</strong><br>
+&lt;/table&gt;<br>
+&lt;TR&gt;&lt;TD bgcolor="<strong>white</strong>"&gt;<strong>Ячейка 3-1</strong><br>
+    &lt;TD bgcolor="<strong>white</strong>"&gt;<strong>Ячейка 4-1</strong><br>
+&lt;/table&gt;
+</div>
+<p>
+</p><table border="4" cellspacing="0">
+<tbody><tr><td bgcolor="white">Ячейка 1
+    </td><td>
+<table border="2">    
+<tbody><tr><td>Ячейка 2-1
+    </td><td>Ячейка 2-2
+</td></tr><tr><td>Ячейка 3-2
+    </td><td>Ячейка 4-2
+</td></tr></tbody></table>
+</td></tr><tr><td bgcolor="white">Ячейка 3-1
+    </td><td bgcolor="white">Ячейка 4-1
+</td></tr></tbody></table>
+
+<p>Таблица, состоящая из одной ячейки.</p>
+<div class="cod">
+&lt;TABLE border=<strong>4 </strong>cellspacing=<strong>3</strong> cellpadding=<strong>10</strong>&gt;<br>
+&lt;TR&gt;&lt;TD bgcolor="<strong>white</strong>"&gt;<strong>Одна ячейка</strong><br>
+&lt;/table&gt;
+</div>
+<p>
+</p><table border="4" cellpadding="10" cellspacing="3">
+<tbody><tr><td bgcolor="white">Одна ячейка
+</td></tr></tbody></table>
+
+<p>Таблица размещена в центре, толщина рамки <b>1</b> пиксель,  имеет синий фон, верхний и нижний, по-разному отформатированные заголовки, с <b>красным</b> и <b>aqua</b> фоном, таблица разбита на две неравные части,
+одна из них - левая колонка имеет <b>белый</b> фон и текст, располагающийся <b>по центру</b>, а вторая  представляет собой группу из трех колонок, цвет фона не указан, поэтому отображен общий фон таблицы 
+ с текстом, сдвинутым <b>влево</b>.</p>
+<div class="cod">
+&lt;TABLE bgcolor="<strong>#0000ff</strong>" border="<strong>1</strong>" 
+<br>align="<strong>center</strong>" rules="<strong>all</strong>" frame="<strong>box</strong>"&gt;<br>
+&lt;caption align="top"&gt; Заголовок таблицы &lt;/caption&gt;<br>
+&lt;COL width="<strong>100</strong>" bgcolor="<strong>#ffffff</strong>" align="<strong>center</strong>"&gt;<br>
+&lt;COLGROUP span="<strong>3</strong>" width="<strong>50</strong>"&gt;<br>
+&lt;CAPTION align="<strong>top</strong>"&gt;CAPTION&lt;/CAPTION&gt;<br>
+&lt;THEAD bgcolor="<strong>#ff0000</strong>"&gt;<br>
+&lt;TR&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;<br>
+&lt;/THEAD&gt;<br>
+&lt;TFOOT bgcolor="<strong>aqua</strong>"&gt;<br>
+&lt;TR&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;<br>
+&lt;/TFOOT&gt;<br>
+&lt;TBODY&gt;<br>
+&lt;TR&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;<br>
+&lt;TR&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;<br>
+&lt;TR&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;<br>
+&lt;TR&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;<br>
+&lt;TR&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;&lt;TD&gt;<br>
+&lt;/TBODY&gt;<br>
+&lt;/TABLE&gt;
+</div>
+<p>
+</p><table align="center" bgcolor="#0000ff" border="1" frame="box" rules="all">
+<col bgcolor="#ffffff" align="center" width="100">
+<colgroup span="3" width="50"></colgroup><caption align="top">Заголовок таблицы</caption>
+<thead bgcolor="#ff0000">
+<tr><td>.</td><td>.</td><td>.</td><td>.
+</td></tr></thead>
+<tfoot bgcolor="aqua">
+<tr><td>.</td><td>.</td><td>.</td><td>.
+</td></tr></tfoot>
+<tbody>
+<tr><td>.</td><td>.</td><td>.</td><td>.
+</td></tr><tr><td>.</td><td>.</td><td>.</td><td>.
+</td></tr><tr><td>.</td><td>.</td><td>.</td><td>.
+</td></tr><tr><td>.</td><td>.</td><td>.</td><td>.
+</td></tr><tr><td>.</td><td>.</td><td>.</td><td>.
+</td></tr></tbody>
+</table>
+
+
+<br>
+
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="-1"><a href="http://172.16.76.30/ivs/HTML_Tutor/112.html">Назад</a> 
+		| <a href="http://172.16.76.30/ivs/HTML_Tutor/1.html">Содержание</a> | <a href="http://172.16.76.30/ivs/HTML_Tutor/114.html">Вперед</a></font></p>
+<br><br>
+
+</body></html>

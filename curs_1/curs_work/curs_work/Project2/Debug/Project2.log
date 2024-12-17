@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\B-ZONE\Desktop\curswork\Project2\Source.c(19,3): warning C4405: str: идентификатор является зарезервированным словом
+C:\Users\B-ZONE\Desktop\curswork\Project2\Source.c(31,3): warning C4405: str: идентификатор является зарезервированным словом
+  Project2.vcxproj -> C:\Users\B-ZONE\Desktop\curswork\Project2\Debug\Project2.exe

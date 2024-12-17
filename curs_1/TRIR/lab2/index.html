@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="T1">
+        <h2>Маркированный список</h2>
+        <p style="padding-left:20px">Фрукты:</p>
+        <ul style="list-style-image: url(css/Снимок\ экрана\ 2023-09-27\ 234639.png);">
+            <li >Яблоко</li>
+            <li>Банан</li>
+            <li>Абрикос</li>
+            <li>Авокадо</li>
+            <li>Ананас</li>
+        </ul>
+    </div>
+    <div class="T2">
+        <h2>Нумерованный список</h2>
+        <p style="padding-left: 20px;">Ягоды:</p>
+        <ol start="1"  type="I"  >
+            <li>Барбарис</li>
+            <li>Боярышник</li>
+            <li>Брусника</li>
+            <li>Бузина</li>
+            <li>Виноград</li>
+        </ol>
+    </div>
+    <div class="T3">
+        <h2>Cписок определений</h2>
+        <p style="padding-left:20px">Фильм "Семнадцать мгновений весны"</p>
+        <dl>Режисёр:</dl>
+            <dd>Татьяна Лиознова</dd>
+        <dl>Главные актеры:</dl>
+            <dd>Вячеслав Тихонов</dd>
+            <dd>Олег Табаков</dd>
+            <dd>Леонид Броневой</dd>
+            <dd>Ростислав Плятт</dd>
+            <dd>Евгений Кузнецов</dd>
+    </div>
+    <div class="T4">
+        <h2>Вложенный список</h2>
+        <ul style=" padding: 0; margin-left: 20px;">
+            <li>Пункт 1.</li>
+             <li>Пункт 2.
+               <div class="T4">
+			   <ul style="margin-left:0px; padding:0px">
+                 <li >Подпункт 2.1.</li>
+                  <li>Подпункт 2.2.     
+                   <ul style="margin-left:0px; padding:0px">
+                     <li>Подпункт 2.2.1.</li>
+                     <li>Подпункт 2.2.2.</li>
+                     </ul>
+                  </li>          
+                 <li>Подпункт 2.3.</li>
+               </ul>
+			   </div>
+             </li>
+            <li>Пункт 3.</li>
+        </ul>
+    </div>
+    <div class="T6">
+        <ol>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, placeat!</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, non.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, fugiat?</li>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, esse.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, esse.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, esse.</li>
+                </ol>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link rel="shortcut icon" href="http://172.16.76.30/ivs/NetProg/images/favicon.ico"><title>Применение стиля к тексту.</title>
+
+    
+    <style type="text/css" media="screen,projection">
+    @import "css/main.css";
+    </style>
+    <link rel="stylesheet" type="text/css" media="print" href="text_files/commonPrint.css"><!--[if IE]><style type="text/css" media="all">@import "css/IEFixes.css";</style>
+    <script type="text/javascript" src="scripts/IEFixes.js"></script>
+    <meta http-equiv="imagetoolbar" content="no" />
+	<![endif]-->
+	
+    
+    <script type="text/javascript" src="text_files/wikibits.js"></script></head>
+
+<body class="ns-0">
+  <div class="large">
+  <p class="center"></p>
+  </div>
+    <div id="globalWrapper">
+      <div id="column-content">
+	<div id="content">
+	    
+	  <a name="top" id="contentTop"></a>
+	  <h1 class="firstHeading">Применение стиля к тексту</h1>
+	  <div id="bodyContent">
+	    <h3 id="siteSub">Кафедра САПР</h3>
+	    <!-- start content -->
+<table id="toc" border="0"><tbody><tr id="toctitle"><td align="center">
+<b>Содержание</b> 
+
+</td></tr><tr id="tocinside"><td>
+<div class="tocline"><a href="#Overview">1 Внедренные таблицы стилей </a><br>
+</div>
+<div class="tocindent">
+<p><a href="#What">1.1 Таблица стилей для текста </a><br>
+<a href="#Quick_Start">1.2 Использование свойства font-weight </a><br>
+</p>
+</div></td></tr></tbody></table>
+        <a name="Overview" id="Overview"></a>
+        <h1> Внедренные таблицы стилей </h1>
+<p>Использование таблиц стилей существенно расширяет возможности Web-авторов. Таблицы CSS 
+  не только позволяют устанавливать различные стили для отдельных компонентов страницы или 
+  узлаЮ но и предоставляют дополнительные средства управления стилями документа, недоступные 
+  при использовании элементов и атрибутов представления в HTML и XHTML.</p>
+<p>Внедренные таблицы стилей позволяют управлять стилями одного документа. Внедрение стилей 
+  выполняется с помощью элемента style, располагаемого в разделе head. Стили, определенные 
+  в элементе style, броузер применяет ко всему документу. </p>  
+        <a name="What" id="What"></a>
+        <h2> Таблица стилей для текста </h2>
+<p>Ниже показан процесс создания документа, в котором используется таблица стилей, определяющая 
+  цвет, размер и гарнитуру текста, в дескрипторе абзаца документа XHTML.</p>
+<p>Создайте с помощью инструмента TopStyle новый документ XHTML 1.0 Transitional и сохраните его 
+  в домашнем каталоге под именем primer.html.</p>
+<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" dir="ltr" lang="ru"&gt;
+
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" /&gt;
+&lt;title&gt;Внедренный лист стилей&lt;/title&gt;
+
+&lt;/head&gt;
+</pre>
+<p>Добавьте текст в тело документа.</p>
+<pre>&lt;body&gt;
+
+&lt;p&gt;
+  Исследователи умственных способностей утверждают, что ваша 
+  неосознанная база данных превосходит по объему осознанную 
+  более чем в 10 миллионов раз. А эта база данных является 
+  источником вашей скрытой естественной гениальности. Другими 
+  словами, определенная часть из вас является более умной, чем 
+  это кажется на самом деле. Мудрые люди регулярно консультируют 
+  эту более умную часть людей.&lt;/p&gt;
+
+&lt;p&gt;
+  Увлеченные люди, которые что-то создают, являются гениями. Богатые 
+  увлеченные люди являются чудаками. Увлеченные люди, которые ничего 
+  не создают и не имеют богатства, являются просто увлеченными людьми. 
+  Гении и увлеченные люди никогда не сидят дома, они находятся в 
+  середине глубокого океана; гении плывут, увлеченные люди тонут. 
+  Большинство же из нас сидят беспечно на берегу этого океана. Ловите 
+  удачу и хотя бы немного замочите свои ноги в нем.
+&lt;/p&gt;
+
+&lt;p&gt;
+-- Michael J. Gelb
+&lt;/p&gt;
+
+&lt;/body&gt;
+</pre>
+<p>В разделе head создайте внедренный стиль, содержащий свойство font-family, а также свойства 
+  font-size и color для селектора p. Эти свойства определяют гарнитуру, размер и цвет текста 
+  параграфа.</p>
+<pre>&lt;style type="text/css"&gt;
+&lt;!--
+
+p {
+font-family: Garamond, Times, serif;
+font-size: 20px;
+color: #CC9966;
+}
+
+ --&gt;
+&lt;/style&gt;
+</pre>
+<p>При просмотре созданного документа броузер выведет текст шрифтом Garamond 18. 
+  В окне броузера текст должен иметь цвет красной охры. </p>
+
+<a name="Quick_Start" id="Quick_Start"></a>
+<h2> Использование свойства font-weight </h2>
+<p>Данное свойство характеризует толщину линий в символах текста. Для совместимости документа 
+  рекомендуется использовать шрифты с наиболее распространенными насыщенностями. К ним 
+  относятся шрифты обычной насыщенности и полужирные, которые доступны почти на любом 
+  компьютере.</p>
+<p>Добавьте в документе primer.html, созданном вами ранее, заголовок h1, расположив его 
+  непосредственно после дескриптора body.</p>
+<pre>&lt;h1&gt;Цитаты от Michael J. Gelb&lt;/h1&gt;
+</pre>
+<p>Определите для него в таблице стилей полужирный шрифт, тот же цвет и другую гарнитуру.</p>
+<pre>h1 {
+font-family: Helvetica, Arial, sans-serif;
+font-weight: bold;
+color: #CC9966;
+}
+</pre>
+<p>Измените также цвет и размер шрифта для основного текста.</p>
+<pre>p {
+font-family: Garamond, Times, serif;
+color: #999999;
+}
+</pre>
+
+
+
