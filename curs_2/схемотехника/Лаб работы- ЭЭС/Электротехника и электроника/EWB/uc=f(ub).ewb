@@ -1,0 +1,206 @@
+nt-family:"Courier New"'>поле соответствует
+  координате </span><span lang=EN-US style='font-family:"Courier New";
+  mso-ansi-language:EN-US'>Z<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>«Диапазон корректных
+значений» - поле зарезервировано для дальнейшей разработки.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>«Диапазон ошибочных
+значений» - это те значения поля, которые будут найдены в процессе проверки.
+Каждое найденное значение в отчете автоматической проверки будет сопровождено
+датой его появления.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Формат диапазонов:
+цифровые значения, перечисленные через запятую, возможно указание диапазонов
+(заключены в квадратных скобках) <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Пример: </span><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='font-family:"Courier New";
+mso-ansi-language:EN-US'>-8,-2,[0,8],11,[19,20],25</span></i><i
+style='mso-bidi-font-style:normal'><span style='font-family:"Courier New"'><o:p></o:p></span></i></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Пример файла отчета:<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+style='font-family:"Courier New"'><!--[if gte vml 1]><v:shape id="_x0000_i1032"
+ type="#_x0000_t75" style='width:480pt;height:156pt'>
+ <v:imagedata src="XMLCreatorHelpField.files/image015.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=640 height=208
+src="XMLCreatorHelpField.files/image016.jpg" v:shapes="_x0000_i1032"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span
+style='font-family:"Courier New"'>Рисунок </span><!--[if supportFields]><span
+style='font-family:"Courier New"'><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SEQ Рисунок \* ARABIC <span style='mso-element:
+field-separator'></span></span><![endif]--><span style='font-family:"Courier New"'><span
+style='mso-no-proof:yes'>8</span></span><!--[if supportFields]><span
+style='font-family:"Courier New"'><span style='mso-element:field-end'></span></span><![endif]--><span
+style='font-family:"Courier New"'> - Пример диапазона ошибочных значений<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>В случае отметки
+поля «Печать всей кодограммы в случае ошибки» в отчет будет помещено не только
+время появления ошибочного значения, но и все остальные поля кодограммы.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Пример файла отчета:<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><i><span
+style='font-family:"Courier New"'><!--[if gte vml 1]><v:shape id="_x0000_i1033"
+ type="#_x0000_t75" style='width:480pt;height:300pt'>
+ <v:imagedata src="XMLCreatorHelpField.files/image017.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=640 height=400
+src="XMLCreatorHelpField.files/image018.jpg" v:shapes="_x0000_i1033"><![endif]></span></i><span
+style='font-family:"Courier New"'><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span
+style='font-family:"Courier New"'>Рисунок </span><!--[if supportFields]><span
+style='font-family:"Courier New"'><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SEQ Рисунок \* ARABIC <span style='mso-element:
+field-separator'></span></span><![endif]--><span style='font-family:"Courier New"'><span
+style='mso-no-proof:yes'>9</span></span><!--[if supportFields]><span
+style='font-family:"Courier New"'><span style='mso-element:field-end'></span></span><![endif]--><span
+style='font-family:"Courier New"'> - Пример печати всей кодограммы<i><o:p></o:p></i></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>В поле
+«дополнительные параметры контроля» можно задать условие проверки одной
+кодограммы по данным, содержащимся в другой кодограмме. Данная процедура осуществляется
+посредством выполнения функций проверки. Каждая функция может оперировать
+следующими параметрами:<o:p></o:p></span></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'>параметр 1 - &lt;[кодограмма<span
+class=GramE>1</span>],[поле времени1],[проверяемое поле1]&gt; <o:p></o:p></span></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'>параметр 2 - &lt;[кодограмма<span
+class=GramE>2</span>],[поле времени2],[проверяемое поле2]&gt; <o:p></o:p></span></i></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'>константа - &lt;[константа]&gt;<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Возможны следующие
+проверочные формулы:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'>const</span></i></span><span
+style='font-family:"Courier New"'> - функция сравнения проверяемого поля 2 с
+константой с учётом разницы поля времени 1 и поля времени 2 <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'>const</span></i></span><i style='mso-bidi-font-style:
+normal'><span style='font-family:"Courier New"'>:[кодограмма<span class=GramE>1</span>],[поле
+времени1],[проверяемое поле1];[кодограмма2],[поле времени2],[проверяемое
+поле2];[константа] <o:p></o:p></span></i></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Пример</span><span
+lang=EN-US style='font-family:"Courier New";mso-ansi-language:EN-US'>: <i
+style='mso-bidi-font-style:normal'>equation:271,time,x;16,tDoc,h;10000</i><o:p></o:p></span></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span lang=EN-US
+style='font-family:"Courier New";mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></i></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'>equation</span></i></span><span
+style='font-family:"Courier New"'> - функция сравнения проверяемого поля 1 с
+проверяемым полем 2 с учётом разницы поля времени 1 и поля времени 2 <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'>equation</span></i></span><i
+style='mso-bidi-font-style:normal'><span style='font-family:"Courier New"'>:[кодограмма<span
+class=GramE>1</span>],[поле времени1],[проверяемое поле1];[кодограмма2],[поле
+времени2],[проверяемое поле2] <o:p></o:p></span></i></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Пример</span><span
+lang=EN-US style='font-family:"Courier New";mso-ansi-language:EN-US'>: <i
+style='mso-bidi-font-style:normal'>equation:271,time,x;16,tDoc,x0</i><o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><span style='font-family:"Courier New"'>modeq</span></span><span
+style='font-family:"Courier New"'> - функция сравнения проверяемого поля 1 с
+проверяемым полем 2 с точностью константа с учётом разницы поля времени 1 и
+поля времени 2<o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=SpellE><i style='mso-bidi-font-style:normal'><span
+style='font-family:"Courier New"'>modeq</span></i></span><i style='mso-bidi-font-style:
+normal'><span style='font-family:"Courier New"'>:[кодограмма<span class=GramE>1</span>],[поле
+времени1],[проверяемое поле1];[кодограмма2],[поле времени2],[проверяемое
+поле2];[константа]<o:p></o:p></span></i></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Пример</span><span
+lang=EN-US style='font-family:"Courier New";mso-ansi-language:EN-US'>: <i
+style='mso-bidi-font-style:normal'>modeq:271,time,x;16,tDoc,x0;300<o:p></o:p></i></span></p>
+
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'><span lang=EN-US
+style='font-family:"Courier New";mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></i></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Для удобства
+заполнения формул реализован следующий механизм:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Значения параметров
+можно задать в таблице «параметры для функций», проверочной константы в поле
+«Константа» (рисунок 10).<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;page-break-after:avoid'><span
+style='font-family:"Courier New"'><!--[if gte vml 1]><v:shape id="_x0000_i1034"
+ type="#_x0000_t75" style='width:430.5pt;height:79.5pt'>
+ <v:imagedata src="XMLCreatorHelpField.files/image019.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=574 height=106
+src="XMLCreatorHelpField.files/image020.jpg" v:shapes="_x0000_i1034"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span
+style='font-family:"Courier New"'>Рисунок </span><!--[if supportFields]><span
+style='font-family:"Courier New"'><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>SEQ Рисунок \* ARABIC <span style='mso-element:
+field-separator'></span></span><![endif]--><span style='font-family:"Courier New"'><span
+style='mso-no-proof:yes'>10</span></span><!--[if supportFields]><span
+style='font-family:"Courier New"'><span style='mso-element:field-end'></span></span><![endif]--><span
+style='font-family:"Courier New"'> - Пример занесения параметров формул<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>По нажатию на одну
+из кнопок <!--[if gte vml 1]><v:shape id="_x0000_i1035" type="#_x0000_t75"
+ style='width:142.5pt;height:17.25pt'>
+ <v:imagedata src="XMLCreatorHelpField.files/image021.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=190 height=23
+src="XMLCreatorHelpField.files/image022.jpg" v:shapes="_x0000_i1035"><![endif]><span
+style='mso-spacerun:yes'> </span>в<span style='mso-spacerun:yes'>  </span><span
+style='mso-spacerun:yes'> </span>поле «дополнительные параметры контроля»
+автоматически занесется соответствующая функция, при этом старая функция будет
+удалена.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>Для того чтобы
+сохранить произведенные изменения в описании поля необходимо нажать кнопку <!--[if gte vml 1]><v:shape
+ id="_x0000_i1036" type="#_x0000_t75" style='width:53.25pt;height:17.25pt'>
+ <v:imagedata src="XMLCreatorHelpField.files/image023.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=71 height=23
+src="XMLCreatorHelpField.files/image024.jpg" v:shapes="_x0000_i1036"><![endif]>,
+в противном случае <!--[if gte vml 1]><v:shape id="_x0000_i1037" type="#_x0000_t75"
+ style='width:52.5pt;height:16.5pt'>
+ <v:imagedata src="XMLCreatorHelpField.files/image025.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=70 height=22
+src="XMLCreatorHelpField.files/image026.jpg" v:shapes="_x0000_i1037"><![endif]>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
+                                     
